@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Teaching
+title: Teaching 
 ---
 
 ### Teaching assistant at Carnegie Mellon University
-+ **15-388/688** Practical Data Science, Fall 2016
++ [**15-388/688** *Head TA* Practical Data Science, Fall 2016](http://www.datasciencecourse.org/)
 + **10-715** Advanced Introduction to Machine Learning, Fall 2015
 + **15-451** Algorithms, Fall 2014
 + **08-766/781** Pervasive and Mobile Computing Services, Spring 2014
