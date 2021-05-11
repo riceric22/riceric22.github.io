@@ -6,6 +6,8 @@ subtitle: Postdoctoral researcher, MIT
 
 I am a postdoctoral researcher in the [Computer Science and Artifical Intelligence Laboratory](https://www.csail.mit.edu/) of [Massachusetts Institute of Technology](https://www.mit.edu/), where I am advised by [Aleksander Madry](https://people.csail.mit.edu/madry/). Previously, I completed my PhD at the [Machine Learning Department](https://www.ml.cmu.edu/) of [Carnegie Mellon University](https://www.cmu.edu/) where I was advised by [Zico Kolter](https://zicokolter.com/). 
 
+### Research
+
 How can we ensure whether deep learning models are actually doing what we want them to do, in order to make them safe, robust, and reliable? My work develops principled methods to better understand and guarantee properties of deep networks, while connecting these foundational algorithms to real world problems. My research interests are roughly centered around machine learning, optimization, and robustness. 
 
 **Provable guarantees for deep networks** Adversarial examples have established that deep networks are exceedingly brittle, and are not robust to small targeted perturbations. Empirical defenses and attacks are prone to blind spots, leading to unreliable robustness estimates. Instead, we derived scalable, provable defenses which provides a differentiable, guaranteed bound on the output of a network that can be used to train convolutional networks with robustness guarantees. 
