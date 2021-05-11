@@ -70,6 +70,7 @@
             {% else %}
               <h2 class="{{ include.type }}-subheading">{{ page.subtitle }}</h2>
             {% endif %}
+            {% include social-networks-links.html %}
           {% endif %}
 
           {% if include.type == "post" %}
