@@ -9,6 +9,8 @@ I am a postdoctoral researcher in the [Computer Science and Artifical Intelligen
 My research interests are centered around machine learning, optimization, and robustness. My goal is to ensure that deep learning models are actually doing what we want them to do, in order to make them safe, robust, and reliable. To do so, I have worked on training networks with provable guarantees, bridging the gap between robustness and the real world, and developing tools for debugging models and data. 
 
 ### News
-+ Our paper "Leveraging Sparse Linear Layers for Debuggable Deep Networks" was accepted for a long oral presentation at ICML 2021
-+ I am on the organizing committee for the ICML 2021 workshop [A Blessing in Disguise: The Prospects and Perils of Adversarial Machine Learning](https://advml-workshop.github.io/icml2021/)
-+ I am a main organizer for the ICLR 2021 workshop [Robust and Reliable Machine learning in the Real World](https://sites.google.com/connect.hku.hk/robustml-2021/home) 
++ 5/12/21: Our paper "Leveraging sparse linear layers for debuggable deep networks" was accepted for a long oral presentation at ICML 2021
++ 4/7/21: I am on the organizing committee for the ICML 2021 workshop [A Blessing in Disguise: The Prospects and Perils of Adversarial Machine Learning](https://advml-workshop.github.io/icml2021/)
++ 1/12/21: Our paper "Learning perturbation sets for robust machine learning" was accepted for a poster at ICLR 2021
++ 12/14/20: I am a main organizer for the ICLR 2021 workshop [Robust and Reliable Machine learning in the Real World](https://sites.google.com/connect.hku.hk/robustml-2021/home) 
++ 8/1/20: I have started my postdoc at MIT with Aleksander Madry
