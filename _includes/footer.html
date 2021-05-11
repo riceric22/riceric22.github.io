@@ -2,14 +2,14 @@
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-      <!-- {% include social-networks-links.html %}
+      <!-- {% include social-networks-links.html %} -->
       {% if page.footer-extra %}
         <div class="footer-custom-content">
           {% for file in page.footer-extra %}
             {% include {{ file }} %}
           {% endfor %}
         </div>
-      {% endif %} -->
+      {% endif %}
       <h4>Contact</h4>
       <p class="copyright text-muted">
       {% if site.author %}
@@ -34,6 +34,7 @@
         {% endif %}
       {% endif%}
       </p>
+      {% include social-networks-links.html %}
       {% unless site.remove-ads %}<p class="theme-by text-muted">
         Powered by
         <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
