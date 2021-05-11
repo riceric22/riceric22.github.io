@@ -10,11 +10,14 @@
           {% endfor %}
         </div>
       {% endif %}
+      <h4>Contact</h4>
       <p class="copyright text-muted">
       {% if site.author %}
         {{ site.author }}
         &nbsp;&bull;&nbsp;
       {% endif %}
+      {{ site.email }}
+      &nbsp;&bull;&nbsp;
       {{ site.time | date: '%Y' }}
 
       {% if site.url-pretty %}
