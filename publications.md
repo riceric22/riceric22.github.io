@@ -7,12 +7,12 @@ title: Publications
 Eric Wong\*, Shibani Santurkar\*, Aleksander Madry  
 In Proceedings of the International Conference on Machine learning (ICML), 2021 
 [Source code on Github](https://github.com/madrylab/debuggabledeepnetworks) + [Blog post](https://gradientscience.org/glm_saga/)
-
-### 2020
 + [Learning perturbation sets for robust machine learning](https://arxiv.org/abs/2007.08450)  
 Eric Wong, J. Zico Kolter  
 In proceedings of the International Conference on Learning Representations (ICLR), 2021  
 [Source code on Github](https://github.com/locuslab/perturbation_learning/) + [Blog post](https://locuslab.github.io/2020-07-20-perturbation/)
+
+### 2020
 + [Overfitting in adversarially robust deep learning](https://arxiv.org/abs/2002.11569)  
 Leslie Rice\*, Eric Wong\*, J. Zico Kolter  
 In Proceedings of the International Conference on Machine learning (ICML), 2020  
