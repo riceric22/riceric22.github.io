@@ -3,15 +3,18 @@ layout: page
 title: Publications
 ---
 ### 2021 
-+ Leveraging Sparse Linear Layers for Debuggable Deep Networks  
++ [Leveraging Sparse Linear Layers for Debuggable Deep Networks](https://arxiv.org/abs/2105.04857)  
 Eric Wong\*, Shibani Santurkar\*, Aleksander Madry  
 In Proceedings of the International Conference on Machine learning (ICML), 2021 
+[Source code on Github](https://github.com/madrylab/debuggabledeepnetworks)  
+[Blog post][https://gradientscience.org/glm_saga/]
 
 ### 2020
 + [Learning perturbation sets for robust machine learning](https://arxiv.org/abs/2007.08450)  
 Eric Wong, J. Zico Kolter  
 In proceedings of the International Conference on Learning Representations (ICLR), 2021  
-[Source code on Github](https://github.com/locuslab/perturbation_learning/)
+[Source code on Github](https://github.com/locuslab/perturbation_learning/)  
+[Blog post](https://locuslab.github.io/2020-07-20-perturbation/)
 + [Overfitting in adversarially robust deep learning](https://arxiv.org/abs/2002.11569)  
 Leslie Rice\*, Eric Wong\*, J. Zico Kolter  
 In Proceedings of the International Conference on Machine learning (ICML), 2020  
@@ -44,7 +47,8 @@ In Neural Information Processing Systems (NeurIPS), 2018
 Eric Wong, J. Zico Kolter  
 In Proceedings of the International Conference on Machine Learning (ICML), 2018  
 Best defense paper at [NIPS 2017 ML &amp; Security Workshop](https://machine-learning-and-security.github.io/)  
-[Source code on Github](https://github.com/locuslab/convex_adversarial/)
+[Source code on Github](https://github.com/locuslab/convex_adversarial/)  
+[Blog post](https://locuslab.github.io/2019-03-12-provable/)
 + [A Semismooth Newton Method for Fast, Generic Convex Programming](https://arxiv.org/abs/1705.00772)  
 Alnur Ali\*, Eric Wong\*, J. Zico Kolter  
 In Proceedings of the International Conference on Machine Learning (ICML), 2017  
