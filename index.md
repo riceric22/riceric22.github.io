@@ -8,7 +8,7 @@ I am a postdoctoral researcher in the [Computer Science and Artifical Intelligen
 
 ### Research
 
-How can we ensure whether deep learning models are actually doing what we want them to do, in order to make them safe, robust, and reliable? My work develops principled methods to better understand and guarantee properties of deep networks, while connecting these foundational algorithms to real world problems. My research interests are roughly centered around machine learning, optimization, and robustness. 
+How can we make sure that deep learning models are actually doing what we want them to do? I am currently working on aspects of Reliable Machine Learning: the development of methods that allow us to understand, debug, and guarantee properties of machine learning models. My research interest span machine learning, optimization, and robustness, and aim to develop principled methods that are scalable and practical in real-world settings. 
 
 **Provable guarantees for deep networks** Adversarial examples have established that deep networks are exceedingly brittle, and are not robust to small targeted perturbations. Empirical defenses and attacks are prone to blind spots, leading to unreliable robustness estimates. Instead, we derived scalable, provable defenses which provides a differentiable, guaranteed bound on the output of a network that can be used to train convolutional networks with robustness guarantees. 
 

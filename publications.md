@@ -5,7 +5,7 @@ title: Publications
 ### 2021 
 + [Leveraging Sparse Linear Layers for Debuggable Deep Networks](https://arxiv.org/abs/2105.04857)  
 Eric Wong\*, Shibani Santurkar\*, Aleksander Madry  
-In Proceedings of the International Conference on Machine learning (ICML), 2021 
+In Proceedings of the International Conference on Machine learning (ICML), 2021 *Long Oral*
 [Source code on Github](https://github.com/madrylab/debuggabledeepnetworks) + [Blog post](https://gradientscience.org/glm_saga/)
 + [Learning perturbation sets for robust machine learning](https://arxiv.org/abs/2007.08450)  
 Eric Wong, J. Zico Kolter  
