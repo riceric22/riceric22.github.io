@@ -55,3 +55,6 @@ In Proceedings of the International Conference on Machine Learning (ICML), 2017
 + [An SVD and Derivative Kernel Approach to Learning from Geometric Data](http://zicokolter.com/publications/wong2015svdkernel.pdf)  
 Eric Wong, J. Zico Kolter  
 In Proceedings of the Conference on Artificial Intelligence (AAAI), 2015
+
+## Other
+My PhD thesis can be found <a href='/assets/files/ericwong_phd_scs_2020.pdf'>here</a>.
