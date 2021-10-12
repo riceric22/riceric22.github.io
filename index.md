@@ -8,7 +8,7 @@ I am a postdoctoral researcher in the [Computer Science and Artifical Intelligen
 
 ### Research
 
-How can we make sure that deep learning models are actually doing what we want them to do? I study  the foundations of robust and reliable machine learning: how to understand, debug, and guarantee the behavior of machine learning models. My research interests span machine learning, optimization, and robustness, and in order to develop principled methods with an eye towards scalability and practicality in real-world settings. 
+How can we make sure that deep learning models are actually doing what we want them to do? I study  the foundations of robust and reliable machine learning: how to understand, debug, and guarantee the behavior of machine learning models. My research interests span machine learning, optimization, and robustness, in order to develop principled methods with an eye towards scalability and practicality in real-world settings. 
 
 **Provable guarantees for deep networks** Adversarial examples have established that deep networks are exceedingly brittle, and are not robust to small targeted perturbations. Empirical defenses and attacks are prone to blind spots, leading to unreliable robustness estimates. Instead, we derived scalable, provable defenses which provides a differentiable, guaranteed bound on the output of a network that can be used to train convolutional networks with robustness guarantees. 
 
@@ -19,6 +19,8 @@ How can we make sure that deep learning models are actually doing what we want t
 **Debugging deep learning** Robustness research often assumes that we know a priori what phenomena we want our models to be robust to. However, this is not always immediately obvious, especially since deep networks can often rely on unexpected spurious correlations. We have thus developed tools for creating debuggable deep networks that can more easily diagnose various failure modes such as model biases, learned correlations, and misclassifications. 
 
 ### News
++ 10/18/21: I will be speaking as a panelist for the [ATVA 2021 Workshop on Security and Reliability of Machine Learning (SRML)](https://sites.google.com/view/srml-atva2021)
++ 10/12/21: I am on the organizing committee for the AAAI 2022 [Workshop on Adversarial Machine Learning and Beyond](https://advml-workshop.github.io/aaai2022/)
 + 5/12/21: Our paper "Leveraging sparse linear layers for debuggable deep networks" was accepted for a long oral presentation at ICML 2021
 + 4/7/21: I am on the organizing committee for the ICML 2021 workshop [A Blessing in Disguise: The Prospects and Perils of Adversarial Machine Learning](https://advml-workshop.github.io/icml2021/)
 + 1/12/21: Our paper "Learning perturbation sets for robust machine learning" was accepted for a poster at ICLR 2021
