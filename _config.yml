@@ -16,6 +16,7 @@ email: wongeric@mit.edu
 
 navbar-links:
   Publications: "publications"
+  CV: "/assets/files/cv.pdf"
   Teaching: "teaching"
   Software: "https://github.com/riceric22/"
   Random: "random"
