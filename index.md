@@ -4,7 +4,7 @@ title: Eric Wong
 subtitle: Postdoctoral researcher, MIT
 ---
 
-*Update: I'll be starting as an Assistant Professor at UPenn CIS in Fall 2022! I am looking for students.*
+*Update: I'll be starting as an Assistant Professor at UPenn CIS in Fall 2022, as part of the ASSET Center on safe, explainable, and trustworthy AI systems! I am looking for students. If you're at Penn and are interested in machine learning research, send me a message: exwong at cis upenn edu*
 
 I am a postdoctoral researcher in the [Computer Science and Artifical Intelligence Laboratory](https://www.csail.mit.edu/) of [Massachusetts Institute of Technology](https://www.mit.edu/), where I am advised by [Aleksander Madry](https://people.csail.mit.edu/madry/). Previously, I completed my PhD at the [Machine Learning Department](https://www.ml.cmu.edu/) of [Carnegie Mellon University](https://www.cmu.edu/) where I was advised by [Zico Kolter](https://zicokolter.com/). 
 
