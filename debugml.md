@@ -5,7 +5,7 @@ layout: skeleton
 
 # [7000-005: Debugging Data & Models (Fall 2022)][site]
 
-Do you trust your model? Despite their widespread adoption and impressive performance, modern machine learning models have a crucial flaw: it is extremely difficult to discern when and how models fails. This pitfall has given rise to a field of research known as *trustworthy machine learning*, in order to make these systems safe, responsible, and understandable. 
+Do you trust your model? Despite their widespread adoption and impressive performance, modern machine learning models have a crucial flaw: it is extremely difficult to discern when and how models fail. This pitfall has given rise to a field of research known as *trustworthy machine learning*, in order to make these systems safe, responsible, and understandable. 
 
 This course will explore the tools and methods for analyzing the machine learning pipeline and assessing their trustworthiness (or lack thereof), from the datasets, models, and predictions perspective. A [tentative schedule](#tentative-schedule-and-topics) of these topics can be found at the bottom of this page. 
 
@@ -16,6 +16,8 @@ This course will explore the tools and methods for analyzing the machine learnin
 **Website**: [https://www.cis.upenn.edu/~exwong/debugml/][site]
 
 Students from all majors and degree levels are welcome. There are no specific course requirements, but a background in machine learning at an introductory course level is expected, as well as basic programming experience for the course project.  
+
+Grading will be based off of 80% course project (15% proposal + 20% progress report + 25% final report + 20% presentation) and 20% participation (5% readings + 15% discussion). There will be no homeworks or exams. 
 
 This class will combine lectures and discussions. The lectures will typically cover the core groundwork, followed by a student-led in-depth discussion based on assigned readings. Readings and lecture materials will be posted on the schedule. 
 
@@ -45,13 +47,13 @@ The schedule and topics can change based on students' interests and as time perm
 | *Failure modes* |||
 | September 1 | Bias | Data generation<br>[Reading](https://arxiv.org/abs/1901.10002) |
 | September 6 | Bias | Training & deployment |
-| September 8 | Adversarial | Adversarial attacks |
-| September 13 | Adversarial | Threat models |
-| September 15 | Adversarial | Data poisoning, backdoors, Byzantine faults |
+| September 8 | Out of distribution | Covariate, label & concept shifts |
+| September 13 | Out of distribution | Temporal, environmental & group shifts |
+| September 15 | Adversarial | Adversarial attacks |
 | September 20 | No class |  |
-| September 22 | Adversarial | Model stealing & membership inference |
-| September 27 | Out of distribution | Covariate, label & concept shifts |
-| September 29 | Out of distribution | Temporal, environmental & group shifts |
+| September 22 | Adversarial | Threat models |
+| September 27 | Adversarial | Data poisoning, backdoors, Byzantine faults |
+| September 29 | Adversarial | Model stealing & membership inference |
 |  |  |  |
 | *Debugging models* |||
 | October 4 | Explainability | Data visualization, summary statistics & interpretable models <br>[Reading](https://arxiv.org/abs/1811.10154) <br>*Project proposal due* |
