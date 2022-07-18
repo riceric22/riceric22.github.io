@@ -3,6 +3,9 @@ layout: page
 title: Teaching 
 ---
 
+### Teaching at University of Pennsylvania
++ [**7000-05** Debugging Data and Models, Fall 2022]({{ site.baseurl }}{% link debugml.md %})
+
 ### Teaching assistant at Carnegie Mellon University
 + [**15-388/688** *Head TA* Practical Data Science, Fall 2016](http://www.datasciencecourse.org/)
 + **10-715** Advanced Introduction to Machine Learning, Fall 2015

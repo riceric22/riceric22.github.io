@@ -3,6 +3,9 @@
 # set up your website you should go through all these settings and edit them, but after
 # the initial set up you won't need to come back to this file often.
 
+# enable for UPenn directory
+# baseurl: /~exwong
+
 # --- Required options --- #
 
 # Name of website
@@ -10,15 +13,16 @@ title: Eric Wong
 
 # Your name to show in the footer
 author: Eric Wong
-email: wongeric@mit.edu
+email: exwong at cis dot upenn dot edu
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Publications: "publications"
-  CV: "/assets/files/cv.pdf"
+  Research: "research"
   Teaching: "teaching"
-  Software: "https://github.com/riceric22/"
+  CV: "/assets/files/cv.pdf"
+  Publications: "publications"
+  # Software: "https://github.com/riceric22/"
   Random: "random"
   Bio: "bio"
 
@@ -34,7 +38,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
+# title-img: "/assets/img/photo_small.jpg"
 
 
 # --- Footer social media links --- #
@@ -42,7 +46,7 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "wongeric@mit.edu"
+  email: "exwong@cis.upenn.edu"
 #  facebook: deanattali
   github: riceric22
   twitter: riceric22
@@ -243,7 +247,8 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
+  - jekyll-spaceship # for colspan
+  
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 

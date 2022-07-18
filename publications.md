@@ -2,10 +2,27 @@
 layout: page
 title: Publications
 ---
+### 2022
++ [A data-based perspective on transfer learning](https://arxiv.org/abs/2207.05739) 
+Saachi Jain\*, Hadi Salman\*, Alaa Khaddaj\*, Eric Wong, Sung Min Park, Aleksander Madry
++ [When does bias transfer in transfer learning](https://arxiv.org/abs/2207.02842) 
+Hadi Salman\*, Saachi Jain\*, Andrew Ilyas\*, Logan Engstrom\*, Eric Wong, Aleksander Madry 
++ [DeepSplit: Scalable verification of deep neural networks via operator splitting](https://arxiv.org/abs/2106.09117) 
+Shaoru Chen\*, Eric Wong\*, J. Zico Kolter, Mahyar Fazlyab 
+In Proceedings of the IEEE Open Journal of Control Systems (OJCS), 2022 
++ [Missingness bias in model debugging](https://arxiv.org/abs/2204.08945?context=cs) 
+Saachi Jain\*, Hadi Salman\*, Pengchuan Zhang, Vibhav Vineet, Sal Vemprala, Aleksander Madry 
+In proceedings of the International Conference on Learning Representations (ICLR), 2022  
+[Source code on Github](https://github.com/MadryLab/missingness) + [Blog post](https://gradientscience.org/missingness/)
++ [Certified patch robustness via smoothed vision transformers](https://arxiv.org/abs/2110.07719)
+Hadi Salman\*, Saachi Jain\*, Eric Wong\*, Aleksander Madry
+In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022
+[Source code on Github](https://github.com/MadryLab/smoothed-vit) + [Blog post](https://gradientscience.org/smoothing/)
+
 ### 2021 
 + [Leveraging Sparse Linear Layers for Debuggable Deep Networks](https://arxiv.org/abs/2105.04857)  
 Eric Wong\*, Shibani Santurkar\*, Aleksander Madry  
-In Proceedings of the International Conference on Machine learning (ICML), 2021 *Long Oral*
+In Proceedings of the International Conference on Machine learning (ICML), 2021 *Long Oral*  
 [Source code on Github](https://github.com/madrylab/debuggabledeepnetworks) + [Blog post](https://gradientscience.org/glm_saga/)
 + [Learning perturbation sets for robust machine learning](https://arxiv.org/abs/2007.08450)  
 Eric Wong, J. Zico Kolter  

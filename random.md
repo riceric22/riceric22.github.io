@@ -40,8 +40,8 @@ I love experimenting with cooking, and occasionally post pictures of my creation
 <div class ="image-gallery">
 {% for name in filenames %}
     <div class="box">
-    <a href="/assets/img/food/full/{{ name }}">
-      <img src="/assets/img/food/thumbs/{{ name }} " alt="{{ name }}"  class="img-gallery" />
+    <a href="{{ site.url }}{{ site.baseurl }}/assets/img/food/full/{{ name }}">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/img/food/thumbs/{{ name }}" alt="{{ name }}"  class="img-gallery" />
      </a>
     </div>
  {% endfor %}
