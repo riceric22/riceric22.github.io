@@ -44,7 +44,7 @@ The schedule and topics can change based on students' interests and as time perm
 
 | Date | Topic | Notes |
 |---|---|---|
-| August 30 | Overview |  |
+| August 30 | Overview | [Problems in health care](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8443295/) |
 |  |  |  |
 | *Failure modes* |||
 | September 1 | Bias | Data generation<br>[Reading](https://arxiv.org/abs/1901.10002) |
