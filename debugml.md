@@ -11,7 +11,7 @@ This course will explore the tools and methods for analyzing the machine learnin
 
 **Instructor**: [Eric Wong](https://www.cis.upenn.edu/~exwong) ([exwong@cis](mailto:exwong@cis.upenn.edu))
 
-**Class**: Tues/Thurs 1:45-3:15pm Eastern, Hayden Hall 360
+**Class**: Tues 1:45-3:15pm Eastern, DRLB 4C6 / Thurs 1:45-3:15pm Eastern, CHEM 514
 
 **Website**: [https://www.cis.upenn.edu/~exwong/debugml/][site]
 
