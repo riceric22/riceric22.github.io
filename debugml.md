@@ -47,8 +47,8 @@ The schedule and topics can change based on students' interests and as time perm
 | August 30 | Overview | [Problems in health care](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8443295/) |
 |  |  |  |
 | *Failure modes* |||
-| September 1 | Bias | Data generation<br>[Reading](https://arxiv.org/abs/1901.10002) |
-| September 6 | Bias | Training & deployment |
+| September 1 | Bias | Data generation<br>[The trouble with Bias - NeurIPS 2017 Keynote by Kate Crawford](https://www.youtube.com/watch?v=fMym_BKWQzk)<br>[Reading - Bolukbasi et al. 2016](https://arxiv.org/abs/1607.06520)<br>[Supplementary reading - Suresh & Guttag, 2019](https://arxiv.org/abs/1901.10002) |
+| September 6 | Bias | Training & deployment<br>[Arteaga et al. 2019](https://arxiv.org/abs/1901.09451)|
 | September 8 | Out of distribution | Covariate, label & concept shifts |
 | September 13 | Out of distribution | Temporal, environmental & group shifts |
 | September 15 | Adversarial | Adversarial attacks |
