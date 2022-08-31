@@ -15,6 +15,8 @@ This course will explore the tools and methods for analyzing the machine learnin
 
 **Website**: [https://www.cis.upenn.edu/~exwong/debugml/][site]
 
+**Ed discussion**: [Self sign-up link](https://edstem.org/us/join/dKcj6G)
+
 **Mask policy**: Masks are required.  
 
 Students from all majors and degree levels are welcome. There are no specific course requirements, but a background in machine learning at an introductory course level is expected, as well as basic programming experience for the course project.  
