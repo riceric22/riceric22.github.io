@@ -46,7 +46,7 @@ The schedule and topics can change based on students' interests and as time perm
 
 | Date | Topic | Notes |
 |---|---|---|
-| August 30 | Overview | [Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/overview_slides.pptx)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/overview.pdf)<br>[Notebook](https://www.cis.upenn.edu/~exwong/assets/debugml/linear.ipynb)<br>Supplementary reading - [Problems in health care](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8443295/) |
+| August 30 | Overview | [Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/overview_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/overview.pdf)<br>[Notebook](https://www.cis.upenn.edu/~exwong/assets/debugml/linear.ipynb)<br>Supplementary reading - [Problems in health care](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8443295/) |
 |  |  |  |
 | *Failure modes* |||
 | September 1 | Bias | Types of Bias<br>[Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/bias_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/bias.pdf)<br>[Notebook](https://www.cis.upenn.edu/~exwong/assets/debugml/bias.ipynb)<br>[The trouble with Bias - NeurIPS 2017 Keynote by Kate Crawford](https://www.youtube.com/watch?v=fMym_BKWQzk)<br>[Supplementary reading - Suresh & Guttag, 2019](https://arxiv.org/abs/1901.10002) |
