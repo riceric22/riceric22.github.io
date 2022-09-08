@@ -52,7 +52,7 @@ The schedule and topics can change based on students' interests and as time perm
 | September 1 | Bias | Types of Bias<br>[Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/bias_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/bias.pdf)<br>[Notebook](https://www.cis.upenn.edu/~exwong/assets/debugml/bias.ipynb)<br>[The trouble with Bias - NeurIPS 2017 Keynote by Kate Crawford](https://www.youtube.com/watch?v=fMym_BKWQzk)<br>[Supplementary reading - Suresh & Guttag, 2019](https://arxiv.org/abs/1901.10002) |
 | September 6 | Bias | [Assigned reading - Bolukbasi et al. 2016](https://arxiv.org/abs/1607.06520)<br>[Supplementary reading - Arteaga et al. 2019](https://arxiv.org/abs/1901.09451)|
 | September 8 | Out of distribution | Covariate, label & concept shifts<br>[Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/distribution_shift_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/bias.pdf)<br>[Assigned reading - Rabanser et al. 2019](https://arxiv.org/abs/1810.11953)<br>[Supplementary reading - Ruan et al. 2022](https://arxiv.org/abs/2201.00057)|
-| September 13 | Out of distribution | Temporal, environmental & group shifts |
+| September 13 | Out of distribution | Temporal, environmental & group shifts <br>[Assigned reading - Riegar et al. 2019](https://arxiv.org/abs/1909.13584) <br>[Supplementary reading - Beery et al. 2018](https://arxiv.org/abs/1807.04975) <br>[Supplementary reading - Guo et al. 2022](https://www.nature.com/articles/s41598-022-06484-1)|
 | September 15 | Adversarial | Adversarial attacks |
 | September 20 | No class |  |
 | September 22 | Adversarial | Threat models |
