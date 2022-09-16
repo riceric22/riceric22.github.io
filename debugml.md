@@ -55,9 +55,9 @@ The schedule and topics can change based on students' interests and as time perm
 | September 13 | Out of distribution | Measuring distribution shift <br>[Assigned reading - Riegar et al. 2019](https://arxiv.org/abs/1909.13584) <br>[Supplementary reading - Guo et al. 2022](https://www.nature.com/articles/s41598-022-06484-1)|
 | September 15 | Adversarial | Adversarial attacks <br>[Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/adversarial_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/adversarial.pdf)[Assigned reading - Beery et al. 2018](https://arxiv.org/abs/1807.04975) |
 | September 20 | No class |  |
-| September 22 | Adversarial | Threat models |
-| September 27 | Adversarial | Data poisoning, backdoors, Byzantine faults |
-| September 29 | Adversarial | Model stealing & membership inference |
+| September 22 | Adversarial | Data poisoning, backdoors, Byzantine faults <br>[Supplementary reading - Rice et al. 2021](https://proceedings.neurips.cc/paper/2021/hash/ea4c796cccfc3899b5f9ae2874237c20-Abstract.html)<br>[supplementary reading - Robey et al. 2022](https://arxiv.org/abs/2202.01136) |
+| September 27 | Adversarial | Model stealing & membership inference |
+| September 29 | Adversarial |  |
 |  |  |  |
 | *Debugging models* |||
 | October 4 | Explainability | Data visualization, summary statistics & interpretable models <br>[Reading](https://arxiv.org/abs/1811.10154) <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a>|
