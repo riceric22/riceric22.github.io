@@ -57,7 +57,7 @@ The schedule and topics can change based on students' interests and as time perm
 | September 20 | No class |  |
 | September 22 | Adversarial | Data poisoning, backdoors, Byzantine faults <br>[Assigned reading - Li et al. 2020](https://arxiv.org/abs/2004.09984)<br>[Supplementary reading - Rice et al. 2021](https://proceedings.neurips.cc/paper/2021/hash/ea4c796cccfc3899b5f9ae2874237c20-Abstract.html)<br>[Supplementary reading - Robey et al. 2022](https://arxiv.org/abs/2202.01136) |
 | September 27 | Adversarial | Model stealing & membership inference <br> [Supplementary reading - Nguyen et al. 2014](https://arxiv.org/abs/1412.1897)<br> [Supplementary reading - Tramer et al. 2016](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer) <br>[Supplementary reading - Jagielski et al. 2020](https://arxiv.org/abs/1909.01838) |
-| September 29 | Explainability | Data visualization, feature visualization, & interpretable models <br>[Supplementary reading - Rudin 2019](https://arxiv.org/abs/1811.10154)<br> [Assigned reading - Javanmard et al. 2020](https://arxiv.org/abs/2002.10477) <br>[Supplementary reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
+| September 29 | Explainability | Data visualization, feature visualization, & interpretable models<br> [Assigned reading - Javanmard et al. 2020](https://arxiv.org/abs/2002.10477) <br>[Supplementary reading - Rudin 2019](https://arxiv.org/abs/1811.10154) <br>[Supplementary reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
 |  |  |  |
 | *Debugging models* |||
 | October 4 | Explainability | Local & global explanations *Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a>|
