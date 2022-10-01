@@ -60,7 +60,7 @@ The schedule and topics can change based on students' interests and as time perm
 | September 29 | Explainability | Data visualization, feature visualization, & interpretable models<br> [Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability.pdf)<br>[Assigned reading - Javanmard et al. 2020](https://arxiv.org/abs/2002.10477) <br>[Assigned reading - Shamir et al. 2021](https://arxiv.org/abs/2106.10151)<br>[Assigned reading - Rudin 2019](https://arxiv.org/abs/1811.10154) <br>[Supplementary reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
 |  |  |  |
 | *Debugging models* |||
-| October 4 | Explainability | Local & global explanations <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a><br>[Supplementary reading - Dombrowski et al. 2019](https://arxiv.org/abs/1906.07983)<br>[Supplementary reading - Woods et al. 2019](https://arxiv.org/abs/1906.02896)|
+| October 4 | Explainability | Local & global explanations <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a><br>[Assigned reading - Wei et al. 2022](https://arxiv.org/abs/2201.11903) <br>[Assigned reading - Hassani et al. 2022](https://arxiv.org/abs/2201.05149)<br>  [Assigned reading - Dombrowski et al. 2019](https://arxiv.org/abs/1906.07983)<br>[Supplementary reading - Woods et al. 2019](https://arxiv.org/abs/1906.02896)|
 | October 6 | Fall term break |  |
 | October 11 | Explainability | Example-based & model visualizations |
 | October 13 | Verification | Complete & incomplete |
