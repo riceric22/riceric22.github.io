@@ -57,13 +57,13 @@ The schedule and topics can change based on students' interests and as time perm
 | September 20 | No class |  |
 | September 22 | Adversarial | Data poisoning, backdoors, Byzantine faults <br>[Assigned reading - Li et al. 2020](https://arxiv.org/abs/2004.09984)<br>[Supplementary reading - Rice et al. 2021](https://proceedings.neurips.cc/paper/2021/hash/ea4c796cccfc3899b5f9ae2874237c20-Abstract.html)<br>[Supplementary reading - Robey et al. 2022](https://arxiv.org/abs/2202.01136) |
 | September 27 | Adversarial | Model stealing & membership inference <br> [Assigned reading - Nguyen et al. 2014](https://arxiv.org/abs/1412.1897)<br> [Assigned reading - Sinha et al. 2017](https://arxiv.org/abs/1710.10571)<br> [Supplementary reading - Tramer et al. 2016](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer) <br>[Supplementary reading - Jagielski et al. 2020](https://arxiv.org/abs/1909.01838) |
-| September 29 | Explainability | Data visualization, feature visualization, & interpretable models<br> [Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability.pdf)<br>[Assigned reading - Javanmard et al. 2020](https://arxiv.org/abs/2002.10477) <br>[Assigned reading - Shamir et al. 2021](https://arxiv.org/abs/2106.10151)<br>[Assigned reading - Rudin 2019](https://arxiv.org/abs/1811.10154) <br>[Supplementary reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
+| September 29 | Explainability | Data visualization, feature visualization, & interpretable models<br> [Slides](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability_slides.pdf)<br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/explainability.pdf)<br>[Assigned reading - Javanmard et al. 2020](https://arxiv.org/abs/2002.10477) <br>[Assigned reading - Shamir et al. 2021](https://arxiv.org/abs/2106.10151)<br>[Assigned reading - Rudin 2019](https://arxiv.org/abs/1811.10154)|
 |  |  |  |
 | *Debugging models* |||
 | October 4 | Explainability | Local & global explanations <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a><br>[Assigned reading - Wei et al. 2022](https://arxiv.org/abs/2201.11903) <br>[Assigned reading - Hassani et al. 2022](https://arxiv.org/abs/2201.05149)<br>  [Assigned reading - Dombrowski et al. 2019](https://arxiv.org/abs/1906.07983)<br>[Supplementary reading - Woods et al. 2019](https://arxiv.org/abs/1906.02896)|
 | October 6 | Fall term break |  |
-| October 11 | Explainability | Example-based & model visualizations |
-| October 13 | Verification | Complete & incomplete |
+| October 11 | Explainability | Example-based & model visualizations  <br>[Assigned reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
+| October 13 | Verification | Complete & incomplete <br>[Assigned reading - Reddi et al. 2014](https://www.cs.cmu.edu/~sjakkamr/papers/doublyrobust.pdf) |
 | October 18 | Verification | Specifications and properties |
 | October 20 | Scientific discovery |  Finding correlations|
 | October 25 | Scientific discovery | [Influence functions](https://arxiv.org/abs/1703.04730) & [data models](https://arxiv.org/abs/2207.05739) |
