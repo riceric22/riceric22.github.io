@@ -62,8 +62,8 @@ The schedule and topics can change based on students' interests and as time perm
 | *Debugging models* |||
 | October 4 | Explainability | Local & global explanations <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a><br>[Assigned reading - Wei et al. 2022](https://arxiv.org/abs/2201.11903) <br>[Assigned reading - Hassani et al. 2022](https://arxiv.org/abs/2201.05149)<br>  [Assigned reading - Dombrowski et al. 2019](https://arxiv.org/abs/1906.07983)<br>[Supplementary reading - Woods et al. 2019](https://arxiv.org/abs/1906.02896)|
 | October 6 | Fall term break |  |
-| October 11 | Explainability | Example-based & model visualizations  <br>[Assigned reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)|
-| October 13 | Verification | Complete & incomplete <br>[Assigned reading - Reddi et al. 2014](https://www.cs.cmu.edu/~sjakkamr/papers/doublyrobust.pdf) |
+| October 11 | Explainability | Example-based & model visualizations  <br>[Assigned reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)<br>[Supplementary reading - Jeanneret et al. 2022](https://arxiv.org/abs/2203.15636)<br>[Supplementary reading - Ye & Durrett 2022](https://arxiv.org/abs/2205.03401)|
+| October 13 | Verification | Complete & incomplete <br>[Assigned reading - Reddi et al. 2014](https://www.cs.cmu.edu/~sjakkamr/papers/doublyrobust.pdf)<br>[Supplementary reading - Carlini et al. 2022](https://arxiv.org/abs/2206.10550)<br>[Supplementary reading - Salman et al. 2021](https://arxiv.org/abs/2110.07719) |
 | October 18 | Verification | Specifications and properties |
 | October 20 | Scientific discovery |  Finding correlations|
 | October 25 | Scientific discovery | [Influence functions](https://arxiv.org/abs/1703.04730) & [data models](https://arxiv.org/abs/2207.05739) |
