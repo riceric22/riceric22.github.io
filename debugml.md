@@ -63,20 +63,20 @@ The schedule and topics can change based on students' interests and as time perm
 | October 4 | Explainability | Local & global explanations <br>*Project proposal due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/proposal.pdf">Proposal guidelines</a><br>[Assigned reading - Wei et al. 2022](https://arxiv.org/abs/2201.11903) <br>[Assigned reading - Hassani et al. 2022](https://arxiv.org/abs/2201.05149)<br>  [Assigned reading - Dombrowski et al. 2019](https://arxiv.org/abs/1906.07983)<br>[Supplementary reading - Woods et al. 2019](https://arxiv.org/abs/1906.02896)|
 | October 6 | Fall term break |  |
 | October 11 | Explainability | Example-based & model visualizations  <br>[Assigned reading - Nguyen et al. 2016](https://arxiv.org/abs/1602.03616)<br>[Assigned reading - Slack et al. 2020](https://dl.acm.org/doi/abs/10.1145/3375627.3375830)<br>[Assigned reading - Ye & Durrett 2022](https://arxiv.org/abs/2205.03401)<br>[Supplementary reading - Jeanneret et al. 2022](https://arxiv.org/abs/2203.15636)|
-| October 13 | Verification | Complete & incomplete <br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/verification.pdf)<br>[Assigned reading - Reddi et al. 2014](https://www.cs.cmu.edu/~sjakkamr/papers/doublyrobust.pdf)<br>[Assigned reading - Elazar et al. 2020](https://arxiv.org/abs/2006.00995)<br>[Assigned reading - Jacovi et al. 2021](https://arxiv.org/abs/2103.01378)<br>[Supplementary reading - Carlini et al. 2022](https://arxiv.org/abs/2206.10550)<br>[Supplementary reading - Salman et al. 2021](https://arxiv.org/abs/2110.07719) |
+| October 13 | Verification | Complete & incomplete <br>[Lecture notes](https://www.cis.upenn.edu/~exwong/assets/debugml/verification.pdf)<br>[Assigned reading - Reddi et al. 2014](https://www.cs.cmu.edu/~sjakkamr/papers/doublyrobust.pdf)<br>[Assigned reading - Elazar et al. 2020](https://arxiv.org/abs/2006.00995)<br>[Assigned reading - Jacovi et al. 2021](https://arxiv.org/abs/2103.01378)|
 | October 18 | Verification | Specifications and properties<br>[Assigned reading - Swayamdipta et al. 2020](https://arxiv.org/abs/2009.10795)<br>[Assigned reading - Ruan et al. 2022](https://arxiv.org/abs/2201.00057)<br>[Assigned reading - Zhang et al. 2021](https://arxiv.org/abs/2111.04986v1)<br>[Supplementary reading - Gowel et al. 2019](https://arxiv.org/abs/1810.12715)|
 | October 20 | Scientific discovery |  Finding correlations<br>[Assigned reading - Liu et al. 2018]( https://arxiv.org/abs/1811.00196)<br>[Assigned reading - Nori et al. 2019](https://arxiv.org/abs/1909.09223)<br>[Assigned reading - Kleinberg et al. 2018](https://www.cs.cornell.edu/home/kleinber/aer18-fairness.pdf)|
 | October 25 | Scientific discovery | [Influence functions](https://arxiv.org/abs/1703.04730) & [data models](https://arxiv.org/abs/2207.05739)<br>[Supplementary reading - Singla et al. 2021](https://arxiv.org/abs/2012.01750)<br>[Supplementary reading - Xiao et al. 2020](https://arxiv.org/abs/2006.09994)<br>[Supplementary reading - Yang et al. 2022](https://arxiv.org/abs/2202.05189) |
-| October 27 | Robust learning | Robust training & overfitting |
 |  |  |  |
 | *ML repair* |||
-| November 1 | Robust learning | Provable defenses (bound propagation & smoothing) <br>*Progress report due* |
-| November 3 | Robust learning | Distributional robustness ([Domain generalization](https://arxiv.org/abs/2007.01434), [Group DRO](https://arxiv.org/abs/1911.08731), [IRM](https://arxiv.org/abs/1907.02893), [JTT](https://arxiv.org/abs/2107.09044)) |
+| October 27 | Robust learning | Robust training & overfitting, provable defenses (bound propagation & smoothing)  <br>[Supplementary reading - Carlini et al. 2022](https://arxiv.org/abs/2206.10550)<br>[Supplementary reading - Salman et al. 2021](https://arxiv.org/abs/2110.07719) |
+| November 1 | Robust learning | Distributional robustness ([Domain generalization](https://arxiv.org/abs/2007.01434), [Group DRO](https://arxiv.org/abs/1911.08731), [IRM](https://arxiv.org/abs/1907.02893), [JTT](https://arxiv.org/abs/2107.09044))<br>*Progress report due* |
+| November 3 | Data interventions | Data balancing, [source selection](https://proceedings.mlr.press/v139/hashimoto21a.html), pruning hard examples | 
 | November 8 | Election day | Reading group only |
-| November 10 | Data interventions | Data balancing, [source selection](https://proceedings.mlr.press/v139/hashimoto21a.html), pruning hard examples | 
-| November 15 | Data interventions | Data augmentations (classical, [subgroups](https://arxiv.org/abs/2008.06775) & generative) |
-| November 17 | Model adjustments | Model [edit](https://arxiv.org/abs/2110.11309)[ing](https://arxiv.org/abs/2112.01008) and [fine-tuning](https://arxiv.org/abs/2207.02842) |
-| November 22 | Model adjustments | Model [patching](https://arxiv.org/abs/2008.06775) & [repair](https://arxiv.org/abs/2005.09912) |
+| November 10 | Data interventions | Data augmentations (classical, [subgroups](https://arxiv.org/abs/2008.06775) & generative) |
+| November 15 | Model adjustments | Model [edit](https://arxiv.org/abs/2110.11309)[ing](https://arxiv.org/abs/2112.01008) and [fine-tuning](https://arxiv.org/abs/2207.02842) |
+| November 17 | Model adjustments | Model [patching](https://arxiv.org/abs/2008.06775) & [repair](https://arxiv.org/abs/2005.09912) |
+| November 22 | Ethics & Implications |  |
 | November 24 | Thanksgiving |  |
 | November 29 | NeurIPS |  |
 | December 1 | NeurIPS |  |
