@@ -70,8 +70,8 @@ The schedule and topics can change based on students' interests and as time perm
 |  |  |  |
 | *ML repair* |||
 | October 27 | Robust learning | Robust training & overfitting, provable defenses (bound propagation & smoothing)  <br>[Supplementary reading - Carlini et al. 2022](https://arxiv.org/abs/2206.10550)<br>[Supplementary reading - Salman et al. 2021](https://arxiv.org/abs/2110.07719) |
-| November 1 | Robust learning | Distributional robustness ([Domain generalization](https://arxiv.org/abs/2007.01434), [Group DRO](https://arxiv.org/abs/1911.08731), [IRM](https://arxiv.org/abs/1907.02893), [JTT](https://arxiv.org/abs/2107.09044))<br>*Progress report due* |
-| November 3 | Data interventions | Data balancing, [source selection](https://proceedings.mlr.press/v139/hashimoto21a.html), pruning hard examples | 
+| November 1 | Robust learning | Distributional robustness ([Domain generalization](https://arxiv.org/abs/2007.01434), [Group DRO](https://arxiv.org/abs/1911.08731), [IRM](https://arxiv.org/abs/1907.02893), [JTT](https://arxiv.org/abs/2107.09044)) |
+| November 3 | Data interventions | Data balancing, [source selection](https://proceedings.mlr.press/v139/hashimoto21a.html), pruning hard examples <br>*Progress report due*| 
 | November 8 | Election day | Reading group only |
 | November 10 | Data interventions | Data augmentations (classical, [subgroups](https://arxiv.org/abs/2008.06775) & generative) |
 | November 15 | Model adjustments | Model [edit](https://arxiv.org/abs/2110.11309)[ing](https://arxiv.org/abs/2112.01008) and [fine-tuning](https://arxiv.org/abs/2207.02842) |
