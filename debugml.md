@@ -80,7 +80,7 @@ The schedule and topics can change based on students' interests and as time perm
 | November 24 | Thanksgiving |  |
 | November 29 | NeurIPS |  |
 | December 1 | NeurIPS |  |
-| December 6 | Presentations |  |
+| December 6 | Presentations | <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/final_presentation.pdf">Presentation guidelines</a> |
 | December 8 | Presentations |  |
 | December 13 | Reading period |  |
 | December 15 | Final examinations | *Final report due* |
