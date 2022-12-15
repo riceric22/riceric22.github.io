@@ -83,8 +83,8 @@ The schedule and topics can change based on students' interests and as time perm
 | December 6 | Presentations | <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/final_presentation.pdf">Presentation guidelines</a> |
 | December 8 | Presentations |  |
 | December 13 | Reading period |  |
-| December 15 | Final examinations | *Final report due* |
-| December 22 | Term ends |  |
+| December 15 | Final examinations | |
+| December 22 | Term ends | *Final report due* <a href="https://www.cis.upenn.edu/~exwong/assets/debugml/final_report.pdf">Final report guidelines</a> |
 
 There is no official textbook for this course, but you may find the following references to be useful: 
 + [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/) by Christoph Molnar
