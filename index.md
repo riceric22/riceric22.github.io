@@ -12,7 +12,7 @@ I am an assistant professor at the [Department of Computer and Information Scien
 
 I am recruiting PhD students for Fall 2023. If you're interested, apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) and select me as a potential advisor in your application. If you are a UPenn student and are interested in doing machine learning research, send me an email. 
 
-I am also teaching a special topics course this Fall 2022 called *7000-05: Debugging Data and Models*. Check out the course website [here]({{ site.baseurl }}{% link debugml.md %}). 
+I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi Goel](https://www.surbhigoel.com/) Check out the course website [here](https://machine-learning-upenn.github.io/). 
 
 ### Recent News
 + July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester. 
