@@ -8,13 +8,19 @@ subtitle: Assistant Professor, University of Pennsylvania
 | Office | [Levine 506](https://goo.gl/maps/yZmpgFMjUKhGnpXb6) |
 | Email | [exwong@cis](mailto:exwong@cis.upenn.edu) |
 
-I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
+I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania, working on debugging machine learning and making systems actually do what we want them to do. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
 
-I am recruiting PhD students for Fall 2023. If you're interested, apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) and select me as a potential advisor in your application. If you are a UPenn student and are interested in doing machine learning research, send me an email. 
+*PhD applicants*: If you're interested, you will need to 
+
+1. Apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) 
+2. Select me as a potential advisor in your application. 
+
+*Undergraduates/masters students*: If you are a UPenn student and are interested in doing independent machine learning research, then (1) take CIS 5200 (2) read this [blog post](https://www.alextamkin.com/essays/tips-for-new-researchers). Then send me an email and we can chat. If you are not at UPenn, I do not currently have opportunities for external students. 
 
 I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi Goel](https://www.surbhigoel.com/) Check out the course website [here](https://machine-learning-upenn.github.io/). 
 
 ### Recent News
++ Jan '23: I am teaching CIS 5200 Machine Learning with [Surbhi Goel](https://www.surbhigoel.com/)
 + July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester. 
 + May '22: I will be moving to UPenn CIS as an Assistant Professor starting Fall 2022
 + March '22: I am on the organizing committee for the ICML 2022 [Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
