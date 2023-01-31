@@ -19,6 +19,7 @@ email: exwong at cis dot upenn dot edu
 
 navbar-links:
   Research: "research"
+  Group: "group"
   Teaching: "teaching"
   CV: "/assets/files/cv.pdf"
   Publications: "publications"
