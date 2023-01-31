@@ -9,7 +9,7 @@ To achieve this goal, my work touches upon a variety of topics. Some examples in
 
 Here are some examples of directions that I have or are currently pursuing: 
 
-**Prompting science** A recent learning paradigm known as "prompting" allows users to adapt models with natural language instructions. However, there is no clear process for designing such prompts. We are working on developing tools and methods to automatically guide prompt design and find unique prompts that elicit strange behaviors.  
+**Prompting science** A recent learning paradigm known as "prompting" allows users to adapt models with natural language instructions. However, there is no clear process for designing such prompts. We are working on developing tools and methods to automatically guide prompt design, which can sometimes find unique prompts that elicit strange behaviors.  
 
 **Certified interpretability** Explanations of model predictions in machine learning are often criticized for being misleading and brittle. We are working on methods to learn models with provably meaningful post-hoc explanations. 
 
