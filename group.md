@@ -3,7 +3,7 @@ layout: page
 title: People  
 ---
 
-Although I have yet have any official students in my group, I have had the fortune of working with the following students here at UPenn: 
+Although I have yet have any official students in my group, I have had the fortune of being able to work with the following students here at UPenn: 
 
 + [Aaditya Naik](https://www.seas.upenn.edu/~asnaik/) 
 + [Adam Stein](https://www.seas.upenn.edu/~steinad/)
