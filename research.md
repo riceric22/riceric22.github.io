@@ -13,7 +13,7 @@ Here are some examples of directions that I have or are currently pursuing:
 
 **Certified interpretability** Explanations of model predictions in machine learning are often criticized for being misleading and brittle. We are working on methods to learn models with provably meaningful post-hoc explanations. 
 
-**Explaining distribution shift** Models need to work well when their environments change. But how exactly do environments change? We are developing tools that can generate explanations of distribution shift. 
+**Explaining distribution shift** Models need to work well when their environments change. But how exactly do environments change? We are developing tools that can pinpoint how and why distributions are changing. 
 
 **Common sense reasoning** Machine learning models behave in surprising ways that sometimes defy basic common sense. We are working on ways to characterize common sense and adapt models to obey such common sense rules. 
 
