@@ -2,6 +2,9 @@
 layout: page
 title: Publications
 ---
+### 2023
++ [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)
+
 ### 2022
 + [A data-based perspective on transfer learning](https://arxiv.org/abs/2207.05739) 
 Saachi Jain\*, Hadi Salman\*, Alaa Khaddaj\*, Eric Wong, Sung Min Park, Aleksander Madry
