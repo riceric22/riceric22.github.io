@@ -6,11 +6,12 @@ title: Publications
 + [In-context Example Selection with Influences](https://arxiv.org/abs/2302.11042) 
 Tai Nguyen, Eric Wong
 + [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237) 
-Natalie Maus, Patrick Chao, Eric Wong, Jacob Gardner
+Natalie Maus\*, Patrick Chao\*, Eric Wong, Jacob Gardner
 
 ### 2022
 + [A data-based perspective on transfer learning](https://arxiv.org/abs/2207.05739) 
 Saachi Jain\*, Hadi Salman\*, Alaa Khaddaj\*, Eric Wong, Sung Min Park, Aleksander Madry
+In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023
 + [When does bias transfer in transfer learning](https://arxiv.org/abs/2207.02842) 
 Hadi Salman\*, Saachi Jain\*, Andrew Ilyas\*, Logan Engstrom\*, Eric Wong, Aleksander Madry 
 + [DeepSplit: Scalable verification of deep neural networks via operator splitting](https://arxiv.org/abs/2106.09117) 
