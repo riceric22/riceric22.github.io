@@ -3,7 +3,10 @@ layout: page
 title: Publications
 ---
 ### 2023
-+ [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237) Natalie Maus, Patrick Chao, Eric Wong, Jacob Gardner
++ [In-context Example Selection with Influences](https://arxiv.org/abs/2302.11042) 
+Tai Nguyen, Eric Wong
++ [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237) 
+Natalie Maus, Patrick Chao, Eric Wong, Jacob Gardner
 
 ### 2022
 + [A data-based perspective on transfer learning](https://arxiv.org/abs/2207.05739) 
