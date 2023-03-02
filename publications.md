@@ -7,6 +7,7 @@ title: Publications
 Tai Nguyen, Eric Wong  
 + [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)   
 Natalie Maus\*, Patrick Chao\*, Eric Wong, Jacob Gardner  
+[Blog post](https://debugml.github.io/adversarial-prompts/)
 
 ### 2022
 + [A data-based perspective on transfer learning](https://arxiv.org/abs/2207.05739)  
