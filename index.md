@@ -7,6 +7,7 @@ subtitle: Assistant Professor, University of Pennsylvania
 |--|--|
 | Office | [Levine 506](https://goo.gl/maps/yZmpgFMjUKhGnpXb6) |
 | Email | [exwong@cis](mailto:exwong@cis.upenn.edu) |
+| Lab Blog | [debugml.github.io](https://debugml.github.io/)
 
 I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania, working on debugging machine learning and making systems actually do what we want them to do. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
 
@@ -20,6 +21,7 @@ I am an assistant professor at the [Department of Computer and Information Scien
 I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi Goel](https://www.surbhigoel.com/) Check out the course website [here](https://machine-learning-upenn.github.io/). 
 
 ### Recent News
++ Mar '23: We've released a new [blog post](https://debugml.github.io/adversarial-prompts/) covering our recent work on *adversarial prompting*
 + Jan '23: I am teaching CIS 5200 Machine Learning with [Surbhi Goel](https://www.surbhigoel.com/)
 + July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester. 
 + May '22: I will be moving to UPenn CIS as an Assistant Professor starting Fall 2022
