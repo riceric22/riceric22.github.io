@@ -10,7 +10,7 @@ Tai Nguyen, Eric Wong
 + [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)   
 Natalie Maus\*, Patrick Chao\*, Eric Wong, Jacob Gardner  
 [Blog post](https://debugml.github.io/adversarial-prompts/)  
-+ [Faithful Chain-of-Thought Reasoning](https://arxiv.org/abs/2302.04237)  
++ [Faithful Chain-of-Thought Reasoning](https://arxiv.org/abs/2301.13379)  
 Qing Lyu\*, Shreya Havaldar\*, Adam Stein\*, Li Zhang, Delip Rao, Eric Wong, Marianna Apidianaki, Chris Callison-Burch
 
 ### 2022
