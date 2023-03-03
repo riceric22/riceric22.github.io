@@ -3,6 +3,8 @@ layout: page
 title: Publications
 ---
 ### 2023
++ [Do Machine Learning Models Learn Common Sense?](https://arxiv.org/abs/2303.01433)   
+Aaditya Naik, Yinjun Wu, Mayur Naik, Eric Wong   
 + [In-context Example Selection with Influences](https://arxiv.org/abs/2302.11042)   
 Tai Nguyen, Eric Wong  
 + [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)   
