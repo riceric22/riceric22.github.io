@@ -21,13 +21,16 @@ I am an assistant professor at the [Department of Computer and Information Scien
 I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi Goel](https://www.surbhigoel.com/) Check out the course website [here](https://machine-learning-upenn.github.io/). 
 
 ### Recent News
++ May '23: I gave a keynote talk at [DLSP 2023](https://dls2023.ieee-security.org/) on adversarial prompting
++ Mar '22: I am on the organizing committee for the ICML 2023 [2nd Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
 + Mar '23: We've released a new [blog post](https://debugml.github.io/adversarial-prompts/) covering our recent work on *adversarial prompting*
++ Mar '23: We've released a new [blog post](https://debugml.github.io/incontext-influences/) covering our recent work on *in-context influences*
 + Jan '23: I am teaching CIS 5200 Machine Learning with [Surbhi Goel](https://www.surbhigoel.com/)
-+ July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester. 
++ July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester 
 + May '22: I will be moving to UPenn CIS as an Assistant Professor starting Fall 2022
-+ March '22: I am on the organizing committee for the ICML 2022 [Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
+<!-- + March '22: I am on the organizing committee for the ICML 2022 [Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
 + March '22: Our paper "Certified Patch Robustness via Smoothed Vision Transformers" was accepted at CVPR 2022
-+ January '22: Our paper "Missingness Bias in Model Debugging" was accepted at ICLR 2022
++ January '22: Our paper "Missingness Bias in Model Debugging" was accepted at ICLR 2022 -->
 
 <!-- + 10/18/21: I will be speaking as a panelist for the [ATVA 2021 Workshop on Security and Reliability of Machine Learning (SRML)](https://sites.google.com/view/srml-atva2021)
 + 10/12/21: I am on the organizing committee for the AAAI 2022 [Workshop on Adversarial Machine Learning and Beyond](https://advml-workshop.github.io/aaai2022/)
