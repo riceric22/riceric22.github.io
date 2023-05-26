@@ -18,8 +18,8 @@
     link: https://arxiv.org/abs/2302.11042
     authors: Tai Nguyen, Eric Wong
     conference: 
-    blog: 
-    github: 
+    blog: https://debugml.github.io/incontext-influences/
+    github: https://github.com/DebugML/incontext_influences
 
   - title: Adversarial Prompting for Black Box Foundation Models
     link: https://arxiv.org/abs/2302.04237
