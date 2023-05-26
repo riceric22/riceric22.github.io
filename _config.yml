@@ -18,14 +18,15 @@ email: exwong at cis dot upenn dot edu
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Research: "research"
   Group: "group"
+  Blog: "https://debugml.github.io/"
+  Research: "research"
   Teaching: "teaching"
-  CV: "/assets/files/cv.pdf"
+#   CV: "/assets/files/cv.pdf"
   Publications: "publications"
   # Software: "https://github.com/riceric22/"
-  Random: "random"
-  Bio: "bio"
+  Random: "about"
+#   Bio: "About"
 
 
 # --- Logo --- #
