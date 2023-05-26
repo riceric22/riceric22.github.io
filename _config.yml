@@ -25,7 +25,7 @@ navbar-links:
 #   CV: "/assets/files/cv.pdf"
   Publications: "publications"
   # Software: "https://github.com/riceric22/"
-  Random: "about"
+  About: "about"
 #   Bio: "About"
 
 

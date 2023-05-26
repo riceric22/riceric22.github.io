@@ -1,4 +1,5 @@
 all: 
+	git pull
 	bundle.ruby2.5 exec jekyll build
 	find _site -type d -exec chmod a+rx {} +
 	find _site -type f -exec chmod a+r {} +
