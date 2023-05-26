@@ -24,7 +24,7 @@
   - title: Adversarial Prompting for Black Box Foundation Models
     link: https://arxiv.org/abs/2302.04237
     authors: Natalie Maus*, Patrick Chao*, Eric Wong, Jacob Gardner 
-    conference: 
+    conference: Keynote in [DLSP 2023](https://dls2023.ieee-security.org/)
     blog: https://debugml.github.io/adversarial-prompts/
     github: https://github.com/DebugML/adversarial_prompting
 
