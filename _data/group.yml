@@ -1,11 +1,11 @@
 phd: 
   - name: Shreya Havaldar
     url: https://shreyahavaldar.com/
-    photo: https://shreyahavaldar.github.io/images/shreya.jpeg
+    photo: /assets/img/portrait/shreya.jpeg
     coadvisor: Lyle Ungar
     coadvisor_url: https://www.cis.upenn.edu/~ungar/
   - name: Weiqiu You
     url: https://fallcat.github.io/
-    photo: https://fallcat.github.io/images/profile_pic2.jpg
+    photo: /assets/img/portrait/weiqiu.jpeg
     coadvisor: 
     coadvisor_url: 

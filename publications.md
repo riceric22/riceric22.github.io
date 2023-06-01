@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications
+title: Papers
 ---
 
 {% for collection in site.data.papers %}
