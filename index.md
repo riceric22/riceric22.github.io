@@ -28,9 +28,12 @@ I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi
 + Jan '23: I am teaching CIS 5200 Machine Learning with [Surbhi Goel](https://www.surbhigoel.com/)
 + July '22: I am creating a new course on [debugging the ML pipeline]({{ site.baseurl }}{% link debugml.md %}) for the Fall 2022 semester 
 + May '22: I will be moving to UPenn CIS as an Assistant Professor starting Fall 2022
-<!-- + March '22: I am on the organizing committee for the ICML 2022 [Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
+
+<!-- 
++ March '22: I am on the organizing committee for the ICML 2022 [Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
 + March '22: Our paper "Certified Patch Robustness via Smoothed Vision Transformers" was accepted at CVPR 2022
-+ January '22: Our paper "Missingness Bias in Model Debugging" was accepted at ICLR 2022 -->
++ January '22: Our paper "Missingness Bias in Model Debugging" was accepted at ICLR 2022 
+-->
 
 <!-- + 10/18/21: I will be speaking as a panelist for the [ATVA 2021 Workshop on Security and Reliability of Machine Learning (SRML)](https://sites.google.com/view/srml-atva2021)
 + 10/12/21: I am on the organizing committee for the AAAI 2022 [Workshop on Adversarial Machine Learning and Beyond](https://advml-workshop.github.io/aaai2022/)
