@@ -9,5 +9,6 @@ Thumbs.db
 ehthumbs.db
 
 Gemfile.lock
+.ruby-version
 
 beautiful-jekyll-theme-*.gem
