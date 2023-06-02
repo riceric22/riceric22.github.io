@@ -9,7 +9,7 @@ title: Group
 {% for student in site.data.group.phd %}
     <div class="avatar-container">
     	<div class="avatar-img-border">
-	      <img src="{{ student.photo }}" alt="{{ student.name }}"  class="avatar-img" />
+	      <img src="{{ student.photo | relative_url }}" alt="{{ student.name }}"  class="avatar-img" />
   		</div>	
 	    <div class="avatar-name">
 		    <a href="{{ student.url }}">{{ student.name }}</a>
