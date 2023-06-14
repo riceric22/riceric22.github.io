@@ -29,7 +29,6 @@ In addition, I have had the fortune of being able to work on various papers with
 
 + [Aaditya Naik](https://www.seas.upenn.edu/~asnaik/) 
 + [Adam Stein](https://www.seas.upenn.edu/~steinad/)
-+ [Anton Xue](https://antonxue.github.io/)
 + [Natalie Maus](https://antonxue.github.io/)
 + [Patrick Chao](https://patrickrchao.github.io/)
 + [Tai Nguyen](https://taidnguyen.github.io/)

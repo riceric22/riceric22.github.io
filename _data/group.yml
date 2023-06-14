@@ -9,3 +9,8 @@ phd:
     photo: /assets/img/portrait/weiqiu.jpeg
     coadvisor: 
     coadvisor_url: 
+  - name: Anton Xue
+    url: https://antonxue.github.io/
+    photo: /assets/img/portrait/anton.jpeg
+    coadvisor: Rajeev Alur
+    coadvisor_url: https://www.cis.upenn.edu/~alur/
