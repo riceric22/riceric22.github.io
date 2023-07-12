@@ -19,8 +19,10 @@ To better prepare undergraduates for machine learning coursework, this course ai
 + MATH2400 or equivalent (linear algebra)
 
 **Structure**: We will build upon these foundations and cover a more in depth study suited for machine learning problems. Particular areas of focus are: 
+
 + Continuous probability
 + Vector calculus
 + Linear algebra and matrix decompositions
 + Continuous optimization
++ 
 We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. 
