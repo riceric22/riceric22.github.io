@@ -24,5 +24,5 @@ To better prepare undergraduates for machine learning coursework, this course ai
 + Vector calculus
 + Linear algebra and matrix decompositions
 + Continuous optimization
-+ 
+
 We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. 
