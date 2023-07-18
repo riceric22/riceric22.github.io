@@ -1,5 +1,12 @@
 - year: 2023
   papers: 
+  - title: Stability Guarantees for Feature Attributions with Multiplicative Smoothing
+    link: https://arxiv.org/abs/2307.05902
+    authors: Anton Xue, Rajeev Alur, Eric Wong
+    conference: 
+    blog: 
+    github: 
+    
   - title: Rectifying Group Irregularities in Explanations for Distribution Shift
     link: https://arxiv.org/abs/2305.16308
     authors: Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
