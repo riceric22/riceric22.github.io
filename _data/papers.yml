@@ -6,18 +6,18 @@
     conference: 
     blog: 
     github: 
-    
-  - title: Rectifying Group Irregularities in Explanations for Distribution Shift
-    link: https://arxiv.org/abs/2305.16308
-    authors: Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
-    conference: 
-    blog: 
-    github: 
 
   - title: TopEx: Topic-based Explanations for Model Comparison
     link: https://arxiv.org/abs/2306.00976
     authors: Shreya Havaldar, Adam Stein, Eric Wong, Lyle Ungar
     conference: In proceedings of the International Conference on Learning Representations, Tiny Papers Track (ICLR), 2023
+    blog: 
+    github: 
+    
+  - title: Rectifying Group Irregularities in Explanations for Distribution Shift
+    link: https://arxiv.org/abs/2305.16308
+    authors: Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
+    conference: 
     blog: 
     github: 
     
