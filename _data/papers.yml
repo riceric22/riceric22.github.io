@@ -13,14 +13,14 @@
     conference: In proceedings of the International Conference on Learning Representations, Tiny Papers Track (ICLR), 2023
     blog: 
     github: 
-    
+
   - title: Rectifying Group Irregularities in Explanations for Distribution Shift
     link: https://arxiv.org/abs/2305.16308
     authors: Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
     conference: 
     blog: 
     github: 
-    
+
   - title: Do Machine Learning Models Learn Common Sense?
     link: https://arxiv.org/abs/2303.01433
     authors: Aaditya Naik, Yinjun Wu, Mayur Naik, Eric Wong
