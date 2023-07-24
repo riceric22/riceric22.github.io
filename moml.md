@@ -36,7 +36,7 @@ If you haven't yet taken the course CS prerequisites, you may be able to get by 
 
 We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. 
 
-**Grading**: There will be approximately 11 homeworks (estimated weekly) totaling 55% of your grade. There will also be 3 midterms at 15% each, one per focus area. 
+**Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for participation. 
 
 ### Schedule
 
