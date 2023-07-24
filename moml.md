@@ -18,7 +18,7 @@ To better prepare undergraduates for machine learning coursework and research, t
 
 **Website**: [https://www.cis.upenn.edu/~exwong/moml/][site]
 
-**Registration**: To register, you need to sign up both on [courses.upenn.edu](courses.upenn.edu) and also submit the questionaire on the [CIS waitlist](courses.upenn.edu) before I can add you to the course. 
+**Registration**: To register, you need to sign up both on [courses.upenn.edu](https://courses.upenn.edu/) and also submit the questionaire on the [CIS waitlist](https://advising.cis.upenn.edu/waitlist/) before I can add you to the course. 
 
 **Prerequisites**: We will assume you've taken the [minimum mathematics requirements of the Penn CS degree](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/). That is: 
 + CIS1600 (CS foundations)
