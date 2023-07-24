@@ -20,7 +20,7 @@ To better prepare undergraduates for machine learning coursework and research, t
 
 **Structure**: We will build upon these foundations and cover a more in depth study suited for machine learning problems. Each focus area will be structured in three parts as (1) review of prior material, (2) new ML fundamentals, and (3) an ML example. The review will quickly go over concepts that were already covered in a previous course. The ML fundamentals will introduce the advanced concepts for machine learning. The example will show you how these fundamentals are used in practice. These focus areas are: 
 
-1. **Probability & statistics.** Review: probability spaces and discrete probability. Fundamentals: continuous probability. Example: concentration inequalities and generalization bounds. 
+1. **Probability & statistics.** Review: probability spaces and discrete probability. Fundamentals: continuous probability. Example: generalization bounds. 
 2. **Linear & functional analysis.** Review: linear algebra. Fundamentals: function spaces. Example: representer theorems. 
 3. **Calculus & optimization.** Review: Multivariate calculus. Fundamentals: optimization. Example: convergence rates. 
 
