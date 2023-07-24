@@ -16,11 +16,12 @@ I am an assistant professor at the [Department of Computer and Information Scien
 1. Apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) 
 2. Select me as a potential advisor in your application. 
 
-*Undergraduates/masters students*: If you are a UPenn student and are interested in doing independent machine learning research, then (1) take CIS 5200 (2) read this [blog post](https://www.alextamkin.com/essays/tips-for-new-researchers). Then send me an email and we can chat. If you are not at UPenn, I do not currently have opportunities for external students. 
+*Undergraduates/masters students*: If you are a UPenn student and are interested in doing independent machine learning research, then I would recommend (1) take CIS 5200 (2) read this [blog post](https://www.alextamkin.com/essays/tips-for-new-researchers). I would strongly recommend you take my special topics course, 3990-002 Mathematics for Machine Learning so that you are prepared for the mathematics behind the research. If you are not at UPenn, I do not currently have opportunities for external students. 
 
-I am currently teaching a CIS 5200 Machine Learning for Spring 2023 with [Surbhi Goel](https://www.surbhigoel.com/) Check out the course website [here](https://machine-learning-upenn.github.io/). 
+In Fall 2023, I will be teaching a special topics course 3990-002 Mathematics for Machine Learning. See course website [here](https://www.cis.upenn.edu/~exwong/moml/). If you're interested in doing advanced research or graduate coursework in AI/machine learning but have taken only the core math requirements of the CS degree, then this course is for you. 
 
 ### Recent News
++ July '23: Our paper ["Do Machine Learning Models Learn Statistical Rules Inferred from Data?"](https://arxiv.org/abs/2303.01433) will be presented at ICML 2023
 + May '23: I gave a keynote talk at [DLSP 2023](https://dls2023.ieee-security.org/) on adversarial prompting
 + Mar '22: I am on the organizing committee for the ICML 2023 [2nd Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)
 + Mar '23: We've released a new [blog post](https://debugml.github.io/adversarial-prompts/) covering our recent work on *adversarial prompting*
