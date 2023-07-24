@@ -46,35 +46,35 @@ Tentative schedule.
 |---|---|---|
 | August 30 | Overview | |
 | September 4 | Labor day (no class) ||
-| Probability & statistics |||
-| September 6 |||
-| September 11 |||
-| September 13 |||
-| September 18 |||
-| September 20 |||
-| September 25 |||
-| September 27 | Midterm 1 ||
-| October 2 |||
-| Linear & functional analysis |||
-| October 4 |||
-| October 9 |||
-| October 11 |||
-| October 16 |||
-| October 18 |||
-| October 23 |||
-| October 25 |||
-| October 30 | Midterm 2 ||
-| November 1 |||
-| Calculus & optimization |||
-| November 6 |||
-| November 8 |||
-| November 13 |||
-| November 15 |||
-| November 20 |||
+| *Probability & statistics* |||
+| September 6 | Review | Discrete probability |
+| September 11 | Review | Discrete probability |
+| September 13 | Fundamentals | Continuous probability |
+| September 18 | Fundamentals | Continuous distributions |
+| September 20 | Fundamentals | Concentration inequalities |
+| September 25 | Example | Generalization bounds |
+| September 27 | Example | Generalization bounds |
+| October 2 | Midterm 1 || 
+| *Linear & functional analysis* |||
+| October 4 | Review | Linear algebra |
+| October 9 | Review | Linear algebra |
+| October 11 | Fundamentals | Decompositions |
+| October 16 | Fundamentals | Inner product spaces |
+| October 18 | Fundamentals | Functional analysis|
+| October 23 | Fundamentals | Hilbert spaces |
+| October 25 | Example | Representer theorems |
+| October 30 | Example | Representer theorems |
+| November 1 | Midterm 2 ||
+| *Calculus & optimization* |||
+| November 6 | Review | Multivariate calculus |
+| November 8 | Review | Multivariate calculus |
+| November 13 | Fundamentals | Vector calculus |
+| November 15 | Fundamentals | Matrix calculus |
+| November 20 | Fundamentals | Multivariate Taylor Expansion |
 | November 22 | Friday class schedule (no class) ||
-| November 27 |||
-| November 29 |||
-| December 4 |||
+| November 27 | Fundamentals | Gradient Descent |
+| November 29 | Example | Convergence analysis |
+| December 4 | Example | Convergence analysis |
 | December 6 | Midterm 3 ||
 | December 11 | No class ||
 | December 21 | Term ends ||
