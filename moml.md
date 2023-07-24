@@ -12,11 +12,21 @@ However, the typical computer science degree typical requires only a basic under
 
 To better prepare undergraduates for machine learning coursework and research, this course aims to provide the missing background required to be able understand mathematical concepts commonly used in machine learning. This course will be based on the [Mathematics for Machine Learning](https://mml-book.github.io/) textbook, which covers the mathematical foundations of machine learning as well as examples of how machine learning algorithms that use these foundations. 
 
+**Instructor**: [Eric Wong](https://www.cis.upenn.edu/~exwong) ([exwong@cis](mailto:exwong@cis.upenn.edu))
+
+**Class**: Monday and Wednesday, 3:30PM-4:59PM
+
+**Website**: [https://www.cis.upenn.edu/~exwong/moml/][site]
+
+**Registration**: To register, you need to sign up both on [courses.upenn.edu](courses.upenn.edu) and also submit the questionaire on the [CIS waitlist](courses.upenn.edu) before I can add you to the course. 
+
 **Prerequisites**: We will assume you've taken the [minimum mathematics requirements of the Penn CS degree](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/). That is: 
 + CIS1600 (CS foundations)
 + CIS2610 or equivalent (discrete probability)
 + MATH1400/MATH1410 or equivalent (vector calculus)
 + MATH2400 or equivalent (linear algebra)
+
+If you haven't yet taken the course CS prerequisites, you may be able to get by going over the review topics in chapters 2, 5, and 6 of the course textbook. 
 
 **Structure**: We will build upon these foundations and cover a more in depth study suited for machine learning problems. Each focus area will be structured in three parts as (1) review of prior material, (2) new ML fundamentals, and (3) an ML example. The review will quickly go over concepts that were already covered in a previous course. The ML fundamentals will introduce the advanced concepts for machine learning. The example will show you how these fundamentals are used in practice. These focus areas are: 
 
@@ -26,7 +36,45 @@ To better prepare undergraduates for machine learning coursework and research, t
 
 We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. 
 
-### Registration
-To register, you need to sign up both on [courses.upenn.edu](courses.upenn.edu) and also submit the questionaire on the [CIS waitlist](courses.upenn.edu) before I can add you to the course. 
+**Grading**: There will be weekly homeworks totaling 55% of your grade. There will also be 3 midterms at 15% each, one per focus area. 
 
-If you haven't yet taken the course CS prerequisites, you may be able to get by going over the review topics in chapters 2, 5, and 6 of the course textbook. 
+### Schedule
+
+Tentative schedule. 
+
+| Date | Topic | Notes |
+|---|---|---|
+| August 30 | Overview | |
+| September 4 | Labor day (no class) ||
+| Probability & statistics |||
+| September 6 |||
+| September 11 |||
+| September 13 |||
+| September 18 |||
+| September 20 |||
+| September 25 |||
+| September 27 | Midterm 1 ||
+| October 2 |||
+| Linear & functional analysis |||
+| October 4 |||
+| October 9 |||
+| October 11 |||
+| October 16 |||
+| October 18 |||
+| October 23 |||
+| October 25 |||
+| October 30 | Midterm 2 ||
+| November 1 |||
+| Calculus & optimization |||
+| November 6 |||
+| November 8 |||
+| November 13 |||
+| November 15 |||
+| November 20 |||
+| November 22 | Friday class schedule (no class) ||
+| November 27 |||
+| November 29 |||
+| December 4 |||
+| December 6 | Midterm 3 ||
+| December 11 | No class ||
+| December 21 | Term ends ||
