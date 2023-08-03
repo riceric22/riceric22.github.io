@@ -47,32 +47,32 @@ Tentative schedule.
 | August 30 | Overview | |
 | September 4 | Labor day (no class) ||
 | *Probability & statistics* |||
-| September 6 | Review | Discrete probability |
-| September 11 | Review | Discrete probability |
-| September 13 | Fundamentals | Continuous probability |
-| September 18 | Fundamentals | Continuous distributions |
-| September 20 | Fundamentals | Concentration inequalities |
+| September 6 | Review | Discrete probability (6.1) |
+| September 11 | Review | Discrete probability (6.2) |
+| September 13 | Fundamentals | Continuous probability  (6.3, 6.4) |
+| September 18 | Fundamentals | Continuous distributions (6.5, 6.6, 6.7)|
+| September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) |
 | September 25 | Example | Generalization bounds |
 | September 27 | Example | Generalization bounds |
 | October 2 | Midterm 1 || 
 | *Linear & functional analysis* |||
-| October 4 | Review | Linear algebra |
-| October 9 | Review | Linear algebra |
-| October 11 | Fundamentals | Decompositions |
-| October 16 | Fundamentals | Inner product spaces |
+| October 4 | Review | Linear algebra  (2.2,2.4)|
+| October 9 | Review | Linear algebra (2.5,2.6)|
+| October 11 | Fundamentals | Decompositions (4.3,4.4,4.5)|
+| October 16 | Fundamentals | Inner product spaces (2.4) |
 | October 18 | Fundamentals | Functional analysis|
 | October 23 | Fundamentals | Hilbert spaces |
 | October 25 | Example | Representer theorems |
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
-| November 6 | Review | Multivariate calculus |
-| November 8 | Review | Multivariate calculus |
-| November 13 | Fundamentals | Vector calculus |
-| November 15 | Fundamentals | Matrix calculus |
-| November 20 | Fundamentals | Multivariate Taylor Expansion |
+| November 6 | Review | Multivariate calculus (5.1)|
+| November 8 | Review | Multivariate calculus (5.2)|
+| November 13 | Fundamentals | Vector calculus (5.3)|
+| November 15 | Fundamentals | Matrix calculus (5.4)|
+| November 20 | Fundamentals | Multivariate Taylor Expansion (5.7,5.8) |
 | November 22 | Friday class schedule (no class) ||
-| November 27 | Fundamentals | Gradient Descent |
+| November 27 | Fundamentals | Gradient Descent (7.1)|
 | November 29 | Example | Convergence analysis |
 | December 4 | Example | Convergence analysis |
 | December 6 | Midterm 3 ||
