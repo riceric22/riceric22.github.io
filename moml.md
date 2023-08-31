@@ -44,7 +44,7 @@ Tentative schedule.
 
 | Date | Topic | Notes |
 |---|---|---|
-| August 30 | Overview | (1.1, [extra notes](/assets/moml/overview.pdf)) |
+| August 30 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
 | September 4 | Labor day (no class) ||
 | *Probability & statistics* |||
 | September 6 | Review | Discrete probability (6.1) |
