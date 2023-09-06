@@ -38,6 +38,8 @@ We will accompany these topics with several examples demonstrating how these cor
 
 **Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for participation. 
 
+A template for your homework solutions can be found [here](https://www.overleaf.com/read/jpxqtspbpqdk). Homeworks are due a week after they are assigned. 
+
 ### Schedule
 
 Tentative schedule. 
@@ -47,7 +49,8 @@ Tentative schedule.
 | August 30 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
 | September 4 | Labor day (no class) ||
 | *Probability & statistics* |||
-| September 6 | Review | Discrete probability (6.1) |
+| September 6 | Review | Discrete probability (6.1, [probability notes](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf)<br>
+Homework: 6.1, 6.4, 6.11|
 | September 11 | Review | Discrete probability (6.2) |
 | September 13 | Fundamentals | Continuous probability  (6.3, 6.4) |
 | September 18 | Fundamentals | Continuous distributions (6.5, 6.6, 6.7)|
