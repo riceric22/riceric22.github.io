@@ -49,11 +49,10 @@ Tentative schedule.
 | August 30 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
 | September 4 | Labor day (no class) ||
 | *Probability & statistics* |||
-| September 6 | Review | Discrete probability (6.1, [probability notes](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf), 
-Homework: 6.1, 6.4, 6.11)|
-| September 11 | Review | Discrete probability (6.2) |
-| September 13 | Fundamentals | Continuous probability  (6.3, 6.4) |
-| September 18 | Fundamentals | Continuous distributions (6.5, 6.6, 6.7)|
+| September 6 | Review | Discrete + Continuous Probability <br>Reading: 6.1, 6.2 <br>[probability notes](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) <br>Homework: 6.1, 6.4, 6.11)|
+| September 11 | Review |  Discrete + Continuous Probability <br>Reading: 6.3, 6.4 |
+| September 13 | Fundamentals | Continuous distributions (6.5, 6.6, 6.7) |
+| September 18 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) |
 | September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) |
 | September 25 | Example | Generalization bounds |
 | September 27 | Example | Generalization bounds |
