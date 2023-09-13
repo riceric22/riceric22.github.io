@@ -48,8 +48,8 @@ Tentative schedule.
 |---|---|---|
 | August 30 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
 | September 4 | Labor day (no class) ||
-| *Probability & statistics* |||
-| September 6 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 <br>[probability notes](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) <br>Homework: Problems 6.1, 6.4, 6.11 (due September 13)|
+| *Probability & statistics* || [(probability lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) |
+| September 6 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 <br>Homework: Problems 6.1, 6.4, 6.11 (due September 13)|
 | September 11 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
 | September 13 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5 <br>Homework: Problems 6.5, 6.7, 6.9 |
 | September 18 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
