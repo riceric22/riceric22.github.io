@@ -51,7 +51,7 @@ Tentative schedule.
 | *Probability & statistics* || [(probability lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) |
 | September 6 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 <br>Homework: Problems 6.1, 6.4, 6.11 (due September 13)|
 | September 11 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
-| September 13 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5 <br>Homework: Problems 6.5, 6.7, 6.9 |
+| September 13 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5 <br>Homework: Problems 6.5, 6.7, 6.9 (due September 20)|
 | September 18 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
 | September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) |
 | September 25 | Example | Generalization bounds |
