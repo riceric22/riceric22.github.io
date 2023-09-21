@@ -53,7 +53,7 @@ Tentative schedule.
 | September 11 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
 | September 13 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5 <br>Homework: Problems 6.5, 6.7, 6.9 (due September 20)|
 | September 18 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
-| September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>Homework: Problems [6.3, 6.12, Chernoff](https://www.cis.upenn.edu/~exwong/assets/moml/HW3.pdf) (due September 27) |
+| September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>Homework: Problems [6.3, 6.12, MGF/Chernoff](https://www.cis.upenn.edu/~exwong/assets/moml/HW3.pdf) (due September 27) |
 | September 25 | Example | Generalization bounds |
 | September 27 | Example | Generalization bounds |
 | October 2 | Midterm 1 || 
