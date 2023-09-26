@@ -62,8 +62,8 @@ Tentative schedule.
 | October 9 | Review | Linear algebra (2.5,2.6)|
 | October 11 | Fundamentals | Decompositions (4.3,4.4,4.5)|
 | October 16 | Fundamentals | Inner product spaces (2.4) |
-| October 18 | Fundamentals | Functional analysis|
-| October 23 | Fundamentals | Hilbert spaces |
+| October 18 | Fundamentals | Functional analysis, Hilbert spaces |
+| October 23 | No Class |  |
 | October 25 | Example | Representer theorems |
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
