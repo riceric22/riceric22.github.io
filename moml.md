@@ -58,7 +58,7 @@ Tentative schedule.
 | September 27 | Example | Generalization bounds |
 | October 2 | Midterm 1 || 
 | *Linear & functional analysis* |||
-| October 4 | Review | Linear algebra  (2.2,2.4)|
+| October 4 | Review | Linear algebra  (2.2,2.4) [(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf) ||
 | October 9 | Review | Linear algebra (2.5,2.6)|
 | October 11 | Fundamentals | Decompositions (4.3,4.4,4.5)|
 | October 16 | Fundamentals | Inner product spaces (2.4) |
