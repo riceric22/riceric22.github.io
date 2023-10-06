@@ -1,11 +1,25 @@
 - year: 2023
   papers: 
-  - title: Stability Guarantees for Feature Attributions with Multiplicative Smoothing
-    link: https://arxiv.org/abs/2307.05902
-    authors: Anton Xue, Rajeev Alur, Eric Wong
+  - title: SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks
+    link: https://arxiv.org/abs/2310.03684
+    authors: Alexander Robey, Eric Wong, Hamed Hassani, George J. Pappas
     conference: 
     blog: 
     github: 
+    
+  - title: MDB: Interactively Querying Datasets and Models
+    link: https://arxiv.org/abs/2308.06686
+    authors: Aaditya Naik, Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
+    conference: 
+    blog: 
+    github: 
+  
+  - title: Stability Guarantees for Feature Attributions with Multiplicative Smoothing
+    link: https://arxiv.org/abs/2307.05902
+    authors: Anton Xue, Rajeev Alur, Eric Wong
+    conference: Neural Information Processing Systems (NeurIPS), 2023  
+    blog: https://debugml.github.io/multiplicative-smoothing/
+    github: https://github.com/DebugML/mus
 
   - title: 'TopEx: Topic-based Explanations for Model Comparison'
     link: https://arxiv.org/abs/2306.00976
@@ -21,12 +35,12 @@
     blog: 
     github: 
 
-  - title: Do Machine Learning Models Learn Common Sense?
+  - title: Do Machine Learning Models Learn Statistical Rules Inferred from Data?
     link: https://arxiv.org/abs/2303.01433
     authors: Aaditya Naik, Yinjun Wu, Mayur Naik, Eric Wong
     conference: In Proceedings of the International Conference on Machine learning (ICML), 2023
-    blog: 
-    github: 
+    blog: https://debugml.github.io/SQRL/
+    github: https://github.com/DebugML/sqrl
 
   - title: In-context Example Selection with Influences
     link: https://arxiv.org/abs/2302.11042
