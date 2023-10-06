@@ -24,7 +24,7 @@
   - title: 'TopEx: Topic-based Explanations for Model Comparison'
     link: https://arxiv.org/abs/2306.00976
     authors: Shreya Havaldar, Adam Stein, Eric Wong, Lyle Ungar
-    conference: In proceedings of the International Conference on Learning Representations, Tiny Papers Track (ICLR), 2023
+    conference: International Conference on Learning Representations, Tiny Papers Track (ICLR), 2023
     blog: 
     github: 
 
@@ -38,7 +38,7 @@
   - title: Do Machine Learning Models Learn Statistical Rules Inferred from Data?
     link: https://arxiv.org/abs/2303.01433
     authors: Aaditya Naik, Yinjun Wu, Mayur Naik, Eric Wong
-    conference: In Proceedings of the International Conference on Machine learning (ICML), 2023
+    conference: International Conference on Machine learning (ICML), 2023
     blog: https://debugml.github.io/SQRL/
     github: https://github.com/DebugML/sqrl
 
@@ -68,7 +68,7 @@
   - title: A data-based perspective on transfer learning
     link: https://arxiv.org/abs/2207.05739
     authors: Saachi Jain*, Hadi Salman*, Alaa Khaddaj*, Eric Wong, Sung Min Park, Aleksander Madry
-    conference: In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023  
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023  
     blog: https://gradientscience.org/data-transfer/
     github: https://github.com/MadryLab/data-transfer
 
@@ -82,7 +82,7 @@
   - title: Missingness bias in model debugging
     link: https://arxiv.org/abs/2204.08945
     authors: Saachi Jain*, Hadi Salman*, Pengchuan Zhang, Vibhav Vineet, Sal Vemprala, Aleksander Madry  
-    conference: In proceedings of the International Conference on Learning Representations (ICLR), 2022  
+    conference: International Conference on Learning Representations (ICLR), 2022  
     blog: https://gradientscience.org/missingness/
     github: https://github.com/MadryLab/missingness
 
@@ -91,21 +91,21 @@
   - title: Certified patch robustness via smoothed vision transformers
     link: https://arxiv.org/abs/2110.07719
     authors: Hadi Salman*, Saachi Jain*, Eric Wong*, Aleksander Madry 
-    conference: In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022  
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022  
     blog: https://gradientscience.org/smoothing/
     github: https://github.com/MadryLab/smoothed-vit
 
   - title: "DeepSplit: Scalable verification of deep neural networks via operator splitting"
     link: https://arxiv.org/abs/2106.09117
     authors: Shaoru Chen*, Eric Wong*, J. Zico Kolter, Mahyar Fazlyab  
-    conference: In Proceedings of the IEEE Open Journal of Control Systems (OJCS), 2022  
+    conference: IEEE Open Journal of Control Systems (OJCS), 2022  
     blog: 
     github: 
 
   - title: Leveraging Sparse Linear Layers for Debuggable Deep Networks
     link: https://arxiv.org/abs/2105.04857
     authors: Eric Wong*, Shibani Santurkar*, Aleksander Madry  
-    conference: In Proceedings of the International Conference on Machine learning (ICML), 2021 *Long Oral*  
+    conference: International Conference on Machine learning (ICML), 2021 *Long Oral*  
     blog: https://gradientscience.org/glm_saga/
     github: https://github.com/madrylab/debuggabledeepnetworks
 
@@ -114,28 +114,28 @@
   - title: Learning perturbation sets for robust machine learning
     link: https://arxiv.org/abs/2007.08450
     authors: Eric Wong, J. Zico Kolter 
-    conference: In proceedings of the International Conference on Learning Representations (ICLR), 2021  
+    conference: International Conference on Learning Representations (ICLR), 2021  
     blog: https://locuslab.github.io/2020-07-20-perturbation/
     github: https://github.com/locuslab/perturbation_learning/
 
   - title: Overfitting in adversarially robust deep learning 
     link: https://arxiv.org/abs/2002.11569
     authors: Leslie Rice*, Eric Wong*, J. Zico Kolter 
-    conference: In Proceedings of the International Conference on Machine learning (ICML), 2020  
+    conference: International Conference on Machine learning (ICML), 2020  
     blog: 
     github: https://github.com/locuslab/robust_overfitting/ 
 
   - title: Neural network virtual sensors for fuel injection quantities with provable performance specifications
     link: http://arxiv.org/abs/2007.00147
     authors: Eric Wong, Tim Schneider, Joerg Schmitt, Frank R. Schmidt, J. Zico Kolter  
-    conference: In Proceedings of the IEEE Intelligent Vehicles Syimposium (IV), 2020
+    conference: IEEE Intelligent Vehicles Syimposium (IV), 2020
     blog: 
     github: 
 
   - title: "Fast is better than free: revisiting adversarial training"
     link: https://arxiv.org/abs/2001.03994
     authors: Eric Wong*, Leslie Rice*, J. Zico Kolter  
-    conference: In Proceedings of the International Conference on Learning Representations (ICLR), 2020
+    conference: International Conference on Learning Representations (ICLR), 2020
     blog: 
     github: 
 
@@ -144,14 +144,14 @@
   - title: Adversarial robustness against the union of multiple perturbation models
     link: https://arxiv.org/abs/1909.04068
     authors: Pratyush Maini, Eric Wong, J. Zico Kolter  
-    conference: In Proceedings of the International Conference on Machine learning (ICML), 2020  
+    conference: International Conference on Machine learning (ICML), 2020  
     blog: 
     github: https://github.com/locuslab/robust_union/
 
   - title: Wasserstein adversarial examples
     link: https://arxiv.org/abs/1902.07906
     authors: Eric Wong, Frank R. Schmidt, J. Zico Kolter  
-    conference: In Proceedings of the International Conference on Machine Learning (ICML), 2019  
+    conference: International Conference on Machine Learning (ICML), 2019  
     blog: 
     github: 
 
@@ -169,14 +169,14 @@
   - title: Provable defenses against adversarial examples via the convex outer adversarial polytope
     link: https://arxiv.org/abs/1711.00851
     authors: Eric Wong, J. Zico Kolter  
-    conference: "In Proceedings of the International Conference on Machine Learning (ICML), 2018; Best defense paper at [NIPS 2017 ML &amp; Security Workshop](https://machine-learning-and-security.github.io/)"
+    conference: "International Conference on Machine Learning (ICML), 2018; Best defense paper at [NIPS 2017 ML &amp; Security Workshop](https://machine-learning-and-security.github.io/)"
     blog: https://locuslab.github.io/2019-03-12-provable/
     github: https://github.com/locuslab/convex_adversarial/
 
   - title: A Semismooth Newton Method for Fast, Generic Convex Programming
     link: https://arxiv.org/abs/1705.00772
     authors: Alnur Ali*, Eric Wong*, J. Zico Kolter  
-    conference: In Proceedings of the International Conference on Machine Learning (ICML), 2017  
+    conference: International Conference on Machine Learning (ICML), 2017  
     blog: 
     github: https://github.com/locuslab/newton_admm/
 
@@ -185,6 +185,6 @@
   - title: An SVD and Derivative Kernel Approach to Learning from Geometric Data
     link: http://zicokolter.com/publications/wong2015svdkernel.pdf
     authors: Eric Wong, J. Zico Kolter  
-    conference: In Proceedings of the Conference on Artificial Intelligence (AAAI), 2015
+    conference: Conference on Artificial Intelligence (AAAI), 2015
     blog: 
     github: 
