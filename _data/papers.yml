@@ -1,13 +1,13 @@
 - year: 2023
   papers: 
-  - title: SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks
+  - title: 'SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks'
     link: https://arxiv.org/abs/2310.03684
     authors: Alexander Robey, Eric Wong, Hamed Hassani, George J. Pappas
     conference: 
     blog: 
     github: 
     
-  - title: MDB: Interactively Querying Datasets and Models
+  - title: 'MDB: Interactively Querying Datasets and Models'
     link: https://arxiv.org/abs/2308.06686
     authors: Aaditya Naik, Adam Stein, Yinjun Wu, Eric Wong, Mayur Naik
     conference: 
