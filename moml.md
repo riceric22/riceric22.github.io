@@ -62,7 +62,7 @@ Tentative schedule.
 | October 9 | Review | Linear algebra (2.5,2.6)|
 | October 11 | Fundamentals | Change of Basis (2.7)<br>Homework: 2.10, 2.16, 2.19 (due October 18)|
 | October 16 | Fundamentals | Inner product spaces (3.1,3.2,3.3,3.4) |
-| October 18 | Fundamentals | Orthonormal basis (3.5), Decompositions (4.2,4.5) |
+| October 18 | Fundamentals | Orthogonality (3.5,3.6.3.8) |
 | October 23 | No Class |  |
 | October 25 | Example | Functional analysis (3.7), Hilbert spaces, Kernels (12.4) |
 | October 30 | Example | Representer theorems |
