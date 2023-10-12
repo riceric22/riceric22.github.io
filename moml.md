@@ -58,13 +58,13 @@ Tentative schedule.
 | September 27 | Example | Generalization bounds |
 | October 2 | Midterm 1 || 
 | *Linear & functional analysis* |||
-| October 4 | Review | Linear algebra  (2.2,2.4) [(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf) ||
+| October 4 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)<br>Homework: 2.1, 2.3, 2.9 (due October 11) ||
 | October 9 | Review | Linear algebra (2.5,2.6)|
-| October 11 | Fundamentals | Decompositions (4.3,4.4,4.5)|
-| October 16 | Fundamentals | Inner product spaces (2.4) |
-| October 18 | Fundamentals | Functional analysis, Hilbert spaces |
+| October 11 | Fundamentals | Change of Basis (2.7)<br>Homework: 2.10, 2.16, 2.19 (due October 18)|
+| October 16 | Fundamentals | Inner product spaces (3.1,3.2,3.3,3.4) |
+| October 18 | Fundamentals | Orthonormal basis (3.5), Decompositions (4.2,4.5) |
 | October 23 | No Class |  |
-| October 25 | Example | Representer theorems |
+| October 25 | Example | Functional analysis (3.7), Hilbert spaces |
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
