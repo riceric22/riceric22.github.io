@@ -61,10 +61,10 @@ Tentative schedule.
 | October 4 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)<br>Homework: 2.1, 2.3, 2.9 (due October 11) ||
 | October 9 | Review | Linear algebra (2.5,2.6)|
 | October 11 | Fundamentals | Change of Basis (2.7)<br>Homework: 2.10, 2.16, 2.19 (due October 18)|
-| October 16 | Fundamentals | Inner product spaces (3.1,3.2,3.3,3.4) |
-| October 18 | Fundamentals | Orthogonality (3.5,3.6.3.8) |
+| October 16 | Fundamentals | Inner product spaces and Orthogonality (3.1-3.8) |
+| October 18 | Fundamentals | Decompositions (4.1, 4.2, 4.4) |
 | October 23 | No Class |  |
-| October 25 | Example | Functional analysis (3.7), Hilbert spaces, Kernels (12.4) |
+| October 25 | Example | Functional analysis, Hilbert spaces, Kernels (12.4) |
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
