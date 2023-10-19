@@ -1,5 +1,12 @@
 - year: 2023
   papers: 
+  - title: 'Jailbreaking Black Box Large Language Models in Twenty Queries'
+    link: https://arxiv.org/abs/2310.08419
+    authors: Patrick Chao, Alexander Robey, Edgar Dobriban, Hamed Hassani, George J. Pappas, Eric Wong
+    conference: 
+    blog: https://jailbreaking-llms.github.io/
+    github: https://github.com/patrickrchao/JailbreakingLLMs
+    
   - title: 'SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks'
     link: https://arxiv.org/abs/2310.03684
     authors: Alexander Robey, Eric Wong, Hamed Hassani, George J. Pappas
