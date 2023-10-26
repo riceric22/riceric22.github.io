@@ -18,8 +18,8 @@
     link: https://arxiv.org/abs/2310.03684
     authors: Alexander Robey, Eric Wong, Hamed Hassani, George J. Pappas
     conference: 
-    blog: 
-    github: 
+    blog: https://debugml.github.io/smooth-llm/
+    github: https://github.com/arobey1/smooth-llm
     
   - title: 'MDB: Interactively Querying Datasets and Models'
     link: https://arxiv.org/abs/2308.06686
