@@ -73,9 +73,9 @@
   - title: Faithful Chain-of-Thought Reasoning
     link: https://arxiv.org/abs/2301.13379
     authors: Qing Lyu*, Shreya Havaldar*, Adam Stein*, Li Zhang, Delip Rao, Eric Wong, Marianna Apidianaki, Chris Callison-Burch
-    conference: 
-    blog: 
-    github: 
+    conference: IJCNLP-AACL, 2023
+    blog: https://debugml.github.io/fcot/
+    github: https://github.com/veronica320/Faithful-COT
 
 - year: 2022
   papers: 
