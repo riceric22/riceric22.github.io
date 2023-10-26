@@ -21,6 +21,10 @@ I am an assistant professor at the [Department of Computer and Information Scien
 In Fall 2023, I will be teaching a special topics course 3990-002 Mathematics for Machine Learning. See course website [here](https://www.cis.upenn.edu/~exwong/moml/). If you're interested in doing advanced research or graduate coursework in AI/machine learning but have taken only the core math requirements of the CS degree, then this course is for you. 
 
 ### Recent News
++ October '23: We've released new blog posts on [faithful grouped attributions](https://debugml.github.io/sum-of-parts/) and [certified jailbreak defenses](https://debugml.github.io/smooth-llm/). We've also released new work on [semantic jailbreaks](https://jailbreaking-llms.github.io/)
++ October '23: I gave a talk at the [UCSB Responsible Machine Learning Summit](https://ml.ucsb.edu/events/summit/responsible-machine-learning-summit-2023) 
++ September '23: Our paper ["Stability Guarantees for Feature Attributions with Multiplicative Smoothing"](https://arxiv.org/abs/2307.05902) will be presented at NeurIPS 2023
++ July '23: We released a new blog post on [certified stability guarantees for feature attributions](https://debugml.github.io/multiplicative-smoothing/)
 + July '23: Our paper ["Do Machine Learning Models Learn Statistical Rules Inferred from Data?"](https://arxiv.org/abs/2303.01433) will be presented at ICML 2023
 + May '23: I gave a keynote talk at [DLSP 2023](https://dls2023.ieee-security.org/) on adversarial prompting
 + Mar '22: I am on the organizing committee for the ICML 2023 [2nd Workshop on New Frontiers in Adversarial Machine Learning](https://advml-frontier.github.io/)

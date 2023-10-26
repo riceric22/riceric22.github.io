@@ -1,5 +1,12 @@
 - year: 2023
   papers: 
+  - title: 'Sum-of-Parts Models: Faithful Attributions for Groups of Features'
+    link: https://arxiv.org/abs/2310.16316
+    authors: Weiqiu You, Helen Qu, Marco Gatti, Bhuvnesh Jain, Eric Wong
+    conference: 
+    blog: https://debugml.github.io/sum-of-parts/
+    github: https://github.com/DebugML/sop
+
   - title: 'Jailbreaking Black Box Large Language Models in Twenty Queries'
     link: https://arxiv.org/abs/2310.08419
     authors: Patrick Chao, Alexander Robey, Edgar Dobriban, Hamed Hassani, George J. Pappas, Eric Wong
