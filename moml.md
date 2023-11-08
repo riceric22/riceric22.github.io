@@ -68,13 +68,13 @@ Tentative schedule.
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
-| November 6 | Review | Multivariate calculus (5.1)|
-| November 8 | Review | Multivariate calculus (5.2)|
-| November 13 | Fundamentals | Vector calculus (5.3)|
-| November 15 | Fundamentals | Matrix calculus (5.4)|
-| November 20 | Fundamentals | Multivariate Taylor Expansion (5.7,5.8) |
+| November 6 | Review | Multivariate calculus (5.1-5.4)|
+| November 8 | Review | Multivariate calculus (5.5-5.9)|
+| November 13 | Fundamentals | Gradient Descent (7.1)|
+| November 15 | Fundamentals | Constrained optimization (7.2)|
+| November 20 | Fundamentals | TBD |
 | November 22 | Friday class schedule (no class) ||
-| November 27 | Fundamentals | Gradient Descent (7.1)|
+| November 27 | Fundamentals | Convex optimization (7.3) |
 | November 29 | Example | Convergence analysis |
 | December 4 | Example | Convergence analysis |
 | December 6 | Midterm 3 ||
