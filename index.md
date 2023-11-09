@@ -16,7 +16,7 @@ I am an assistant professor at the [Department of Computer and Information Scien
 1. Apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) 
 2. Select me as a potential advisor in your application. 
 
-*Undergraduates/masters students*: If you are a UPenn student and are interested in doing independent machine learning research, then I would recommend (1) take CIS 5200 (2) read this [blog post](https://www.alextamkin.com/essays/tips-for-new-researchers). I would strongly recommend you take my special topics course, 3990-002 Mathematics for Machine Learning so that you are prepared for the mathematics behind the research. If you are not at UPenn, I do not currently have opportunities for external students. 
+*Undergraduates/masters students*: If you are a UPenn student and are interested in doing independent machine learning research, then I would recommend (1) take CIS 5200 (2) read this [blog post](https://www.alextamkin.com/essays/tips-for-new-researchers), and (3) fill out [this form](https://forms.gle/AXx3JfKCEsLPC6Wx5). We will be in touch if there is a good fit. As a bonus, I would strongly recommend you take my special topics course, 3990-002 Mathematics for Machine Learning so that you are prepared for the mathematics behind the research. If you are not at UPenn, I do not currently have opportunities for external students. 
 
 In Fall 2023, I will be teaching a special topics course 3990-002 Mathematics for Machine Learning. See course website [here](https://www.cis.upenn.edu/~exwong/moml/). If you're interested in doing advanced research or graduate coursework in AI/machine learning but have taken only the core math requirements of the CS degree, then this course is for you. 
 
