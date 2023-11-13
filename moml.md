@@ -68,8 +68,8 @@ Tentative schedule.
 | October 30 | Example | Representer theorems |
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
-| November 6 | Review | Multivariate calculus (5.1-5.4)|
-| November 8 | Review | Multivariate calculus (5.5-5.9)|
+| November 6 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
+| November 8 | Review | Multivariate calculus (5.5-5.9)<br>Homework: 5.4, 5.5, 5.9|
 | November 13 | Fundamentals | Gradient Descent (7.1)|
 | November 15 | Fundamentals | Constrained optimization (7.2)|
 | November 20 | Fundamentals | TBD |
