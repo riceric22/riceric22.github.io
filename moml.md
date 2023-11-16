@@ -71,7 +71,7 @@ Tentative schedule.
 | November 6 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
 | November 8 | Review | Multivariate calculus (5.5-5.7)<br>Homework: 5.4, 5.5, 5.9 (due November 15)|
 | November 13 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
-| November 15 | Fundamentals | Gradient Descent (7.1)|
+| November 15 | Fundamentals | Gradient Descent (7.1))<br>Homework: 7.4, 7.5, 7.8, 7.9 (due November 29)|
 | November 20 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
 | November 22 | Friday class schedule (no class) ||
 | November 27 | Fundamentals | Convergence Analysis |
