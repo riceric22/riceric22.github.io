@@ -69,12 +69,12 @@ Tentative schedule.
 | November 1 | Midterm 2 ||
 | *Calculus & optimization* |||
 | November 6 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
-| November 8 | Review | Multivariate calculus (5.5-5.9)<br>Homework: 5.4, 5.5, 5.9 (due November 15)|
-| November 13 | Fundamentals | Gradient Descent (7.1)|
-| November 15 | Fundamentals | Constrained optimization (7.2)|
-| November 20 | Fundamentals | TBD |
+| November 8 | Review | Multivariate calculus (5.5-5.7)<br>Homework: 5.4, 5.5, 5.9 (due November 15)|
+| November 13 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
+| November 15 | Fundamentals | Gradient Descent (7.1)|
+| November 20 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
 | November 22 | Friday class schedule (no class) ||
-| November 27 | Fundamentals | Convex optimization (7.3) |
+| November 27 | Fundamentals | Convergence Analysis |
 | November 29 | Example | Convergence analysis |
 | December 4 | Example | Convergence analysis |
 | December 6 | Midterm 3 ||
