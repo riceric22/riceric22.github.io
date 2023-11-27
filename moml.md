@@ -74,7 +74,7 @@ Tentative schedule.
 | November 15 | Fundamentals | Gradient Descent (7.1))<br>[(continuous optimization notes)](https://www.cis.upenn.edu/~exwong/assets/moml/continuous_optimization.pdf)<br>Homework: 7.4, 7.5, 7.8, 7.9 (due November 29)|
 | November 20 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
 | November 22 | Friday class schedule (no class) ||
-| November 27 | Fundamentals | Convergence Analysis |
+| November 27 | Fundamentals | Conjugates & Taylor's Theorem <br>[(SGD convergence notes)](https://www.cis.upenn.edu/~exwong/assets/moml/sgd_convergence.pdf)|
 | November 29 | Example | Convergence analysis |
 | December 4 | Example | Convergence analysis |
 | December 6 | Midterm 3 ||
