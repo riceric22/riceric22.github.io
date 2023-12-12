@@ -18,7 +18,7 @@ email: exwong at cis dot upenn dot edu
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Group: "group"
+  Group: "https://brachiolab.github.io/"
   Blog: "https://debugml.github.io/"
   Research: "research"
   Teaching: "teaching"

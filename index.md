@@ -9,7 +9,7 @@ subtitle: Assistant Professor, University of Pennsylvania
 | Email | [exwong@cis](mailto:exwong@cis.upenn.edu) |
 | Lab Blog | [debugml.github.io](https://debugml.github.io/)
 
-I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania, working on debugging machine learning and making systems actually do what we want them to do. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
+I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania. I lead [Brachio Lab](https://brachiolab.github.io/) on debugging machine learning and making systems actually do what we want them to do. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
 
 *PhD applicants*: If you're interested, you will need to 
 
