@@ -28,6 +28,7 @@ To better prepare undergraduates for machine learning coursework and research, t
 + STAT4300 or CIS2610 or equivalent (discrete probability)
 + MATH1400 or MATH1410 or equivalent (calculus)
 + MATH2400 or equivalent (linear algebra)
+
 If you have 2 out of the 3 pre-requisites, you can review the missing background and take the course. The pre-requisite topics are covered in chapters 2, 5, and 6 of the course textbook. The corresponding module may be more challenging than the others, but can be done successfully. If you are missing more than one pre-requisite, you may find this course to be extra challenging.  
 
 **Structure**: We will build upon these foundations and cover a more in depth study suited for machine learning problems. Each focus area will be structured in three parts as (1) review of prior material, (2) new ML fundamentals, and (3) an ML example. The review will quickly go over concepts that were already covered in a previous course. The ML fundamentals will introduce the advanced concepts for machine learning. The example will show you how these fundamentals are used in practice. These focus areas are: 
@@ -36,7 +37,7 @@ If you have 2 out of the 3 pre-requisites, you can review the missing background
 2. **Linear & functional analysis.** Review: linear algebra. Fundamentals: function spaces. Example: representer theorems. 
 3. **Calculus & optimization.** Review: Multivariate calculus. Fundamentals: optimization. Example: convergence rates. 
 
-We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. In particular, we will prove several hallmark theoretical results from machine learning: genearlization bounds that explain why learning from data works, representer theorems that identify what functions models can learn, and convergence rates that control how long it takes to learn models.  
+These topics will be accompanied with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. In particular, we will prove several hallmark theoretical results from machine learning: genearlization bounds that explain why learning from data works, representer theorems that identify what functions models can learn, and convergence rates that control how long it takes to learn models.  
 
 **Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for in-class participation. 
 
