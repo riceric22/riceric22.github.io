@@ -3,7 +3,7 @@ layout: skeleton
 ---
 [site]: https://www.cis.upenn.edu/~exwong/moml/
 
-# [3990-002: Mathematics of Machine Learning (Fall 2023)][site]
+# [CIS 3333: Mathematics of Machine Learning (Fall 2024)][site]
 
 Machine learning is the study of algorithms (i.e. gradient descent) that learn functions (i.e. deep networks) from experience (i.e. data). 
 Behind this simple statement, is a lot of mathematical scaffolding: statistics for handling data, optimization for understanding learning algorithms, and linear algebra to create expressive models. 
@@ -12,21 +12,23 @@ However, the typical computer science degree typical requires only a basic under
 
 To better prepare undergraduates for machine learning coursework and research, this course aims to provide the missing background required to be able understand mathematical concepts commonly used in machine learning. This course will be based on the [Mathematics for Machine Learning](https://mml-book.github.io/) textbook, which covers the mathematical foundations of machine learning as well as examples of how machine learning algorithms that use these foundations. 
 
+**Course Attributes**: 
++ This course counts as a *mathematics elective* for engineering degrees. 
++ This course counts as a standalone co-requisite/pre-requisite for CIS5200
+
 **Instructor**: [Eric Wong](https://www.cis.upenn.edu/~exwong) ([exwong@cis](mailto:exwong@cis.upenn.edu))
 
-**Class**: Monday and Wednesday, 3:30PM-4:59PM
+**Class**: Monday and Wednesday, 12:00PM-1:29PM
 
 **Website**: [https://www.cis.upenn.edu/~exwong/moml/][site]
 
 **Registration**: To register, you need to sign up both on [courses.upenn.edu](https://courses.upenn.edu/) and also submit the questionaire on the [CIS waitlist](https://advising.cis.upenn.edu/waitlist/) before I can add you to the course. 
 
-**Prerequisites**: We will assume you've taken the [minimum mathematics requirements of the Penn CS degree](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/). That is: 
-+ CIS1600 (CS foundations)
-+ CIS2610 or equivalent (discrete probability)
-+ MATH1400/MATH1410 or equivalent (vector calculus)
+**Prerequisites**: We will assume you've taken a basic introductory course in calculus, probability, and linear algebra. For a typical degree in computer science at Penn, this is typically: 
++ STAT4300 or CIS2610 or equivalent (discrete probability)
++ MATH1400 or MATH1410 or equivalent (calculus)
 + MATH2400 or equivalent (linear algebra)
-
-If you haven't yet taken the course CS prerequisites, you may be able to get by going over the review topics in chapters 2, 5, and 6 of the course textbook. 
+If you have 2 out of the 3 pre-requisites, you can review the missing background and take the course. The pre-requisite topics are covered in chapters 2, 5, and 6 of the course textbook. The corresponding module may be more challenging than the others, but can be done successfully. If you are missing more than one pre-requisite, you may find this course to be extra challenging.  
 
 **Structure**: We will build upon these foundations and cover a more in depth study suited for machine learning problems. Each focus area will be structured in three parts as (1) review of prior material, (2) new ML fundamentals, and (3) an ML example. The review will quickly go over concepts that were already covered in a previous course. The ML fundamentals will introduce the advanced concepts for machine learning. The example will show you how these fundamentals are used in practice. These focus areas are: 
 
@@ -34,9 +36,9 @@ If you haven't yet taken the course CS prerequisites, you may be able to get by 
 2. **Linear & functional analysis.** Review: linear algebra. Fundamentals: function spaces. Example: representer theorems. 
 3. **Calculus & optimization.** Review: Multivariate calculus. Fundamentals: optimization. Example: convergence rates. 
 
-We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. 
+We will accompany these topics with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. In particular, we will prove several hallmark theoretical results from machine learning: genearlization bounds that explain why learning from data works, representer theorems that identify what functions models can learn, and convergence rates that control how long it takes to learn models.  
 
-**Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for participation. 
+**Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for in-class participation. 
 
 A template for your homework solutions can be found [here](https://www.overleaf.com/read/jpxqtspbpqdk). Homeworks are due a week after they are assigned. 
 
@@ -46,37 +48,39 @@ Tentative schedule.
 
 | Date | Topic | Notes |
 |---|---|---|
-| August 30 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
-| September 4 | Labor day (no class) ||
+| August 28 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
+| September 2 | Labor day (no class) ||
 | *Probability & statistics* || [(probability lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) |
-| September 6 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 <br>Homework: Problems 6.1, 6.4, 6.11 (due September 13)|
-| September 11 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
-| September 13 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5 <br>Homework: Problems 6.5, 6.7, 6.9 (due September 20)|
-| September 18 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
-| September 20 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>[(concentration lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/concentration.pdf)<br>Homework: Problems [6.3, 6.12abd, MGF/Chernoff](https://www.cis.upenn.edu/~exwong/assets/moml/HW3.pdf) (due September 27) |
-| September 25 | Example | Generalization bounds |
-| September 27 | Example | Generalization bounds |
-| October 2 | Midterm 1 || 
+| September 4 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 |
+| September 9 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
+| September 11 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5|
+| September 16 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
+| September 18 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>[(concentration lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/concentration.pdf)|
+| September 23 | Example | Generalization bounds |
+| September 24 | Example | Generalization bounds |
+| September 30 | Midterm 1 || 
 | *Linear & functional analysis* |||
-| October 4 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)<br>Homework: 2.1, 2.3, 2.9 (due October 11) ||
-| October 9 | Review | Linear algebra (2.5,2.6)|
-| October 11 | Fundamentals | Change of Basis (2.7)<br>Homework: 2.10, 2.16, 2.19 (due October 18)|
-| October 16 | Fundamentals | Inner product spaces and Orthogonality (3.1-3.8) |
-| October 18 | Fundamentals | Decompositions (4.1, 4.2, 4.4)<br>Homework: 3.1, 3.7, 4.11 (due October 25) |
-| October 23 | No Class |  |
-| October 25 | Example | Functional analysis, Hilbert spaces, Kernels (12.4)  <br>[(representer lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/representer.pdf)|
-| October 30 | Example | Representer theorems |
-| November 1 | Midterm 2 ||
+| October 2 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)||
+| October 7 | Review | Linear algebra (2.5,2.6)|
+| October 0 | Fundamentals | Change of Basis (2.7)|
+| October 14 | Fundamentals | Inner product spaces and Orthogonality (3.1-3.8) |
+| October 16 | Fundamentals | Decompositions (4.1, 4.2, 4.4)|
+| October 21 | Example | Functional analysis, Hilbert spaces, Kernels (12.4)  <br>[(representer lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/representer.pdf)|
+| October 23 | Example | Representer theorems |
+| October 28 | Midterm 2 ||
+| October 30 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
 | *Calculus & optimization* |||
-| November 6 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
-| November 8 | Review | Multivariate calculus (5.5-5.7)<br>Homework: 5.4, 5.5, 5.9 (due November 15)|
-| November 13 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
-| November 15 | Fundamentals | Gradient Descent (7.1))<br>[(continuous optimization notes)](https://www.cis.upenn.edu/~exwong/assets/moml/continuous_optimization.pdf)<br>Homework: 7.4, 7.5, 7.8, 7.9 (due November 29)|
-| November 20 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
-| November 22 | Friday class schedule (no class) ||
-| November 27 | Fundamentals | Conjugates & Taylor's Theorem <br>[(SGD convergence notes)](https://www.cis.upenn.edu/~exwong/assets/moml/sgd_convergence.pdf)|
-| November 29 | Example | Convergence analysis |
-| December 4 | Example | Convergence analysis |
-| December 6 | Midterm 3 ||
-| December 11 | No class ||
-| December 21 | Term ends ||
+| November 4 | Review | Multivariate calculus (5.5-5.7)|
+| November 6 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
+| November 11 | Fundamentals | Gradient Descent (7.1))<br>[(continuous optimization notes)](https://www.cis.upenn.edu/~exwong/assets/moml/continuous_optimization.pdf)|
+| November 13 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
+| November 18 | Fundamentals | Conjugates & Taylor's Theorem <br>[(SGD convergence notes)](https://www.cis.upenn.edu/~exwong/assets/moml/sgd_convergence.pdf)|
+| November 20 | Example | Convergence analysis |
+| November 25 | Example | Convergence analysis |
+| November 27 | Friday class schedule (no class) ||
+| December 2 | Review ||
+| December 4 | Midterm 3 ||
+| December 9 | No class ||
+| December 19 | Term ends ||
+
+
