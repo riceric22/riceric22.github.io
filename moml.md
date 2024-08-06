@@ -63,7 +63,7 @@ Tentative schedule.
 | *Linear & functional analysis* |||
 | October 2 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)||
 | October 7 | Review | Linear algebra (2.5,2.6)|
-| October 0 | Fundamentals | Change of Basis (2.7)|
+| October 9 | Fundamentals | Change of Basis (2.7)|
 | October 14 | Fundamentals | Inner product spaces and Orthogonality (3.1-3.8) |
 | October 16 | Fundamentals | Decompositions (4.1, 4.2, 4.4)|
 | October 21 | Example | Functional analysis, Hilbert spaces, Kernels (12.4)  <br>[(representer lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/representer.pdf)|
