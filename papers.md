@@ -22,4 +22,4 @@ title: Papers
 
 
 ## Other
-My PhD thesis can be found <a href='/assets/files/ericwong_phd_scs_2020.pdf'>here</a>. 
+My PhD thesis can be found <a href='https://www.ml.cmu.edu/research/phd-dissertation-pdfs/thesis-wong-eric.pdf'>here</a>. 
