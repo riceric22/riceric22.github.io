@@ -11,6 +11,9 @@ title: Papers
     {% if paper.conference -%}
       {{ paper.conference }}  
     {% endif -%}
+    {% if paper.website -%}
+      [Site]({{ paper.website }}){%- if paper.blog or paper.github %} \+ {% endif -%}
+    {%- endif -%}
     {% if paper.blog -%}
       [Blog Post]({{ paper.blog }}){%- if paper.github %} \+ {% endif -%}
     {%- endif -%}
