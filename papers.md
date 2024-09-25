@@ -17,7 +17,7 @@ title: Papers
     {% if paper.blog -%}
       [Blog Post]({{ paper.blog }}){%- if paper.github %} \+ {% endif -%}
     {%- endif -%}
-    {%- if paper.blog -%}
+    {%- if paper.github -%}
       [Source Code on GitHub]({{ paper.github }})
     {%- endif %}
   {% endfor %}
