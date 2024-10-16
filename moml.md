@@ -77,9 +77,9 @@ Tentative schedule.
 | November 13 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
 | November 18 | Fundamentals | Conjugates & Taylor's Theorem <br>[(SGD convergence notes)](https://www.cis.upenn.edu/~exwong/assets/moml/sgd_convergence.pdf)|
 | November 20 | Example | Convergence analysis |
-| November 25 | Example | Convergence analysis |
+| November 25 | No class ||
 | November 27 | Friday class schedule (no class) ||
-| December 2 | Review ||
+| December 2 | Example | Convergence analysis |
 | December 4 | Midterm 3 ||
 | December 9 | No class ||
 | December 19 | Term ends ||
