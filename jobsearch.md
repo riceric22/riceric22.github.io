@@ -3,26 +3,28 @@ layout: page
 title: Faculty Job Search
 ---
 
-In 2021-2022, I was on the job market. In preparation, I attended lots of workshops, seeked the advice of many people beyond my advisors, and referred to many informative blogs such as [Kira Goldner's excellent three part series](https://www.kiragoldner.com/blog/job-market.html). I highly recommend looking through these. 
+In 2021-2022, I was on the job market. In preparation, I attended lots of workshops, seeked the advice of many people beyond my advisors, and referred to many informative blogs such as [Kira Goldner's excellent three part series](https://www.kiragoldner.com/blog/job-market.html). I highly recommend looking through these. Disclaimer: these views are my own opinion, and may be specific to only computer science departments.  
 
 ## Advice
 
 There is an overwhelming amount of advice. Most is good advice. But it is my opinion that, although well-intentioned, this advice does not always give a good return on investment. 
 
-If you ask "what can I do to prepare for the job market," you will generally get good recommendations. Unfortunately, due to the nature of the market, the actual effect of following this advice on the job market outcome is often negligible. 
+If you ask "what can I do to prepare for the job market," you will generally get good recommendations. Unfortunately, due to the nature of the market, the actual effect of following this advice on the job market outcome can be negligible. 
 
-Instead, you should ask "what can I do that will most affect my job outcome?" There are two key criteria for answers this question: 
+If you instead ask "what can I do that will non-trivially affect my job outcome?" There are two key criteria for answers this question: 
 
 1. The advice must be something you can *actually do*. 
 2. If followed, it should significantly impact your ability to get a job. 
 
-As an applicant, there are many things you have zero control over. And there are many things that, for better or for worse, will minimally impact your ability to get a job. I've filtered this down my experience to what I personally found to be the 5 most impactful things you can actually do. 
+As an applicant, there are many things you have zero control over. And there are many things that, for better or for worse, will minimally impact your ability to get a job. I've filtered this down my experience to what I personally believe to be the 5 most impactful things you can actually do. 
 
 ### 1. Get fit
 
+![Cartoon of tired vs. energetic person](/assets/img/tired_vs_energetic.png)
+
 When interviewing on-site, many faculty simply want to preview what it will be like to have you around as their coworker for the next 6 years. 
 
-So make sure you are in shape. Build up your endurance. Faculty interviews are a physically grueling process (12+ hours of walking, standing, and talking). If you aren't in shape, you will quickly lose all your energy and be exhausted by the end of the day. And people generally don't get good vibes when around tired people.  
+So make sure you are in shape, and *build up your endurance*. Faculty interviews are a physically grueling process (12+ hours of walking, standing, and talking, plus back-to-back traveling). If you aren't in shape, you will quickly lose all your energy and be exhausted by the end of the day. And people generally don't get good vibes when around tired people.  
 
 ### 2. Have money reserves
 
