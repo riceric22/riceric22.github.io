@@ -5,7 +5,7 @@ subtitle: Assistant Professor, University of Pennsylvania
 ---
 
 |--|--|
-| Office | [Levine 506](https://goo.gl/maps/yZmpgFMjUKhGnpXb6) |
+| Office | [Amy Gutman Hall 621](https://goo.gl/maps/yZmpgFMjUKhGnpXb6) |
 | Email | [exwong@cis](mailto:exwong@cis.upenn.edu) |
 | Lab Blog | [debugml.github.io](https://debugml.github.io/)
 
