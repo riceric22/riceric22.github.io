@@ -17,7 +17,7 @@ This hands-on seminar requires active student engagement in discussions and expl
 
 **Instructor**: [Eric Wong](https://www.cis.upenn.edu/~exwong) ([exwong@cis](mailto:exwong@cis.upenn.edu))
 
-**Class**: TBD
+**Class**: F 1:45pm-4:44pm, AGH 214
 
 **Website**: [https://www.cis.upenn.edu/~exwong/arga/][site]
 
@@ -59,7 +59,14 @@ This course will delve into how Large Language Models (LLMs) can be applied acro
 * **Qualitative Data Exploration:** Assisting in thematic analysis by suggesting potential themes or categories in text data (requires significant human oversight).
 * **Interpreting Results:** Rephrasing complex statistical outputs into more understandable language (verify accuracy carefully).
 
-**V. Writing and Manuscript Preparation**
+**V. Theory Development and Formal Reasoning**
+
+* **Structuring Proofs:** Assisting in outlining logical steps for mathematical or theoretical proofs (requires careful validation).
+* **Exploring Counterexamples:** Brainstorming potential edge cases or counterexamples to test hypotheses.
+* **Formal Verification Assistance:** Helping translate natural language specifications into formal logic or code for verification tools (requires significant expertise and validation).
+* **Mathematical Formula Manipulation:** Assisting with symbolic manipulation or checking steps in derivations (use with extreme caution and verify results).
+
+**VI. Writing and Manuscript Preparation**
 
 * **Drafting Assistance:** Generating initial drafts for sections like Introduction (background), Methods (descriptions based on user input), or Discussion (potential interpretations).
 * **Rephrasing and Paraphrasing:** Rewriting sentences or paragraphs to improve clarity, flow, or conciseness, or to avoid repetition.
@@ -68,7 +75,7 @@ This course will delve into how Large Language Models (LLMs) can be applied acro
 * **Citation Management Assistance:** Formatting references based on specific style guides (though dedicated tools are often better).
 * **Generating Figure/Table Captions:** Drafting descriptive captions based on the data presented.
 
-**VI. Dissemination and Presentation**
+**VII. Dissemination and Presentation**
 
 * **Presentation Outline Creation:** Generating a logical structure for a research talk.
 * **Slide Content Generation:** Drafting text points, summaries, or explanations for presentation slides.
@@ -78,11 +85,43 @@ This course will delve into how Large Language Models (LLMs) can be applied acro
 * **Responding to Reviewers:** Helping draft responses to reviewer comments by outlining arguments or rephrasing points.
 * **Lay Summaries:** Translating technical research findings into language accessible to a general audience.
 
+**VIII. Electronic Communication and Online Presence**
+
+* **Email Drafting:** Assisting with composing professional emails (e.g., to collaborators, reviewers, for inquiries).
+* **Website Content:** Generating or refining text for personal research websites, lab websites, or project pages.
+* **Social Media/Blog Posts:** Drafting posts for disseminating research findings or engaging with the academic community online (e.g., Twitter threads, blog entries).
+* **Public Communication:** Assisting in writing content for platforms like Wikipedia or public science communication outlets.
+
 **Important Considerations:**
 
 Throughout the course, we will emphasize:
 
-* **Accuracy & Verification:** LLM outputs must always be critically evaluated for factual accuracy, correctness (especially code), and potential biases.
+* **Accuracy & Verification:** LLM outputs must always be critically evaluated for factual accuracy, correctness (especially code and formal reasoning), and potential biases.
 * **Originality & Plagiarism:** Ensure that LLM-generated text is properly attributed or significantly rewritten to avoid plagiarism. Understand journal/conference policies on AI use.
 * **Confidentiality:** Be cautious about inputting sensitive or unpublished data into public LLMs.
 * **Ethical Use:** Consider the ethical implications of using AI in research, including data privacy and potential biases in the models themselves.
+
+---
+
+## Schedule
+
+Tentative schedule. Topics are subject to change.
+
+| Date   | Topic | Notes |
+| :----- | :---- | :---- |
+| Aug 29 |       |       |
+| Sep 05 |       |       |
+| Sep 12 |       |       |
+| Sep 19 |       |       |
+| Sep 26 |       |       |
+| Oct 03 |       |       |
+| Oct 10 |       |       |
+| Oct 17 |       |       |
+| Oct 24 |       |       |
+| Oct 31 |       |       |
+| Nov 07 |       |       |
+| Nov 14 |       |       |
+| Nov 21 |       |       |
+| Nov 28 |       |       |
+| Dec 05 |       |       |
+
