@@ -45,19 +45,19 @@ This course will delve into how Large Language Models (LLMs) can be applied acro
 * **Grant Proposal Assistance:** Drafting sections like literature review, background, or potential impact.
 * **Data Management Planning:** Outlining potential data organization strategies or documentation needs.
 
-**III. Data Collection and Experimentation**
+**III. Data Collection and Analysis**
 
 * **Survey/Questionnaire Design:** Generating draft questions or structuring survey flow.
-* **Code Generation (Simulations/Scripts):** Creating initial code drafts for simulations, data processing scripts, or experimental setups (e.g., Python, R, MATLAB).
 * **Generating Synthetic Data (Use with Caution):** Creating placeholder or example datasets for testing analysis pipelines (requires careful validation).
+* **Qualitative Data Exploration:** Assisting in thematic analysis by suggesting potential themes or categories in text data (requires significant human oversight).
+* **Interpreting Results:** Rephrasing complex statistical outputs into more understandable language (verify accuracy carefully).
 
-**IV. Data Analysis and Interpretation**
+**IV. Code Generation and Development**
 
+* **Code Generation (Simulations/Scripts):** Creating initial code drafts for simulations, data processing scripts, or experimental setups (e.g., Python, R, MATLAB).
 * **Code Generation (Analysis):** Writing code snippets for specific statistical analyses or data visualization using libraries (e.g., Python's Matplotlib/Seaborn, R's ggplot2).
 * **Code Debugging:** Identifying errors or suggesting improvements in analysis scripts.
 * **Code Documentation:** Generating comments or explanations for code sections.
-* **Qualitative Data Exploration:** Assisting in thematic analysis by suggesting potential themes or categories in text data (requires significant human oversight).
-* **Interpreting Results:** Rephrasing complex statistical outputs into more understandable language (verify accuracy carefully).
 
 **V. Theory Development and Formal Reasoning**
 
