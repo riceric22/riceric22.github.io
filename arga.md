@@ -9,9 +9,16 @@ layout: skeleton
 
 This seminar explores practical approaches for researchers to effectively utilize Generative AI models through hands-on experimentation and exploration. Students will investigate applying these models to research tasks such as summarizing literature, writing assistance, code development, and visual aid creation. Potential topics include effective prompting, critical evaluation of outputs, and responsible use considerations including relevant ethics and safety. Students are expected to be familiar with and actively engaged in research methodology.
 
+For instance, we might ponder questions like:
+* How good is DeepResearch at doing comprehensive literature review?
+* Are LLMs good at picking up new software libraries?
+* Can LLMs create good presentations?
+
+The core philosophy of this course is learning by doing and analyzing. We will actively try using various LLMs and related tools for research tasks, report back on our experiences, and collectively analyze each other's results. This collaborative process will help us understand the practical capabilities, limitations, and effective usage patterns of these powerful technologies in a research context.
+
 ## Course Structure and Expectations
 
-This hands-on seminar requires active student engagement in discussions and explorations of GenAI tools. Students will experiment with applying LLMs and other generative models to various research tasks (similar to those listed below), focusing on prompt engineering, utilizing different platforms, and analyzing results. A key component involves critically evaluating AI outputs for accuracy, bias, relevance, and ethical implications. The course culminates in a project where students apply GenAI to accelerate a part of their own research pipeline or a defined problem, evaluating its effectiveness and sharing their findings and techniques with the class.
+This hands-on seminar requires active student engagement in discussions and explorations of GenAI tools. Students will experiment with applying LLMs and other generative models to various research tasks (similar to those listed below), focusing on prompt engineering, utilizing different platforms, and analyzing results. A key component involves critically evaluating AI outputs for accuracy, bias, relevance, and ethical implications. The course culminates in a project where students apply GenAI to accelerate a part of their own research pipeline or a defined problem, evaluating its effectiveness and sharing their findings and techniques with the class. Furthermore, students will be encouraged to engage with and provide feedback on their peers' projects, fostering a collaborative learning environment.
 
 ---
 
@@ -27,7 +34,7 @@ This hands-on seminar requires active student engagement in discussions and expl
 
 ## Potential Applications / Topics
 
-This course will delve into how Large Language Models (LLMs) can be applied across the research lifecycle. We will explore and experiment with tasks such as:
+This course aims to explore how Large Language Models (LLMs) might be applied across the research lifecycle. We may explore and experiment with potential applications such as:
 
 **I. Ideation and Literature Review**
 
@@ -124,4 +131,3 @@ Tentative schedule. Topics are subject to change.
 | Nov 21 |       |       |
 | Nov 28 |       |       |
 | Dec 05 |       |       |
-
