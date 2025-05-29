@@ -7,7 +7,7 @@ layout: skeleton
 
 # [CIS 7000: Accelerating Research with Generative AI (Fall 2025)][site]
 
-This seminar explores practical approaches for researchers to effectively utilize Generative AI models through hands-on experimentation and exploration. Students will investigate applying these models to research tasks such as summarizing literature, writing assistance, code development, and visual aid creation. Potential topics include effective prompting, critical evaluation of outputs, and responsible use considerations including relevant ethics and safety. Students are expected to be familiar with and actively engaged in research methodology.
+This seminar explores practical approaches for researchers to effectively utilize Generative AI models through hands-on experimentation and exploration. Students will investigate applying these models to research tasks such as summarizing literature, writing assistance, code development, and visual aid creation. The course also aims to challenge your preconceptions of generative AI and inspire new perspectives on the ways in which it can be used. Potential topics include effective prompting, critical evaluation of outputs, and responsible use considerations including relevant ethics and safety. Students are expected to be familiar with and actively engaged in research methodology.
 
 For instance, we might ponder questions like:
 * How good is DeepResearch at doing comprehensive literature review?
