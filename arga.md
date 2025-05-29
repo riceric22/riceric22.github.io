@@ -16,6 +16,8 @@ For instance, we might ponder questions like:
 
 The core philosophy of this course is learning by doing and analyzing. We will actively try using various LLMs and related tools for research tasks, report back on our experiences, and collectively analyze each other's results. This collaborative process will help us understand the practical capabilities, limitations, and effective usage patterns of these powerful technologies in a research context.
 
+Furthermore, understanding how generative AI works at a fundamental level may potentially help us utilize these tools more effectively. Therefore, while the primary focus is on application, we may also delve deeper into the common generative AI technologies that underpin the tools we use.
+
 ## Course Structure and Expectations
 
 This hands-on seminar requires active student engagement in discussions and explorations of GenAI tools. Students will experiment with applying LLMs and other generative models to various research tasks (similar to those listed below), focusing on prompt engineering, utilizing different platforms, and analyzing results. A key component involves critically evaluating AI outputs for accuracy, bias, relevance, and ethical implications. The course culminates in a project where students apply GenAI to accelerate a part of their own research pipeline or a defined problem, evaluating its effectiveness and sharing their findings and techniques with the class. Furthermore, students will be encouraged to engage with and provide feedback on their peers' projects, fostering a collaborative learning environment.
