@@ -11,6 +11,9 @@ subtitle: Assistant Professor, University of Pennsylvania
 
 I am an assistant professor at the [Department of Computer and Information Science](https://www.cis.upenn.edu/) at the University of Pennsylvania. I lead [Brachio Lab](https://brachiolab.github.io/) on debugging machine learning and making systems actually do what we want them to do. I'm also a part of the [ASSET Center](https://blog.seas.upenn.edu/penn-engineerings-new-asset-center-will-focus-on-the-safety-explainability-and-trustworthiness-of-ai-systems/) on safe, explainable, and trustworthy AI systems. Previously, I completed my PhD at CMU advised by [Zico Kolter](https://zicokolter.com/), and did a postdoc with [Aleksander Madry](https://people.csail.mit.edu/madry/). 
 
+{: .box-success}
+At ICML on Saturday, July 19th, I will be giving some talks on the following topics at a few workshops: <br><br> 9:00 - Safety alignment at the [DIG-BUGS Workshop](https://icml2025digbugs.github.io/) <br> 13:30 - Rule-following theory for principled steering at the [MOSS Workshop](https://sites.google.com/view/moss2025) <br> 15:30 - Certified explanations for experts at the [Actionable Interpretability Workshop](https://actionable-interpretability.github.io/)
+
 *PhD applicants*: If you're interested, you will need to 
 
 1. Apply to the [CIS department](https://www.cis.upenn.edu/graduate/program-offerings/doctoral-program/) 
