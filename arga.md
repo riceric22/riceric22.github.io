@@ -118,18 +118,18 @@ Tentative schedule. Topics are subject to change.
 
 | Date   | Topic | Notes |
 | :----- | :---- | :---- |
-| Aug 29 |       |       |
-| Sep 05 |       |       |
-| Sep 12 |       |       |
-| Sep 19 |       |       |
-| Sep 26 |       |       |
-| Oct 03 |       |       |
-| Oct 10 |       |       |
-| Oct 17 |       |       |
-| Oct 24 |       |       |
-| Oct 31 |       |       |
-| Nov 07 |       |       |
-| Nov 14 |       |       |
-| Nov 21 |       |       |
-| Nov 28 |       |       |
-| Dec 05 |       |       |
+| Aug 29 | Intro |  |
+| Sep 05 | Writing | Related work & citations (DeepResearch) |
+| Sep 12 | Writing | Editing & critiquing drafts |
+| Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) |  |
+| Sep 26 | Coding | Developing & debugging, tests & documentation |
+| Oct 03 | Coding | Data analysis & discovery |
+| Oct 10 | Fall Term Break (No class) |       |
+| Oct 17 | TBD |       |
+| Oct 24 | Reviewing | Should we do it? |
+| Oct 31 | TBD |       |
+| Nov 07 | Proofs | Starting & completing proofs |
+| Nov 14 | Presentations | Generating & critiqueing slides and posters |
+| Nov 21 | Class projects |       |
+| Nov 26 | Thanksgiving (No class) |       |
+| Dec 05 | NeurIPS conference (No class) |       |
