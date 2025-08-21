@@ -127,7 +127,7 @@ Tentative schedule. Topics are subject to change.
 | Oct 10 | Fall Term Break (No class) |       |
 | Oct 17 | TBD |  |
 | Oct 24 | Reviewing | Should we do it? |
-| Oct 31 | TBD | Proofs with LLMs  |
+| Oct 31 | Proofs | Guest instructor: Surbhi  |
 | Nov 07 | Tooling |  |
 | Nov 14 | TBD | Class Projects |
 | Nov 21 | Ethics |       |
