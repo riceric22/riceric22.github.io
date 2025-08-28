@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: AI for Related Work</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is structured as a single-page guide with smooth-scrolling navigation. This design was chosen to transform the linear worksheet into a more engaging and easily navigable tool. The core of the app is an interactive toggle that allows students to directly compare the "Expert" and "Non-Expert" strategies, which is a key learning objective. Tips are hidden within accordions to reduce cognitive load, encouraging exploration. Finally, actionable elements like "copy to clipboard" buttons for reflection questions directly support the student's workflow. This structure prioritizes user interaction and clarity over the original document's static format. -->
+    <!-- Visualization & Content Choices: 
+        - Introduction: Report Info -> Exercise tasks. Goal -> Inform. Method -> Styled cards for clarity. Interaction -> None. Justification -> Visually separates tasks from prose.
+        - Expert vs. Non-Expert Strategies: Report Info -> Two distinct sets of tips. Goal -> Compare & Organize. Method -> A toggle button controls visibility of content sections. Interaction -> Click to switch views. Justification -> Encourages direct comparison of the two mindsets.
+        - Tips & Tricks: Report Info -> Detailed tips with code examples. Goal -> Organize & Inform. Method -> Accordion list. Interaction -> Click to expand/collapse. Justification -> Hides detailed content by default to prevent overwhelming the user.
+        - General Tips: Report Info -> General prompting advice. Goal -> Inform. Method -> Grid of cards. Interaction -> Hover effects. Justification -> More visually engaging than a simple list.
+        - Reflection Questions: Report Info -> List of questions. Goal -> Action. Method -> Numbered list with buttons. Interaction -> Click to copy text. Justification -> Provides a direct utility for the student's task of note-taking.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .active-tab {
+            background-color: #A77E58;
+            color: #FFFFFF;
+        }
+        .inactive-tab {
+            background-color: #EFEAE4;
+            color: #A77E58;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-open .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .transition-transform {
+            transition: transform 0.3s ease-in-out;
+        }
+        .copy-feedback {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#EFEAE4] sticky top-0 z-10 shadow-sm">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 class="text-xl font-bold text-[#A77E58]">AI for Related Work</h1>
+                <div class="flex flex-wrap justify-center space-x-2 md:space-x-4 mt-2 md:mt-0">
+                    <a href="#introduction" class="text-sm font-medium text-gray-700 hover:text-[#A77E58]">Introduction</a>
+                    <a href="#strategies" class="text-sm font-medium text-gray-700 hover:text-[#A77E58]">Strategies</a>
+                    <a href="#general-tips" class="text-sm font-medium text-gray-700 hover:text-[#A77E58]">General Tips</a>
+                    <a href="#reflection" class="text-sm font-medium text-gray-700 hover:text-[#A77E58]">Reflection</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="introduction" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#A77E58]">Generating a Related Work Section with AI</h2>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                This exercise gives you hands-on experience using Large Language Models (LLMs) to accelerate writing a "Related Work" section. You will explore two perspectives: that of an **expert** (using your own paper) and a **non-expert** (using a classmate's paper). The goal is to understand the process, learn to craft effective prompts, and critically evaluate the AI's output.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2 text-[#A77E58]">1. The Expert</h3>
+                    <p class="text-sm">Use an LLM to generate a "Related Work" section for a paper you are familiar with.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2 text-[#A77E58]">2. The Non-Expert</h3>
+                    <p class="text-sm">Swap papers with a partner and repeat the process for their paper.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2 text-[#A77E58]">3. Document Everything</h3>
+                    <p class="text-sm">Keep a Google Doc to record your prompts, responses, and reflections.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategies" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#A77E58]">Expert vs. Non-Expert Strategies</h2>
+            <div class="flex justify-center mb-8">
+                <div class="flex rounded-lg p-1 bg-[#EFEAE4]">
+                    <button id="expertBtn" class="px-6 py-2 text-sm font-medium rounded-md active-tab">Expert</button>
+                    <button id="nonExpertBtn" class="px-6 py-2 text-sm font-medium rounded-md inactive-tab">Non-Expert</button>
+                </div>
+            </div>
+
+            <div id="expertContent">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-2">You as the Expert</h3>
+                    <p class="text-lg font-medium text-[#A77E58] mb-2">Key Strategy: Provide Scaffolding and Constraints</p>
+                    <p>When you're familiar with the research area, you can guide the LLM with much greater precision. You know the key players, seminal papers, and schools of thought. Use this knowledge to your advantage.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4 accordion-container">
+                    <!-- Accordion Items will be injected here by JS -->
+                </div>
+            </div>
+
+            <div id="nonExpertContent" class="hidden">
+                 <div class="max-w-3xl mx-auto text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-2">You as the Non-Expert</h3>
+                    <p class="text-lg font-medium text-[#A77E58] mb-2">Key Strategy: Explore the Landscape with Research Tools</p>
+                    <p>When you're unfamiliar with a topic, your goal is to get a "lay of the land." Use AI research tools to perform broad searches and synthesize the state of the field before trying to place the specific paper within it.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4 accordion-container">
+                    <!-- Accordion Items will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="general-tips" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#A77E58]">General Prompting Tips & Tricks</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow">
+                    <h3 class="font-bold text-lg mb-2">🎭 Use Personas</h3>
+                    <p class="text-sm">Tell the LLM who it should be. E.g., "Act as an expert in computational linguistics..."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow">
+                    <h3 class="font-bold text-lg mb-2">🎯 Be Clear and Specific</h3>
+                    <p class="text-sm">Vague prompts lead to vague answers. Provide concrete details and constraints.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow">
+                    <h3 class="font-bold text-lg mb-2">📝 Provide Examples</h3>
+                    <p class="text-sm">If you want a specific style or format, give the LLM a short example to follow.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow">
+                    <h3 class="font-bold text-lg mb-2">🔄 Don't Be Afraid to Start Over</h3>
+                    <p class="text-sm">If a line of prompting isn't working, open a new chat and try a different approach.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-shadow">
+                    <h3 class="font-bold text-lg mb-2">✅ Fact-Check Everything</h3>
+                    <p class="text-sm">LLMs can "hallucinate" citations and misrepresent findings. Always verify.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reflection">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#A77E58]">Reflection Questions</h2>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <ol class="list-decimal list-inside space-y-4">
+                    <!-- Questions will be injected here by JS -->
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 bg-[#EFEAE4] mt-12">
+        <p class="text-sm text-gray-600">An Interactive Guide for the Generative AI in Research Workshop</p>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const expertBtn = document.getElementById('expertBtn');
+    const nonExpertBtn = document.getElementById('nonExpertBtn');
+    const expertContent = document.getElementById('expertContent');
+    const nonExpertContent = document.getElementById('nonExpertContent');
+
+    const expertTips = [
+        { title: 'Provide a "Gold Standard" Abstract', content: 'Start by giving the LLM the abstract of your paper. This is the most crucial piece of context.' },
+        { title: 'Seed with Key Papers', content: 'Don\'t just ask for "related work." Give the LLM a starting point.', example: 'My paper\'s abstract is: [Your Abstract]. Please generate a related work section that connects my work to the foundational research by [Author A, Year], [Author B, Year], and the recent advancements in [Subfield C].' },
+        { title: 'Define the Thematic Structure', content: 'You likely have a mental outline of how the related work should be organized. Share it with the LLM.', example: 'Generate a related work section that is organized into the following themes: 1. Historical Context of [Problem X], 2. Current Approaches to [Problem X], and 3. Gaps in the Literature that My Paper Addresses.' },
+        { title: 'Specify the Desired Tone and Style', content: '', example: 'The tone should be academic and critical. For each piece of related work, briefly summarize it and then explain how my paper builds upon or diverges from it.' },
+        { title: 'Iterate and Refine', content: 'The first draft won\'t be perfect. Use your expertise to correct the LLM and guide it toward a better version.', example: 'That\'s a good start, but you\'ve misrepresented the findings of [Author B, Year]. The key takeaway from that paper is actually [Your Correction]. Please revise the section on [Author B] and also find a way to connect it to the work of [Author D, Year].' }
+    ];
+
+    const nonExpertTips = [
+        { title: 'Identify Core Concepts for a Broad Search', content: 'Use the paper\'s abstract to find keywords. Then, ask a research tool to define them and their importance.', example: 'The abstract for a paper I\'m reading mentions "[keyword 1]", "[keyword 2]", and "[methodology]". Act as a research expert and explain these concepts to me. What is the general field they belong to?' },
+        { title: 'Query for Foundational Papers and Surveys', content: 'Ask the tool to find the most important, highly-cited papers or literature reviews for the core concepts you identified.', example: 'Based on the field of [General Field], perform a broad search for seminal papers and recent survey articles. Provide me with a list of 5-7 key publications with brief summaries.' },
+        { title: 'Synthesize and Map the Field', content: 'Ask the tool to organize the information it has found into a coherent structure, like a timeline or thematic map.', example: 'From the papers you found, create a timeline of major developments in this field. What are the main competing schools of thought or methodologies?' },
+        { title: 'Find the Paper\'s Place in the Landscape', content: 'Now, introduce the specific paper and ask the tool where it fits into the map it just created.', example: 'Here is the abstract of the paper I was given: [Paste Abstract]. Based on your synthesis of the field, where does this paper fit in? Does it extend an existing line of work, challenge a common assumption, or open a new area?' },
+        { title: 'Identify the Research Frontier', content: 'Finally, ask the tool to identify what\'s next for the field, based on its broad understanding.', example: 'Given your analysis, what are the current research gaps or future directions in this area? What are the most exciting recent trends?' }
+    ];
+
+    const reflectionQuestions = [
+        "What was the most effective prompt you used? Why do you think it worked so well? (Copy and paste the prompt into your notes).",
+        "What was the least effective prompt? What was the result, and how did you change your approach?",
+        "Did the LLM make any factual errors or 'hallucinate' any information?",
+        "How much editing was required to make the generated text usable?",
+        "What were the biggest differences between working as an 'expert' versus a 'non-expert'?",
+        "How could you see yourself incorporating this tool into your own research workflow in the future? What are the potential benefits and drawbacks?"
+    ];
+
+    function createAccordionItem(item) {
+        const hasContent = item.content && item.content.trim() !== '';
+        const hasExample = item.example && item.example.trim() !== '';
+        
+        return `
+            <div class="accordion-item bg-white rounded-lg shadow-sm border border-gray-200">
+                <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                    <span>${item.title}</span>
+                    <span class="transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-4 border-t border-gray-200">
+                        ${hasContent ? `<p class="mb-4 text-sm">${item.content}</p>` : ''}
+                        ${hasExample ? `<pre class="bg-gray-100 p-3 rounded-md text-xs whitespace-pre-wrap font-mono">${item.example}</pre>` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function populateAccordions() {
+        const expertContainer = expertContent.querySelector('.accordion-container');
+        expertContainer.innerHTML = expertTips.map(createAccordionItem).join('');
+
+        const nonExpertContainer = nonExpertContent.querySelector('.accordion-container');
+        nonExpertContainer.innerHTML = nonExpertTips.map(createAccordionItem).join('');
+    }
+    
+    function populateQuestions() {
+        const container = document.querySelector('#reflection ol');
+        container.innerHTML = reflectionQuestions.map(q => `
+            <li class="relative">
+                ${q}
+                <button class="copy-btn absolute top-0 right-0 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                    <span class="copy-icon">📋</span>
+                    <span class="copy-feedback opacity-0 absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                </button>
+            </li>
+        `).join('');
+    }
+
+    function setupEventListeners() {
+        expertBtn.addEventListener('click', () => {
+            expertContent.classList.remove('hidden');
+            nonExpertContent.classList.add('hidden');
+            expertBtn.classList.add('active-tab');
+            expertBtn.classList.remove('inactive-tab');
+            nonExpertBtn.classList.add('inactive-tab');
+            nonExpertBtn.classList.remove('active-tab');
+        });
+
+        nonExpertBtn.addEventListener('click', () => {
+            nonExpertContent.classList.remove('hidden');
+            expertContent.classList.add('hidden');
+            nonExpertBtn.classList.add('active-tab');
+            nonExpertBtn.classList.remove('inactive-tab');
+            expertBtn.classList.add('inactive-tab');
+            expertBtn.classList.remove('active-tab');
+        });
+        
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('accordion-open');
+                const icon = button.querySelector('span:last-child');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const questionText = button.parentElement.innerText.trim();
+                
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = questionText;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                try {
+                    document.execCommand('copy');
+                    const feedback = button.querySelector('.copy-feedback');
+                    feedback.style.opacity = '1';
+                    setTimeout(() => {
+                        feedback.style.opacity = '0';
+                    }, 1500);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+                document.body.removeChild(tempTextArea);
+            });
+        });
+    }
+
+    populateAccordions();
+    populateQuestions();
+    setupEventListeners();
+});
+</script>
+
+</body>
+</html>

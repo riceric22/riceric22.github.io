@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: From Notes to Report with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is designed as a multi-step, wizard-style guide. This structure was chosen to transform the linear worksheet into an active, task-oriented workflow. By breaking the process into four distinct steps (Introduction, Core Prompt, Refinement, Verification), it reduces cognitive load and guides the user through the task sequentially. Navigation is handled by 'Next' and 'Previous' buttons, with a progress bar providing clear feedback on the user's location in the workflow. This interactive, guided approach is more engaging and user-friendly for a learning exercise than a static document. -->
+    <!-- Visualization & Content Choices: 
+        - Process Steps: Report Info -> 4 main sections of the worksheet. Goal -> Organize & Guide. Method -> A step-by-step wizard UI. Interaction -> Next/Prev buttons to show/hide content divs. Justification -> Turns a passive reading task into an active, guided process.
+        - Task List: Report Info -> The 4 main tasks. Goal -> Inform. Method -> Styled cards. Interaction -> None. Justification -> Clearly outlines the exercise goals at the start.
+        - Prompt Examples: Report Info -> Example prompts for each stage. Goal -> Action. Method -> Code-style blocks with a copy button. Interaction -> Click to copy. Justification -> Provides direct utility, allowing students to easily use the examples.
+        - Refinement Techniques: Report Info -> Structure, Style, Verbosity tips. Goal -> Organize & Inform. Method -> An accordion component. Interaction -> Click to expand/collapse. Justification -> Keeps the UI clean by hiding detailed tips until needed.
+        - Verification Checklist: Report Info -> The final checklist. Goal -> Action & Verify. Method -> Interactive checkboxes. Interaction -> Click to check off items and reveal sub-questions. Justification -> Makes the final review an active, engaging task.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .step-container { display: none; }
+        .step-container.active { display: block; }
+        .progress-bar-fill {
+            transition: width 0.5s ease-in-out;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-open .accordion-content {
+            max-height: 500px;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .transition-transform { transition: transform 0.3s ease-in-out; }
+        .copy-feedback { transition: opacity 0.5s ease-in-out; }
+        .checklist-item label:hover {
+            cursor: pointer;
+        }
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            color: #9CA3AF;
+        }
+        .checklist-item .sub-question {
+            display: none;
+        }
+        .checklist-item input:checked ~ .sub-question {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 py-12 max-w-4xl">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#A77E58]">From Notes to Report with AI</h1>
+            <p class="mt-2 text-lg text-gray-600">An Interactive Guide to Generating Polished Reports</p>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="mb-8">
+            <div class="w-full bg-[#EFEAE4] rounded-full h-2.5">
+                <div id="progressBar" class="bg-[#A77E58] h-2.5 rounded-full progress-bar-fill" style="width: 25%"></div>
+            </div>
+            <div class="flex justify-between text-xs mt-1 text-gray-500">
+                <span>Intro</span>
+                <span>Core Prompt</span>
+                <span>Refine</span>
+                <span>Verify</span>
+            </div>
+        </div>
+
+        <main id="wizard" class="bg-white p-6 sm:p-10 rounded-xl shadow-lg border border-gray-200">
+            
+            <!-- Step 1: Introduction -->
+            <div id="step1" class="step-container active">
+                <h2 class="text-2xl font-bold mb-4">Introduction: The Goal</h2>
+                <p class="mb-6">This exercise will teach you to move beyond simple text generation. You'll learn to **direct, constrain, and refine** an AI's output to transform raw notes into a polished, professional document, a crucial skill for research workflows.</p>
+                <h3 class="text-xl font-bold mb-4">Your Task</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex-shrink-0 text-xl text-[#A77E58]">1.</div>
+                        <p><strong>Synthesize Your Notes:</strong> Gather your notes from the "Related Work" exercise, including prompts, responses, and reflections.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex-shrink-0 text-xl text-[#A77E58]">2.</div>
+                        <p><strong>Generate a Draft Report:</strong> Use an LLM to create an initial report from your notes.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex-shrink-0 text-xl text-[#A77E58]">3.</div>
+                        <p><strong>Iteratively Refine:</strong> Apply the techniques in the following steps to control the report's structure, tone, and verbosity.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex-shrink-0 text-xl text-[#A77E58]">4.</div>
+                        <p><strong>Verify and Edit:</strong> Critically evaluate the final report for accuracy, completeness, and consistency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: The Core Prompt -->
+            <div id="step2" class="step-container">
+                <h2 class="text-2xl font-bold mb-4">Step 1: The Core Prompt</h2>
+                <p class="mb-6">The first step is to provide the LLM with your raw material. Instead of pasting text, attach your notes document directly to give the AI the full context.</p>
+                <div class="bg-white rounded-lg border border-gray-200 p-4">
+                    <h4 class="font-semibold text-lg mb-2">Key Technique: Assign a Persona and Goal</h4>
+                    <p class="text-sm mb-4">Frame your request clearly by telling the AI who to be and what to do, then attach your notes document.</p>
+                    <div class="relative bg-[#FDFBF8] p-4 rounded-md border">
+                        <p class="text-sm font-mono">"You are a research assistant tasked with writing a report about an experiment in using AI to generate a 'Related Work' section. I have attached a Google Doc containing my raw notes from the experiment. Your task is to synthesize these notes into a well-structured, formal report that details the methodology, findings, and reflections. [Attach your Google Doc here]"</p>
+                        <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                            <span class="copy-icon">📋</span>
+                            <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Refinement -->
+            <div id="step3" class="step-container">
+                <h2 class="text-2xl font-bold mb-4">Step 2: Refine the Draft</h2>
+                <p class="mb-6">An AI's first draft is rarely perfect. Use these techniques to act as an editor, refining the report's structure, style, and conciseness.</p>
+                <div class="space-y-4">
+                    <div class="accordion-item border border-gray-200 rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                            <span>Enforce Structure & Constraints</span>
+                            <span class="transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 border-t border-gray-200">
+                                <p class="text-sm mb-4">Impose a clear structure to ensure all key information is included and logically arranged. The most effective method is to provide a mandatory outline.</p>
+                                <div class="relative bg-[#FDFBF8] p-4 rounded-md border">
+                                    <pre class="text-sm font-mono whitespace-pre-wrap">"Regenerate the report, but follow this exact structure:
+1. Introduction: Goal of the exercise.
+2. Methodology:
+   2.1 The 'Expert' Role.
+   2.2 The 'Non-Expert' Role.
+3. Analysis of Findings:
+   3.1 What Worked.
+   3.2 Challenges and Failures.
+4. Reflection: Address key reflection questions.
+5. Conclusion: Key takeaways."</pre>
+                                    <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                                        <span class="copy-icon">📋</span>
+                                        <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-gray-200 rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                            <span>Adjust Style & Tone</span>
+                            <span class="transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                             <div class="p-4 border-t border-gray-200">
+                                <p class="text-sm mb-4">Be explicit about the desired writing style to move away from the AI's generic default.</p>
+                                <div class="relative bg-[#FDFBF8] p-4 rounded-md border mb-2">
+                                    <p class="text-sm font-mono">"Revise the report to have a more academic and objective tone. Remove conversational language."</p>
+                                    <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                                        <span class="copy-icon">📋</span>
+                                        <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                                    </button>
+                                </div>
+                                <div class="relative bg-[#FDFBF8] p-4 rounded-md border">
+                                    <p class="text-sm font-mono">"Rewrite the 'Reflection' section in the first person to sound more like a personal journal entry."</p>
+                                    <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                                        <span class="copy-icon">📋</span>
+                                        <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-gray-200 rounded-lg">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                            <span>Combat Verbosity</span>
+                            <span class="transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-4 border-t border-gray-200">
+                                <p class="text-sm mb-4">Give direct commands to tighten the language and improve clarity.</p>
+                                <div class="relative bg-[#FDFBF8] p-4 rounded-md border">
+                                    <p class="text-sm font-mono">"This report is too wordy. Shorten it by 25%, removing redundant phrases and making each sentence as clear and direct as possible."</p>
+                                    <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                                        <span class="copy-icon">📋</span>
+                                        <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Verification -->
+            <div id="step4" class="step-container">
+                <h2 class="text-2xl font-bold mb-4">Step 3: The Critical Final Check</h2>
+                <p class="mb-6">An AI-generated report is a **draft, not a final product**. It is your responsibility to ensure it is accurate and faithful to your original notes. Never trust the output without verification.</p>
+                <div id="verificationChecklist" class="space-y-4">
+                    <!-- Checklist items will be injected here -->
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="mt-10 flex justify-between">
+                <button id="prevBtn" class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Previous</button>
+                <button id="nextBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90">Next</button>
+            </div>
+        </main>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const steps = document.querySelectorAll('.step-container');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const progressBar = document.getElementById('progressBar');
+    let currentStep = 0;
+
+    const checklistItems = [
+        { id: 'check1', label: 'Faithfulness', question: "Did the AI misinterpret any of my observations or change the meaning of my reflections?" },
+        { id: 'check2', label: 'Completeness', question: "Scan your notes for important details. Did the AI leave anything significant out of the final report?" },
+        { id: 'check3', label: 'No Hallucinations', question: "Is there anything in this report that I don't remember writing in my notes? Let me double-check." },
+        { id: 'check4', label: 'Consistency', question: "Does the story the report tells make sense from beginning to end?" }
+    ];
+
+    function populateChecklist() {
+        const container = document.getElementById('verificationChecklist');
+        container.innerHTML = checklistItems.map(item => `
+            <div class="checklist-item relative p-4 border rounded-lg hover:bg-gray-50">
+                <input type="checkbox" id="${item.id}" class="h-4 w-4 rounded border-gray-300 text-[#A77E58] focus:ring-[#A77E58] mr-3 align-middle">
+                <label for="${item.id}" class="font-medium text-gray-700 align-middle">✅ ${item.label}</label>
+                <div class="sub-question mt-2 pl-7 text-sm text-gray-500 italic">
+                    <strong>Self-Correction Question:</strong> "${item.question}"
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function updateWizard() {
+        steps.forEach((step, index) => {
+            step.classList.toggle('active', index === currentStep);
+        });
+        prevBtn.disabled = currentStep === 0;
+        nextBtn.textContent = currentStep === steps.length - 1 ? 'Finish' : 'Next';
+        
+        const progressPercentage = ((currentStep + 1) / steps.length) * 100;
+        progressBar.style.width = `${progressPercentage}%`;
+    }
+
+    function handleNavigation(direction) {
+        if (direction === 'next' && currentStep < steps.length - 1) {
+            currentStep++;
+        } else if (direction === 'prev' && currentStep > 0) {
+            currentStep--;
+        }
+        updateWizard();
+    }
+
+    nextBtn.addEventListener('click', () => handleNavigation('next'));
+    prevBtn.addEventListener('click', () => handleNavigation('prev'));
+
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('accordion-open');
+            const icon = button.querySelector('span:last-child');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.copy-btn')) {
+            const button = e.target.closest('.copy-btn');
+            const pre = button.previousElementSibling;
+            const textToCopy = pre.innerText || pre.textContent;
+
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                const feedback = button.querySelector('.copy-feedback');
+                feedback.style.opacity = '1';
+                setTimeout(() => {
+                    feedback.style.opacity = '0';
+                }, 1500);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            document.body.removeChild(tempTextArea);
+        }
+    });
+    
+    populateChecklist();
+    updateWizard();
+});
+</script>
+
+</body>
+</html>
