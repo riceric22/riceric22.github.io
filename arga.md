@@ -118,7 +118,7 @@ Tentative schedule. Topics are subject to change.
 
 | Date   | Topic | Notes |
 | :----- | :---- | :---- |
-| Aug 29 | Writing | Related work & report generation [[Worksheet 1]](1_related_work.html) [[Worksheet 2]](2_report_generation.html)|
+| Aug 29 | Writing | Related work & report generation [[Survey]](0_survey.html) [[Worksheet 1]](1_related_work.html) [[Worksheet 2]](2_report_generation.html)|
 | Sep 05 | Writing | Graphics: Figures & Posters |
 | Sep 12 | Writing | Reviewing, critiquing, & editing |
 | Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) |  |
