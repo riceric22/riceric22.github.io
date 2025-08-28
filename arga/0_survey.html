@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Research: Survey Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .chart-bar {
+            transition: width 0.5s ease-in-out;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .title-gradient {
+            background: linear-gradient(to right, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold title-gradient">AI's Role in Research</h1>
+            <p class="mt-4 text-lg text-slate-600">An analysis of survey responses on the desired and perceived capabilities of LLMs in academic research.</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Column 1: What researchers WANT vs DON'T WANT -->
+            <div class="space-y-8">
+                <!-- Card: What topics do you WANT LLMs to do for you? -->
+                <div class="card">
+                    <h2 class="text-xl font-semibold text-slate-800 mb-1">✅ Tasks Researchers Welcome AI For</h2>
+                    <p class="text-sm text-slate-500 mb-6">Respondents want AI to handle tedious, time-consuming, and preparatory tasks.</p>
+                    <div id="want-chart" class="space-y-4"></div>
+                </div>
+
+                <!-- Card: What topics do you NOT WANT LLMs to do for you? -->
+                <div class="card">
+                    <h2 class="text-xl font-semibold text-slate-800 mb-1">❌ Tasks Researchers Reserve for Humans</h2>
+                     <p class="text-sm text-slate-500 mb-6">Core intellectual contributions like novel ideas and final judgments are kept for human oversight.</p>
+                    <div id="not-want-chart" class="space-y-4"></div>
+                </div>
+            </div>
+
+            <!-- Column 2: What researchers think LLMs CAN vs CAN'T do -->
+            <div class="space-y-8">
+                <!-- Card: What topics do you think LLMs CAN do? -->
+                <div class="card">
+                    <h2 class="text-xl font-semibold text-slate-800 mb-1">👍 Perceived Capabilities of AI</h2>
+                     <p class="text-sm text-slate-500 mb-6">There's strong confidence in AI's ability to assist with structured tasks like coding and writing.</p>
+                    <div id="can-do-chart" class="space-y-4"></div>
+                </div>
+
+                <!-- Card: What topics do you think LLMs CANNOT do? -->
+                <div class="card">
+                    <h2 class="text-xl font-semibold text-slate-800 mb-1">👎 Perceived Limitations of AI</h2>
+                     <p class="text-sm text-slate-500 mb-6">Respondents believe AI currently lacks the ability for true innovation and high-level reasoning.</p>
+                    <div id="cannot-do-chart" class="space-y-4"></div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Key Insights Section -->
+        <div class="card mt-10">
+             <h2 class="text-2xl font-bold text-slate-800 mb-4 text-center">Key Insights 💡</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                 <div class="bg-slate-50 p-4 rounded-lg">
+                     <h3 class="font-semibold text-indigo-600">AI as an Assistant</h3>
+                     <p class="text-slate-600 text-sm mt-1">Researchers see AI as a powerful assistant for support tasks (literature review, coding, writing), not a replacement for the core researcher.</p>
+                 </div>
+                 <div class="bg-slate-50 p-4 rounded-lg">
+                     <h3 class="font-semibold text-indigo-600">Human-in-the-Loop is Critical</h3>
+                     <p class="text-slate-600 text-sm mt-1">There's a clear boundary: AI assists, but humans must drive novel ideas, research design, and final validation. The creative spark remains human.</p>
+                 </div>
+                 <div class="bg-slate-50 p-4 rounded-lg">
+                     <h3 class="font-semibold text-indigo-600">Confidence in Execution</h3>
+                     <p class="text-slate-600 text-sm mt-1">Confidence is high for AI's role in executing well-defined tasks, but skepticism remains about its ability to handle abstract reasoning or genuine innovation.</p>
+                 </div>
+             </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Data derived from manual thematic analysis of the CSV file.
+        const surveyData = {
+            want: [
+                { label: 'Literature Review & Ideation', value: 4, color: 'bg-indigo-500' },
+                { label: 'Writing & Manuscript Prep', value: 3, color: 'bg-indigo-400' },
+                { label: 'Code Generation & Debugging', value: 3, color: 'bg-indigo-400' },
+                { label: 'Data Analysis', value: 2, color: 'bg-indigo-300' },
+                { label: 'Theorem Proving', value: 1, color: 'bg-indigo-200' },
+            ],
+            notWant: [
+                { label: 'Novel Ideas & Proofs', value: 3, color: 'bg-rose-500' },
+                { label: 'Research Design & Planning', value: 2, color: 'bg-rose-400' },
+                { label: 'Handling Sensitive Data', value: 1, color: 'bg-rose-300' },
+                { label: 'Final Decision Making', value: 1, color: 'bg-rose-300' },
+            ],
+            canDo: [
+                { label: 'Literature Discovery', value: 4, color: 'bg-emerald-500' },
+                { label: 'Code Generation', value: 4, color: 'bg-emerald-500' },
+                { label: 'Writing Assistance', value: 4, color: 'bg-emerald-500' },
+                { label: 'Data Analysis & Synthesis', value: 2, color: 'bg-emerald-400' },
+                { label: 'Math & Proof Structuring', value: 2, color: 'bg-emerald-400' },
+            ],
+            cannotDo: [
+                { label: 'Novel Theory & Reasoning', value: 3, color: 'bg-amber-500' },
+                { label: 'Creative Research Design', value: 2, color: 'bg-amber-400' },
+                { label: 'End-to-End Paper Creation', value: 1, color: 'bg-amber-300' },
+                { label: 'Identifying Technical Flaws', value: 1, color: 'bg-amber-300' },
+            ]
+        };
+
+        function createChart(containerId, data) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const maxValue = Math.max(...data.map(item => item.value));
+
+            data.forEach(item => {
+                const percentage = (item.value / maxValue) * 100;
+                
+                const itemEl = document.createElement('div');
+                itemEl.className = 'flex items-center';
+
+                const labelEl = document.createElement('div');
+                labelEl.className = 'w-1/3 text-sm text-slate-600 pr-4 truncate';
+                labelEl.textContent = item.label;
+                labelEl.title = item.label;
+
+                const barContainerEl = document.createElement('div');
+                barContainerEl.className = 'w-2/3 bg-slate-200 rounded-full h-6';
+
+                const barEl = document.createElement('div');
+                barEl.className = `chart-bar h-6 rounded-full flex items-center justify-end pr-2 text-white font-medium text-sm ${item.color}`;
+                barEl.style.width = '0%'; // Start at 0 for animation
+                setTimeout(() => {
+                    barEl.style.width = `${percentage}%`;
+                }, 100);
+                barEl.textContent = item.value;
+
+                barContainerEl.appendChild(barEl);
+                itemEl.appendChild(labelEl);
+                itemEl.appendChild(barContainerEl);
+                container.appendChild(itemEl);
+            });
+        }
+
+        // Render all charts on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            createChart('want-chart', surveyData.want);
+            createChart('not-want-chart', surveyData.notWant);
+            createChart('can-do-chart', surveyData.canDo);
+            createChart('cannot-do-chart', surveyData.cannotDo);
+        });
+    </script>
+</body>
+</html>
