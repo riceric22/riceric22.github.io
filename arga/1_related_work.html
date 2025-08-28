@@ -44,9 +44,6 @@
         .transition-transform {
             transition: transform 0.3s ease-in-out;
         }
-        .copy-feedback {
-            transition: opacity 0.5s ease-in-out;
-        }
     </style>
 </head>
 <body>
@@ -90,6 +87,33 @@
                     <h3 class="font-bold text-lg mb-2 text-[#A77E58]">4. Expert Evaluation</h3>
                     <p class="text-sm">After swapping back, the expert evaluates the non-expert's generated content and ideas.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="before-you-begin" class="mb-16">
+            <div class="max-w-3xl mx-auto bg-amber-50 p-8 rounded-lg border border-amber-200">
+                <h3 class="text-xl font-bold mb-4 text-amber-800">Before You Begin: Setup for Success</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-amber-600 mr-3 mt-1 font-bold">①</span>
+                        <div>
+                            <h4 class="font-semibold">Start a Fresh Chat Session</h4>
+                            <p class="text-sm text-gray-600">To prevent context from previous conversations from influencing your results, start a new, temporary, or incognito chat session in your LLM for this exercise.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-amber-600 mr-3 mt-1 font-bold">②</span>
+                        <div>
+                            <h4 class="font-semibold">Keep Your Notes Open</h4>
+                            <p class="text-sm text-gray-600">Have your Google Doc open the entire time. Your goal is to document your process **as it happens**. Don't wait until the end. For each attempt, record:</p>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li>The exact prompt you used.</li>
+                                <li>A brief summary of the AI's output.</li>
+                                <li>Your own thoughts on what worked or didn't work.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -187,7 +211,10 @@
         <section id="reflection">
             <h2 class="text-3xl font-bold text-center mb-8 text-[#A77E58]">Reflection Questions</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
-                <ol class="list-decimal list-inside space-y-4">
+                <div class="flex justify-end mb-4">
+                     <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                </div>
+                <ol id="reflectionList" class="list-decimal list-inside space-y-4">
                     <!-- Questions will be injected here by JS -->
                 </ol>
             </div>
@@ -205,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nonExpertBtn = document.getElementById('nonExpertBtn');
     const expertContent = document.getElementById('expertContent');
     const nonExpertContent = document.getElementById('nonExpertContent');
+    const copyAllBtn = document.getElementById('copyAllBtn');
 
     const expertTips = [
         { title: 'Provide a "Gold Standard" Abstract', content: 'Start by giving the LLM the abstract of your paper. This is the most crucial piece of context.' },
@@ -260,16 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function populateQuestions() {
-        const container = document.querySelector('#reflection ol');
-        container.innerHTML = reflectionQuestions.map(q => `
-            <li class="relative">
-                ${q}
-                <button class="copy-btn absolute top-0 right-0 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
-                    <span class="copy-icon">📋</span>
-                    <span class="copy-feedback opacity-0 absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
-                </button>
-            </li>
-        `).join('');
+        const container = document.getElementById('reflectionList');
+        container.innerHTML = reflectionQuestions.map(q => `<li>${q}</li>`).join('');
     }
 
     function setupEventListeners() {
@@ -300,27 +320,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        document.querySelectorAll('.copy-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const liElement = button.closest('li');
-                const questionText = liElement.firstChild.textContent.trim();
-                
-                const tempTextArea = document.createElement('textarea');
-                tempTextArea.value = questionText;
-                document.body.appendChild(tempTextArea);
-                tempTextArea.select();
-                try {
-                    document.execCommand('copy');
-                    const feedback = button.querySelector('.copy-feedback');
-                    feedback.style.opacity = '1';
-                    setTimeout(() => {
-                        feedback.style.opacity = '0';
-                    }, 1500);
-                } catch (err) {
-                    console.error('Failed to copy text: ', err);
-                }
-                document.body.removeChild(tempTextArea);
-            });
+        copyAllBtn.addEventListener('click', () => {
+            const questionsText = reflectionQuestions.map((q, index) => `${index + 1}. ${q}`).join('\n\n');
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = questionsText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                const originalText = copyAllBtn.textContent;
+                copyAllBtn.textContent = 'Copied!';
+                copyAllBtn.classList.add('bg-green-500');
+                setTimeout(() => {
+                    copyAllBtn.textContent = originalText;
+                    copyAllBtn.classList.remove('bg-green-500');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            document.body.removeChild(tempTextArea);
         });
     }
 
