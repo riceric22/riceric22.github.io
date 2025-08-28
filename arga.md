@@ -120,9 +120,9 @@ Tentative schedule. Topics are subject to change.
 
 | Date   | Topic | Notes |
 | :----- | :---- | :---- |
-| Aug 29 | Writing | Related work & report generation |
-| Sep 05 | Writing | Abstract, Introductions & figures |
-| Sep 12 | Writing | Critiquing & editing |
+| Aug 29 | Writing | Related work & reports |
+| Sep 05 | Writing | Abstract, introductions & figures |
+| Sep 12 | Writing | Reviewing & editing technical writing |
 | Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) |  |
 | Sep 26 | Coding | Developing & debugging, tests & documentation |
 | Oct 03 | Coding | Data analysis & agentic coding |
@@ -130,7 +130,7 @@ Tentative schedule. Topics are subject to change.
 | Oct 17 | TBD | Data collection #1 |
 | Oct 24 | Reviewing | Generating & Evaluating (this is not an endorsement, but an exploration of) |
 | Oct 31 | Proofs | Guest instructor: Surbhi  |
-| Nov 07 | Tooling and/or Ethics |  |
+| Nov 07 | Tooling and/or ethics |  |
 | Nov 14 | TBD | Data Collection #2 |
 | Nov 21 | Class Projects |  Presentations  |
 | Nov 26 | Thanksgiving (No class) |       |
