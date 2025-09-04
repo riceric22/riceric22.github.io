@@ -135,14 +135,26 @@
             <div id="reflection" class="tab-content">
                 <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold">Reflection and Final Analysis</h2>
-                    <p class="max-w-3xl mx-auto mt-2">Review your notes and the visuals you've created to consolidate your learnings.</p>
+                    <p class="max-w-3xl mx-auto mt-2">Review your notes, submit your best figure, and consolidate your learnings.</p>
                 </div>
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Final Questions</h3>
-                        <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200 space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Final Submission</h3>
+                        <div class="border rounded-lg p-4 bg-[#FDFBF8]">
+                            <p class="text-sm">As the final step, please add your best figure from this exercise to our shared class presentation. Create a new slide, add your figure, and include your name.</p>
+                            <a href="https://docs.google.com/presentation/d/1kwR2EtcFPE5vpeDksxm1z981WLMgvv1T8ZbQ7mMKlO4/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">
+                                Open Google Slides Presentation
+                            </a>
+                        </div>
                     </div>
-                    <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Final Questions for Your Notes</h3>
+                            <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                        </div>
+                        <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+                    </div>
                 </div>
             </div>
         </main>
@@ -323,4 +335,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
