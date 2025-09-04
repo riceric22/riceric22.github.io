@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: AI for Scientific Visuals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: This application is structured as an interactive lab notebook with a top-level tabbed navigation for the major stages of the figure creation workflow (Idea to Code, Image to Code, Modification, etc.). This modular design allows students to focus on one skill at a time. Within each stage, individual experiments are presented in an accordion format, keeping the interface clean and guiding the user through specific tasks. This structure was chosen to break down a complex, multi-faceted process into manageable, interactive steps, superior to a linear document. Key user interactions include copying prompts and reviewing analysis questions, which are built directly into each experimental module. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Report Info -> 7 main sections of the worksheet. Goal -> Organize & Guide. Method -> Tabbed navigation UI. Interaction -> Click to switch main content views. Justification -> The most effective way to segment a complex, multi-stage exercise into manageable parts.
+        - Experimental Strategies: Report Info -> Different methods for figure generation. Goal -> Compare & Organize. Method -> Accordion component within each tab. Interaction -> Click to expand/collapse. Justification -> Hides detailed instructions by default, allowing users to focus on one experiment at a time without being overwhelmed.
+        - Prompt Examples: Report Info -> Example prompts for Python code generation. Goal -> Action. Method -> Code-style blocks with a copy button. Interaction -> Click to copy. Justification -> Provides direct utility for students to use in their own LLM sessions.
+        - Conceptual Illustrations: Report Info -> Using sketches as input. Goal -> Inform & Instruct. Method -> Text description paired with an  tag for context. Justification -> Clearly communicates the novel input method for the reverse-engineering task.
+        - Reflection Questions: Report Info -> Final list of questions. Goal -> Action. Method -> A numbered list with a single "Copy All" button. Justification -> Streamlines the final note-taking step based on previous user feedback.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { 
+            background-color: #A77E58;
+            color: #FFFFFF;
+        }
+        .tab-btn {
+            background-color: #EFEAE4;
+            color: #A77E58;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .accordion-open .accordion-content {
+            max-height: 1000px;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .transition-transform { transition: transform 0.3s ease-in-out; }
+        .copy-feedback { transition: opacity 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 py-12 max-w-5xl">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#A77E58]">From Sketch to Publication</h1>
+            <p class="mt-2 text-lg text-gray-600">A Guide to AI-Assisted Scientific Visuals</p>
+        </header>
+
+        <!-- Intro Section -->
+        <section id="getting-started" class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4 text-[#A77E58]">Getting Started</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold mb-1">Your Tools</h3>
+                    <p>A dataset, a process description, a whiteboard/paper for sketching, and example visuals from papers.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-1">Your Goal</h3>
+                    <p>To experiment with the methods below to create, modify, and caption visuals using Python.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-1">Documentation</h3>
+                    <p>Keep a Google Doc open to record your prompts (including photos of sketches), code, visuals, and analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Tab Navigation -->
+        <div class="mb-8 sticky top-0 z-10 bg-[#FDFBF8] py-4">
+            <div class="flex flex-wrap justify-center rounded-lg p-1 bg-[#EFEAE4] shadow-md">
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md active" data-tab="forward">Idea to Code</button>
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md" data-tab="reverse">Image to Code</button>
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md" data-tab="modify">Modification</button>
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md" data-tab="caption">Captioning</button>
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md" data-tab="brainstorm">Brainstorm</button>
+                <button class="tab-btn flex-grow text-xs sm:text-sm font-medium py-2 px-3 rounded-md" data-tab="reflection">Reflection</button>
+            </div>
+        </div>
+
+        <main>
+            <!-- Forward Pass Content -->
+            <div id="forward" class="tab-content active">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Forward Pass: From Idea to Python Code</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Describe a desired visual and ask the AI to generate the corresponding Python code. For this exercise, please choose <strong>one</strong> of the experiments below to follow through. You are welcome to explore the others if you have time.</p>
+                </div>
+                <div class="space-y-4" id="forward-experiments"></div>
+            </div>
+
+            <!-- Reverse Pass Content -->
+            <div id="reverse" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Reverse Pass: From Image to Code</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Use multimodal LLMs to interpret a visual and generate the Python code to replicate it. For this exercise, please choose <strong>one</strong> of the experiments below to follow through.</p>
+                </div>
+                <div class="space-y-4" id="reverse-experiments"></div>
+            </div>
+
+            <!-- Modification Content -->
+            <div id="modify" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Art of Modification: Iterative Refinement</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Use the AI as a coding assistant to modify and build upon existing figures.</p>
+                </div>
+                <div class="space-y-4" id="modify-experiments"></div>
+            </div>
+
+             <!-- Captioning Content -->
+            <div id="caption" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Narrative: Generating Captions and Titles</h2>
+                    <p class="max-w-3xl mx-auto mt-2">A visual is only as good as its caption. Test the AI's ability to interpret a visual and describe it accurately.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200" id="caption-experiment"></div>
+            </div>
+
+            <!-- Brainstorm Content -->
+            <div id="brainstorm" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Creative Consultant: Brainstorming Visuals</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Use the AI for ideation, not just execution, to suggest novel ways to communicate your concepts.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200" id="brainstorm-experiment"></div>
+            </div>
+
+            <!-- Reflection Content -->
+            <div id="reflection" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Reflection and Final Analysis</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Review your notes and the visuals you've created to consolidate your learnings.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Final Questions</h3>
+                        <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                    </div>
+                    <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Data for experiments
+    const forwardExperiments = [
+        {
+            title: "Experiment A: The Data Plot",
+            strategy: "Provide a natural language description of your data and the plot you want.",
+            prompt: `"I have a CSV file named 'data.csv' with columns 'X_value', 'Y_value', and 'Category'. Generate Python code using Matplotlib and Seaborn to create a scatter plot of 'Y_value' vs. 'X_value', with the points colored by 'Category'."`,
+            analysis: "How well did the AI generate functional code? Did it make reasonable assumptions about styling?"
+        },
+        {
+            title: "Experiment B: The Process Diagram/Flowchart",
+            strategy: "Describe the steps of a pipeline and ask the AI to generate Python code to represent it visually.",
+            prompt: `"Generate Python code using Matplotlib to create a flowchart for the following process: Start with a box labeled 'Data Input', which points to 'Data Preprocessing'. From there, an arrow points to a box for 'Feature Engineering', which then leads to 'Model Training' and finally 'Model Evaluation'. Use simple boxes and arrows."`,
+            analysis: "How effectively did the AI translate the process steps into a visual structure using a standard plotting library?"
+        },
+        {
+            title: "Experiment C: The Publication-Ready Table",
+            strategy: "Provide raw data and ask the AI to generate Python code to render it as a clean, styled table-figure.",
+            prompt: `"Here is some data: Model A, 92.5%, 88.1%; Model B, 94.2%, 90.3%. Generate Python code using Matplotlib to create a simple, clean table figure presenting this data. The columns should be 'Model', 'Accuracy', and 'F1-Score'. Hide the axes and save it as a PNG."`,
+            analysis: "Is this a viable alternative to creating tables in LaTeX or Word?"
+        }
+    ];
+
+    const reverseExperiments = [
+        {
+            title: "Experiment A: From Polished Figure to Code",
+            strategy: "Upload an image of a published figure and ask the AI to replicate its style in Python.",
+            prompt: `"I've uploaded an image of a bar chart from a research paper. Generate Python code using Matplotlib that replicates the style of this plot as closely as possible. Use placeholder data, but match the colors, font style, and overall layout."`,
+            analysis: "How accurately did the AI capture the aesthetic of the original figure?"
+        },
+        {
+            title: "Experiment B: From Whiteboard Sketch to Code",
+            strategy: "Draw a rough sketch of a figure on a whiteboard or paper, take a clear photo, and ask the AI to turn it into code. ",
+            prompt: `"I have uploaded a photo of a hand-drawn sketch of a multi-panel figure. Please interpret this sketch and generate Python code with Matplotlib to create it. The top panel should be a line plot with two lines, and the bottom panel should be a histogram. Use placeholder data but replicate the layout, labels, and general intent of my drawing."`,
+            analysis: "How well did the AI translate your hand-drawn concepts into a structured plot? What was lost or misinterpreted in translation?"
+        }
+    ];
+
+    const modifyExperiments = [
+         {
+            title: "Experiment A: Basic Edits",
+            strategy: "Provide a working Python script and ask for specific stylistic changes.",
+            prompt: `"Here is a Python script for a plot. Modify it to: 1. Change the color palette to 'seaborn-muted'. 2. Add a legend to the upper-left corner. 3. Increase the font size of the axis labels to 14."`,
+            analysis: "Is it faster to ask the AI for these small changes or to look up the documentation yourself?"
+        },
+        {
+            title: "Experiment B: Complex Composition",
+            strategy: "Provide two separate, working Python scripts for figures and ask the AI to combine them into a single, multi-panel figure.",
+            prompt: `"I have two separate Python scripts. The first creates a scatter plot, and the second creates a bar chart. Please combine them into a single figure with two subplots arranged vertically. The scatter plot should be on top, and the bar chart on the bottom."`,
+            analysis: "How well did the AI handle complex layout and composition tasks?"
+        }
+    ];
+
+    const captionExperiment = {
+        strategy: "Provide the AI with the final Python code for your visual and the key takeaway it is meant to illustrate.",
+        prompt: `"I've attached the Python code that generates a figure. The figure shows a scatter plot where data points clearly cluster into two groups. The most important finding is that Group A has a much steeper slope than Group B. Please write a formal academic figure caption that first describes what the plot shows and then states this key finding."`,
+        analysis: "How well did the generated caption balance description (what the visual *is*) with interpretation (what it *means*)?"
+    };
+    
+    const brainstormExperiment = {
+        strategy: "Describe a complex idea, dataset, or process and your communication goal, then ask the AI for suggestions.",
+        prompt: `"I need to show the relationship between three continuous variables (X, Y, Z) and a categorical variable (Group). Suggest three different Python-based visualizations to do this, such as a 3D scatter plot or a bubble chart with size representing the Z variable. Briefly explain the pros and cons of each for a research paper."`,
+        analysis: "Did the AI suggest visualization types you hadn't considered?"
+    };
+
+    const reflectionQuestions = [
+        "Sketch vs. Polished: How did the AI's interpretation of your hand-drawn sketch compare to its interpretation of a polished, published figure?",
+        "AI as Assistant: For modifying code, what is the sweet spot for an AI request? At what point of complexity does it become easier to write the code yourself?",
+        "Context for Captions: How important was it to provide the 'key finding' to the AI when generating a caption?",
+        "Risks and Pitfalls: What is the biggest risk of using AI for generating visuals? (e.g., subtle coding errors that misrepresent data, lack of reproducibility).",
+        "Workflow Integration: Which of these techniques seems most promising for accelerating your personal research workflow?"
+    ];
+
+    function createPromptBlock(promptText) {
+        return `
+            <div class="relative bg-[#FDFBF8] p-4 rounded-md border mt-2">
+                <pre class="text-sm font-mono whitespace-pre-wrap">${promptText}</pre>
+                <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                    <span class="copy-icon">📋</span>
+                    <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                </button>
+            </div>
+        `;
+    }
+
+    function createAccordionItem(exp) {
+        let contentHtml = `<p class="text-sm font-medium mb-2">Strategy:</p><p class="text-sm mb-4">${exp.strategy}</p>`;
+        contentHtml += `<p class="text-sm font-medium mb-2">Prompt Example:</p>${createPromptBlock(exp.prompt)}`;
+        contentHtml += `<hr class="my-4"><p class="text-sm font-medium mb-2">Analysis Questions:</p><p class="text-sm italic">${exp.analysis}</p>`;
+
+        return `
+            <div class="accordion-item bg-white rounded-lg shadow-sm border border-gray-200">
+                <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                    <span>${exp.title}</span>
+                    <span class="transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-4 border-t border-gray-200">
+                        ${contentHtml}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createSingleExperiment(exp) {
+        let contentHtml = `<p class="text-sm font-medium mb-2">Strategy:</p><p class="text-sm mb-4">${exp.strategy}</p>`;
+        contentHtml += `<p class="text-sm font-medium mb-2">Prompt Example:</p>${createPromptBlock(exp.prompt)}`;
+        contentHtml += `<hr class="my-4"><p class="text-sm font-medium mb-2">Analysis Questions:</p><p class="text-sm italic">${exp.analysis}</p>`;
+        return contentHtml;
+    }
+
+    // Populate dynamic content
+    document.getElementById('forward-experiments').innerHTML = forwardExperiments.map(createAccordionItem).join('');
+    document.getElementById('reverse-experiments').innerHTML = reverseExperiments.map(createAccordionItem).join('');
+    document.getElementById('modify-experiments').innerHTML = modifyExperiments.map(createAccordionItem).join('');
+    document.getElementById('caption-experiment').innerHTML = createSingleExperiment(captionExperiment);
+    document.getElementById('brainstorm-experiment').innerHTML = createSingleExperiment(brainstormExperiment);
+    document.getElementById('reflectionList').innerHTML = reflectionQuestions.map(q => `<li>${q}</li>`).join('');
+
+    // Event Listeners
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const tabId = btn.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    });
+
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('accordion-open');
+            button.querySelector('span:last-child').classList.toggle('rotate-180');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        const copyBtn = e.target.closest('.copy-btn');
+        if (copyBtn) {
+            const pre = copyBtn.closest('.relative').querySelector('pre');
+            navigator.clipboard.writeText(pre.innerText).then(() => {
+                const feedback = copyBtn.querySelector('.copy-feedback');
+                feedback.style.opacity = '1';
+                setTimeout(() => { feedback.style.opacity = '0'; }, 1500);
+            }).catch(err => console.error('Failed to copy text: ', err));
+        }
+    });
+
+    document.getElementById('copyAllBtn').addEventListener('click', () => {
+        const textToCopy = reflectionQuestions.map((q, i) => `${i + 1}. ${q}`).join('\n\n');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const btn = document.getElementById('copyAllBtn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.classList.add('bg-green-500');
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('bg-green-500');
+            }, 2000);
+        }).catch(err => console.error('Failed to copy questions: ', err));
+    });
+
+});
+</script>
+
+</body>
+</html>
+

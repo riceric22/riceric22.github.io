@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Generating Abstracts & Introductions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is designed as an interactive lab notebook with a clear, tab-based structure to separate the major sections: Abstract, Introduction, Synthesis, and Reflection. This was chosen to allow students to focus on one area at a time without being overwhelmed by a long scroll. Within each experimental section, a nested accordion structure is used for each distinct strategy (e.g., Minimalist vs. Holistic). This keeps the interface clean and encourages a methodical, step-by-step approach to the exercises. Actionable elements like copy-to-clipboard buttons are integrated directly into the workflow to facilitate the note-taking process. This user-centric, organized structure transforms the static outline into a dynamic and effective learning tool. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Report Info -> 4 main sections of the worksheet. Goal -> Organize & Guide. Method -> Tabbed navigation UI. Interaction -> Click to switch main content views. Justification -> The most effective way to segment a complex exercise into manageable parts.
+        - Experimental Strategies: Report Info -> Different methods for abstracts/intros. Goal -> Compare & Organize. Method -> Accordion component within each tab. Interaction -> Click to expand/collapse. Justification -> Hides detailed content by default to prevent cognitive overload and allows users to focus on one experiment at a time.
+        - Prompt Examples: Report Info -> Example prompts for each strategy. Goal -> Action. Method -> Code-style blocks with a copy button. Interaction -> Click to copy. Justification -> Provides direct utility for students to use in their own LLM sessions.
+        - Synthesis Template: Report Info -> The structure of a master prompt. Goal -> Instruct & Guide. Method -> A structured list within a styled card. Justification -> Presents the template as a clear, actionable artifact to be built.
+        - Reflection Questions: Report Info -> Final list of questions. Goal -> Action. Method -> A numbered list with a single "Copy All" button. Justification -> Streamlines the final note-taking step based on previous user feedback.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { 
+            background-color: #A77E58;
+            color: #FFFFFF;
+        }
+        .tab-btn {
+            background-color: #EFEAE4;
+            color: #A77E58;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .accordion-open .accordion-content {
+            max-height: 1000px;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .transition-transform { transition: transform 0.3s ease-in-out; }
+        .copy-feedback { transition: opacity 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 py-12 max-w-5xl">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#A77E58]">The Art of the Start</h1>
+            <p class="mt-2 text-lg text-gray-600">An Interactive Guide to AI-Assisted Abstracts & Introductions</p>
+        </header>
+
+        <!-- Intro Section -->
+        <section id="getting-started" class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4 text-[#A77E58]">Getting Started</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold mb-1">Your Tool</h3>
+                    <p>A research paper or a near-complete draft that you will use as the source material.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-1">Your Goal</h3>
+                    <p>To experiment with the techniques below and generate multiple versions of an abstract and introduction.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-1">Documentation</h3>
+                    <p>Keep a Google Doc open to record your prompts, the AI's outputs, and your analysis for each experiment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Tab Navigation -->
+        <div class="mb-8 sticky top-0 z-10 bg-[#FDFBF8] py-4">
+            <div class="flex flex-wrap justify-center rounded-lg p-1 bg-[#EFEAE4] shadow-md">
+                <button class="tab-btn flex-grow text-sm sm:text-base font-medium py-2 px-4 rounded-md active" data-tab="abstracts">Part 1: The Abstract</button>
+                <button class="tab-btn flex-grow text-sm sm:text-base font-medium py-2 px-4 rounded-md" data-tab="introductions">Part 2: The Introduction</button>
+                <button class="tab-btn flex-grow text-sm sm:text-base font-medium py-2 px-4 rounded-md" data-tab="synthesis">Part 3: The Synthesis</button>
+                <button class="tab-btn flex-grow text-sm sm:text-base font-medium py-2 px-4 rounded-md" data-tab="reflection">Part 4: Reflection</button>
+            </div>
+        </div>
+
+        <main>
+            <!-- Abstract Content -->
+            <div id="abstracts" class="tab-content active">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Abstract: The Paper in Miniature</h2>
+                    <p class="max-w-3xl mx-auto mt-2">The challenge is to be comprehensive yet concise. Test how different contexts affect the AI's ability to create a strong abstract.</p>
+                </div>
+                <div class="space-y-4" id="abstract-experiments"></div>
+            </div>
+
+            <!-- Introduction Content -->
+            <div id="introductions" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Introduction: Setting the Stage</h2>
+                    <p class="max-w-3xl mx-auto mt-2">The introduction creates a narrative that leads the reader to your research question. Explore how to build this narrative with an AI.</p>
+                </div>
+                <div class="space-y-4" id="introduction-experiments"></div>
+            </div>
+
+            <!-- Synthesis Content -->
+            <div id="synthesis" class="tab-content">
+                 <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">The Synthesis: Crafting a 'One-Shot' Master Prompt</h2>
+                    <p class="max-w-3xl mx-auto mt-2">After experimenting, synthesize your learnings into a single, comprehensive set of instructions that could generate a strong first draft in one attempt.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200 space-y-6">
+                    <div>
+                        <h3 class="font-semibold text-lg">1. Review Your Notes</h3>
+                        <p class="text-sm mt-1">Look back at all your experiments. Identify the key ingredients that led to success (e.g., specific persona, structural rules, key context to provide).</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">2. Draft a "Master Prompt"</h3>
+                        <p class="text-sm mt-1">Combine all successful elements into a single, detailed prompt. Use the template below as a guide.</p>
+                    </div>
+                    <div class="border rounded-lg p-4 bg-[#FDFBF8]">
+                        <h4 class="font-medium mb-2">Master Prompt Template</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><strong>Persona:</strong> "Act as an expert academic writer specializing in [Your Field]."</li>
+                            <li><strong>Task:</strong> "Your task is to generate a [250-word abstract / 5-paragraph introduction] for my research paper."</li>
+                            <li><strong>Context:</strong> "Use the attached document as your source material. Pay special attention to the [Methods and Results sections / Abstract and Conclusion]."</li>
+                            <li><strong>Structural Requirements:</strong> "The introduction must follow a funnel structure. The abstract must contain one sentence for each of these components: Background, Methods, Results, Conclusion."</li>
+                            <li><strong>Key Information to Include:</strong> "Ensure you emphasize that the core finding is [Your Core Finding] and that it addresses the gap of [The Gap in Literature]."</li>
+                            <li><strong>Style and Tone:</strong> "The tone should be formal, objective, and confident. Avoid using jargon where possible."</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-lg">3. Test and Analyze</h3>
+                        <p class="text-sm mt-1">Run your master prompt with the attached paper. How does the output of this single, detailed prompt compare to the drafts you generated through iterative or interactive methods?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reflection Content -->
+            <div id="reflection" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Reflection and Final Analysis</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Review your notes and the various generated texts to consolidate your learnings from this exercise.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Final Questions</h3>
+                        <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                    </div>
+                    <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Data for experiments
+    const abstractExperiments = [
+        {
+            title: "Experiment A: The Minimalist Context (Results-Driven)",
+            strategy: "Provide the LLM *only* with your 'Results' and 'Conclusion' sections.",
+            prompt: `"Act as a research paper author. Based *only* on the attached Results and Conclusion sections, draft a 250-word abstract that covers the background, methods, results, and conclusion."`,
+            analysis: "How well did the AI infer the background and methods? Was the abstract well-balanced or overly focused on the results?"
+        },
+        {
+            title: "Experiment B: The Holistic Context (Full Draft)",
+            strategy: "Provide the LLM with your entire paper draft *except* for the existing introduction.",
+            prompt: `"Act as an expert academic editor. I have attached a full research paper. Your task is to read the entire document and generate a compelling 250-word abstract that accurately summarizes all key sections."`,
+            analysis: "Compare this abstract to the one from Experiment A. Is it more accurate and balanced? Did providing more context lead to a better result?"
+        },
+        {
+            title: "Experiment C: The Socratic Method (Interactive Drafting)",
+            strategy: "Ask the LLM to act as a collaborator and ask you questions to gather the necessary information before it starts writing.",
+            prompt: `"I need to write an abstract for my research paper. Before you draft anything, ask me five critical questions you need answered to write a powerful and comprehensive abstract that covers the problem, the methods, the key findings, and the implications."`,
+            analysis: "How did this interactive process compare to the single-prompt methods? Did the AI's questions help you clarify the core message of your paper?"
+        }
+    ];
+
+    const introductionExperiments = [
+        {
+            title: "Experiment A: The Outline-First Pathway (Iterative Refinement)",
+            strategy: "Generate a bullet-point outline first, refine it yourself, then have the AI expand the refined version into the full text.",
+            steps: [
+                {
+                    title: "Step 1: Generate Outline",
+                    prompt: `"Based on the attached abstract, generate a bullet-point outline for a 5-paragraph introduction. The outline should follow the 'funnel structure': starting broad (the general problem), narrowing to specific research, identifying the gap, and stating the paper's contribution."`
+                },
+                {
+                    title: "Step 2: Refine Outline",
+                    prompt: `Edit the outline yourself. Add, remove, or rephrase points to ensure it perfectly matches the story you want to tell.`
+                },
+                {
+                    title: "Step 3: Generate Full Text",
+                    prompt: `"Now, expand this refined outline into a full introduction. Write in a clear, academic tone and ensure smooth transitions between paragraphs."`
+                }
+            ],
+            analysis: "How did building from an outline affect the final quality? Was this iterative process more effective than a single-shot generation?"
+        },
+        {
+            title: "Experiment B: The 'What's Missing?' Context",
+            strategy: "Provide the AI with your 'Related Work' and 'Methods' sections and ask it to generate the introduction that logically precedes them.",
+            prompt: `"Act as a research storyteller. I have attached the 'Related Work' and 'Methods' sections of my paper. Draft the introduction that would perfectly set the stage for these sections, establishing the context and motivating the research question."`,
+            analysis: "Did this approach create a strong narrative flow? Did it correctly identify the 'gap' in the literature that your work fills?"
+        },
+        {
+            title: "Experiment C: The Interactive Journalist",
+            strategy: "Ask the AI to 'interview' you to get the necessary components for a strong introduction.",
+            prompt: `"I need to write the introduction for my paper. To help you, act like a journalist and ask me questions to uncover the 'story' of my research. Your questions should help establish the hook, the context, the problem, the existing solutions, the gap, and my paper's specific contribution."`,
+            analysis: "Compare this to the outline-first method. Did this conversational approach help you articulate the narrative of your research more effectively?"
+        }
+    ];
+
+    const reflectionQuestions = [
+        "Abstracts: Which method (Minimalist, Holistic, or Socratic) produced the best first draft? Which one was the most efficient?",
+        "Introductions: Which method (Outline-First, 'What's Missing?', or Interactive Journalist) produced the most compelling narrative? Which method gave you the most control over the final product?",
+        "Context is Key: How did changing the source material (e.g., only results vs. the full paper) impact the quality and focus of the generated text?",
+        "Process vs. Product: For your personal workflow, would you prefer a single-shot generation that you heavily edit, or a multi-step, interactive process that you guide from the beginning? Why?",
+        "The Master Prompt: How did your 'one-shot' master prompt perform compared to the iterative methods? What does this tell you about the trade-offs between front-loading your instructions versus refining interactively?"
+    ];
+
+    // Helper to create copyable prompt blocks
+    function createPromptBlock(promptText) {
+        if (!promptText.startsWith('"')) {
+            return `<div class="bg-amber-50 p-3 rounded-md text-xs border border-amber-200"><strong>Note:</strong> ${promptText}</div>`;
+        }
+        return `
+            <div class="relative bg-[#FDFBF8] p-4 rounded-md border mt-2">
+                <pre class="text-sm font-mono whitespace-pre-wrap">${promptText}</pre>
+                <button class="copy-btn absolute top-2 right-2 p-1 text-gray-400 hover:text-gray-700" title="Copy to clipboard">
+                    <span class="copy-icon">📋</span>
+                    <span class="copy-feedback opacity-0 absolute -top-6 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">Copied!</span>
+                </button>
+            </div>
+        `;
+    }
+
+    // Helper to create an accordion item
+    function createAccordionItem(exp) {
+        let contentHtml = `<p class="text-sm font-medium mb-2">Strategy:</p><p class="text-sm mb-4">${exp.strategy}</p>`;
+        
+        if (exp.prompt) {
+            contentHtml += `<p class="text-sm font-medium mb-2">Prompt Example:</p>${createPromptBlock(exp.prompt)}`;
+        }
+
+        if (exp.steps) {
+            contentHtml += exp.steps.map(step => `
+                <div class="mb-4">
+                    <p class="text-sm font-medium">${step.title}:</p>
+                    ${createPromptBlock(step.prompt)}
+                </div>
+            `).join('');
+        }
+
+        contentHtml += `<hr class="my-4"><p class="text-sm font-medium mb-2">Analysis Questions:</p><p class="text-sm italic">${exp.analysis}</p>`;
+
+        return `
+            <div class="accordion-item bg-white rounded-lg shadow-sm border border-gray-200">
+                <button class="accordion-header w-full flex justify-between items-center text-left p-4 font-medium">
+                    <span>${exp.title}</span>
+                    <span class="transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="p-4 border-t border-gray-200">
+                        ${contentHtml}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Populate dynamic content
+    document.getElementById('abstract-experiments').innerHTML = abstractExperiments.map(createAccordionItem).join('');
+    document.getElementById('introduction-experiments').innerHTML = introductionExperiments.map(createAccordionItem).join('');
+    document.getElementById('reflectionList').innerHTML = reflectionQuestions.map(q => `<li>${q}</li>`).join('');
+
+    // Event Listeners
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const tabId = btn.dataset.tab;
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+        });
+    });
+
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('accordion-open');
+            button.querySelector('span:last-child').classList.toggle('rotate-180');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        const copyBtn = e.target.closest('.copy-btn');
+        if (copyBtn) {
+            const pre = copyBtn.querySelector('pre') || copyBtn.closest('.relative').querySelector('pre');
+            const textToCopy = pre.innerText || pre.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const feedback = copyBtn.querySelector('.copy-feedback');
+                feedback.style.opacity = '1';
+                setTimeout(() => { feedback.style.opacity = '0'; }, 1500);
+            }).catch(err => console.error('Failed to copy text: ', err));
+        }
+    });
+
+    document.getElementById('copyAllBtn').addEventListener('click', () => {
+        const textToCopy = reflectionQuestions.map((q, i) => `${i + 1}. ${q}`).join('\n\n');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const btn = document.getElementById('copyAllBtn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.classList.add('bg-green-500');
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('bg-green-500');
+            }, 2000);
+        }).catch(err => console.error('Failed to copy questions: ', err));
+    });
+
+});
+</script>
+
+</body>
+</html>
