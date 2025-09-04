@@ -139,14 +139,30 @@
             <div id="reflection" class="tab-content">
                 <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold">Reflection and Final Analysis</h2>
-                    <p class="max-w-3xl mx-auto mt-2">Review your notes and the various generated texts to consolidate your learnings from this exercise.</p>
+                    <p class="max-w-3xl mx-auto mt-2">Review your notes, get feedback from a peer, and consolidate your learnings from this exercise.</p>
                 </div>
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Final Questions</h3>
-                        <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200 space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Peer Review & Feedback</h3>
+                        <p class="text-sm mb-4">Swap your best-generated abstract and introduction with a partner. Read their work and provide constructive feedback based on the questions below. Discuss your findings with each other.</p>
+                        <div class="border rounded-lg p-4 bg-[#FDFBF8]">
+                            <h4 class="font-medium mb-2">Feedback Questions for Your Partner's Work:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm">
+                                <li>Does the abstract clearly and concisely summarize the paper's core components (problem, method, results, conclusion)?</li>
+                                <li>Does the introduction present a compelling narrative or 'story' that motivates the research?</li>
+                                <li>Is the 'gap' in the existing literature that this research fills made obvious?</li>
+                                <li>What is one thing that works particularly well? What is one area for improvement?</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Final Questions for Your Notes</h3>
+                            <button id="copyAllBtn" class="bg-[#A77E58] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 text-sm">Copy All Questions</button>
+                        </div>
+                        <ol id="reflectionList" class="list-decimal list-inside space-y-4"></ol>
+                    </div>
                 </div>
             </div>
         </main>
@@ -215,7 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Introductions: Which method (Outline-First, 'What's Missing?', or Interactive Journalist) produced the most compelling narrative? Which method gave you the most control over the final product?",
         "Context is Key: How did changing the source material (e.g., only results vs. the full paper) impact the quality and focus of the generated text?",
         "Process vs. Product: For your personal workflow, would you prefer a single-shot generation that you heavily edit, or a multi-step, interactive process that you guide from the beginning? Why?",
-        "The Master Prompt: How did your 'one-shot' master prompt perform compared to the iterative methods? What does this tell you about the trade-offs between front-loading your instructions versus refining interactively?"
+        "The Master Prompt: How did your 'one-shot' master prompt perform compared to the iterative methods? What does this tell you about the trade-offs between front-loading your instructions versus refining interactively?",
+        "Peer Feedback: What was the most valuable piece of feedback you received from your partner? How did seeing their generated text compare to yours?"
     ];
 
     // Helper to create copyable prompt blocks
@@ -328,3 +345,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
