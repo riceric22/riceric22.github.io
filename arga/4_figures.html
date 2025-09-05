@@ -56,19 +56,10 @@
         <!-- Intro Section -->
         <section id="getting-started" class="mb-10 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
             <h2 class="text-2xl font-bold mb-4 text-[#A77E58]">Getting Started</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-sm">
-                <div>
-                    <h3 class="font-semibold mb-1">Your Tools</h3>
-                    <p>A dataset, whiteboard/paper, example visuals, and your research draft.</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-1">Your Goal</h3>
-                    <p>To experiment with the methods below to create, modify, and caption visuals using Python.</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-1">Documentation</h3>
-                    <p>Create and keep a Google Doc open in the class vault to record your prompts, code, and analysis. <a href="https://drive.google.com/drive/folders/1NXTLrIFIhPYFj4tsP1MM2IP7b6mW1eRt?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-[#A77E58] underline">Open Class Vault Folder</a>.</p>
-                </div>
+            <div class="space-y-4 text-sm">
+                <p><strong class="font-semibold">Workflow Suggestion:</strong> To experience the full lifecycle of creating a visual, we recommend taking one primary figure (e.g., a data plot) through all the relevant stages: from generation ("Idea to Code"), to refinement ("Modify & Refine"), to final captioning. However, feel free to create new or different types of visuals (like a diagram) for any task where it makes more sense for your research.</p>
+                <p><strong class="font-semibold">Your Tools:</strong> A dataset, whiteboard/paper for sketching, example visuals, and your research draft.</p>
+                <p><strong class="font-semibold">Documentation:</strong> Create and keep a Google Doc open in the class vault to record your prompts, code, and analysis. <a href="https://drive.google.com/drive/folders/1NXTLrIFIhPYFj4tsP1MM2IP7b6mW1eRt?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-[#A77E58] underline">Open Class Vault Folder</a>.</p>
             </div>
         </section>
 
@@ -97,7 +88,7 @@
             <div id="reverse" class="tab-content">
                  <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold">The Reverse Pass: From Image to Code</h2>
-                    <p class="max-w-3xl mx-auto mt-2">Use multimodal LLMs to interpret a visual and generate the code to replicate it. Explore these different methods for reverse-engineering visuals from an image.</p>
+                    <p class="max-w-3xl mx-auto mt-2">Use multimodal LLMs to interpret a visual and generate the code to replicate it. Explore the tasks below to practice reverse-engineering visuals.</p>
                 </div>
                 <div class="space-y-4" id="reverse-experiments"></div>
             </div>
@@ -106,7 +97,7 @@
             <div id="modify" class="tab-content">
                 <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold">The Art of Modification: Iterative Refinement</h2>
-                    <p class="max-w-3xl mx-auto mt-2">Use the AI as a coding assistant to modify and build upon existing figures. Explore these different methods for refining your visuals.</p>
+                    <p class="max-w-3xl mx-auto mt-2">Use the AI as a coding assistant to modify and build upon existing figures. Explore the different methods below for refining your visuals.</p>
                 </div>
                 <div class="space-y-4" id="modify-experiments"></div>
             </div>
@@ -115,7 +106,7 @@
             <div id="caption" class="tab-content">
                 <div class="text-center mb-8">
                     <h2 class="text-2xl font-bold">The Narrative: Generating Captions and Titles</h2>
-                    <p class="max-w-3xl mx-auto mt-2">A visual is only as good as its caption. Explore these different methods for generating accurate and descriptive captions.</p>
+                    <p class="max-w-3xl mx-auto mt-2">A visual is only as good as its caption. Explore the different methods below for generating accurate and descriptive captions.</p>
                 </div>
                 <div class="space-y-4" id="caption-experiments"></div>
             </div>
@@ -160,10 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
             analysis: "How well did the AI generate functional code? Did it make reasonable assumptions about styling?"
         },
         {
-            title: "Experiment B: The Process Diagram/Flowchart",
-            strategy: "Describe the steps of a pipeline and ask the AI to generate Python code to represent it visually.",
-            prompt: `"Generate Python code using Matplotlib to create a flowchart for the following process: Start with a box labeled 'Data Input', which points to 'Data Preprocessing'. From there, an arrow points to a box for 'Feature Engineering', which then leads to 'Model Training' and finally 'Model Evaluation'. Use simple boxes and arrows."`,
-            analysis: "How effectively did the AI translate the process steps into a visual structure using a standard plotting library?"
+            title: "Experiment B: The Conceptual or Process Diagram",
+            strategy: "Describe the steps of a pipeline or a concept from your research and ask the AI to generate Python code to represent it visually.",
+            prompt: `"Generate Python code using Matplotlib to create a simple diagram illustrating my research concept. The diagram should show a box for 'Cause A' pointing to a box for 'Effect B', with a third box 'Moderator C' having an arrow pointing to the arrow between A and B. Use simple labeled boxes and arrows."`,
+            analysis: "How effectively did the AI translate abstract concepts or process steps into a visual structure using a standard plotting library?"
         },
         {
             title: "Experiment C: The Publication-Ready Table",
@@ -181,14 +172,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const reverseExperiments = [
         {
-            title: "Task A: From Polished Figure to Code",
-            strategy: "Upload an image of a published figure and ask the AI to replicate its style in Python.",
-            prompt: `"I've uploaded an image of a bar chart from a research paper. Generate Python code using Matplotlib that replicates the style of this plot as closely as possible. Use placeholder data, but match the colors, font style, and overall layout."`,
-            analysis: "How accurately did the AI capture the aesthetic of the original figure?"
+            title: "Task A: Create with Inspiration",
+            strategy: "Upload an image of a published figure you like and ask the AI to create a template you can adapt for your own work.",
+            prompt: `"Here is a figure from a research paper that I liked. I want to create a similar figure with my own data, but change the color scheme to blues and remove the top x-axis. Generate Python code using Matplotlib that replicates the general style of this plot. Use placeholder data for now."`,
+            analysis: "How accurately did the AI capture the aesthetic of the original figure while incorporating your requested modifications?"
         },
         {
             title: "Task B: From Whiteboard Sketch to Code",
-            strategy: "Draw a rough sketch of a figure on a whiteboard or paper, take a clear photo, and ask the AI to turn it into code.",
+            strategy: "Draw a rough sketch of a figure, take a clear photo, and ask the AI to turn it into code. Pro-Tip: Convert HEIC photos (from iPhones) to PNG or JPG first, as they are more compatible with LLMs.",
             prompt: `"I have uploaded a photo of a hand-drawn sketch of a multi-panel figure. Please interpret this sketch and generate Python code with Matplotlib to create it. The top panel should be a line plot with two lines, and the bottom panel should be a histogram. Use placeholder data but replicate the layout, labels, and general intent of my drawing."`,
             analysis: "How well did the AI translate your hand-drawn concepts into a structured plot? What was lost or misinterpreted in translation?"
         }
@@ -212,15 +203,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const captionExperiments = [
         {
             title: "Task A: Captioning from Code",
-            strategy: "Provide the AI with the final Python code for your visual and the key takeaway it is meant to illustrate.",
+            strategy: "Provide the AI with the final Python code for your visual and the key takeaway. Pro-Tip: For a clean comparison with the next task, start a new temporary chat session for this.",
             prompt: `"I've attached the Python code that generates a figure. The figure shows a scatter plot where data points clearly cluster into two groups. The most important finding is that Group A has a much steeper slope than Group B. Please write a formal academic figure caption that first describes what the plot shows and then states this key finding."`,
             analysis: "How well did the generated caption balance description (what the visual *is*) with interpretation (what it *means*)?"
         },
         {
             title: "Task B: Captioning from Vision",
-            strategy: "Provide the AI with a screenshot of your final figure and the key takeaway, testing its vision capabilities.",
-            prompt: `"I have uploaded a screenshot of a figure. The figure shows a scatter plot where data points clearly cluster into two groups. The most important finding is that Group A has a much steeper slope than Group B. Please analyze the image and write a formal academic figure caption that first describes what the plot shows and then states this key finding."`,
-            analysis: "Compare this caption to the one generated from code. Did the AI accurately 'see' and describe the figure? Was one method more effective or reliable than the other?"
+            strategy: "Provide the AI with a screenshot of your final figure to test its vision capabilities. Pro-Tip: For a clean comparison, start a new temporary chat session for this.",
+            prompt: `"I have uploaded a screenshot of a figure. Please analyze the image and write a formal academic figure caption for it. The caption should first describe what the plot shows, and then propose a potential key finding or interpretation based on the visual evidence."`,
+            analysis: "Compare this caption to the one generated from code. Did the AI accurately 'see' and describe the figure? Did it correctly infer the main point without being told?"
         }
     ];
 
@@ -329,5 +320,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
-
 
