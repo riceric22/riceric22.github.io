@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: The AI-Assisted Peer Review Lifecycle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A role-based tabbed navigation (Reviewer, Area Chair, Author) guides students through the simulated peer review process step-by-step. Each tab represents a distinct phase and a different hat the student will wear. Within each tab, tasks are laid out clearly. This structure mirrors the linear-yet-distinct stages of peer review and makes the complex, multi-part exercise easy to follow. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Roles -> Tabbed UI. Goal -> Organize & Guide. Interaction -> Click to switch roles/phases. Justification -> Perfect for a multi-stage simulation where each stage has a clear persona.
+        - Prompts/Guidelines: Example prompts and lists -> Code-style blocks with copy buttons. Goal -> Action. Interaction -> Click to copy. Justification -> Provides direct utility and reduces friction for students.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { 
+            background-color: #A77E58;
+            color: #FFFFFF;
+        }
+        .tab-btn {
+            background-color: #EFEAE4;
+            color: #A77E58;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">The AI-Assisted Peer Review Lifecycle</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">An exercise in using LLMs to simulate the academic peer review process, from initial review to final rebuttal.</p>
+        </header>
+
+        <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-md mb-8" role="alert">
+            <h3 class="font-bold">Exercise Overview</h3>
+            <p class="mt-2">In this exercise, you will be part of a three-person group, simulating the review process for three different papers. Each student will take on one of three roles for each paper: the **Author**, the **Reviewer**, and the **Area Chair**. You will cycle through these roles so everyone experiences each perspective. Follow the steps in order.</p>
+            <div class="mt-4">
+                <h4 class="font-semibold">Class Resources:</h4>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li><a href="https://drive.google.com/drive/folders/1ubpgqtloqGRF42fa4TSIkESILaEXYyX6?usp=drive_link" target="_blank" class="font-medium text-amber-900 hover:underline">Folder for Sharing Papers</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1rBrBdd02XL_XzcdTEtXl62-ae1nqXRGL?usp=drive_link" target="_blank" class="font-medium text-amber-900 hover:underline">Folder for Your Notes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="mb-8 border-b border-gray-300">
+            <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
+                <button class="tab-btn active w-full sm:w-auto text-center border-b-2 font-semibold py-3 px-6 rounded-t-md" data-tab="reviewer">
+                    <span class="text-xl">①</span> Role: Reviewer
+                </button>
+                <button class="tab-btn w-full sm:w-auto text-center border-b-2 font-semibold py-3 px-6 rounded-t-md" data-tab="ac">
+                    <span class="text-xl">②</span> Role: Area Chair
+                </button>
+                <button class="tab-btn w-full sm:w-auto text-center border-b-2 font-semibold py-3 px-6 rounded-t-md" data-tab="author">
+                    <span class="text-xl">③</span> Role: Author
+                </button>
+                <button class="tab-btn w-full sm:w-auto text-center border-b-2 font-semibold py-3 px-6 rounded-t-md" data-tab="reviewer2">
+                    <span class="text-xl">④</span> Role: Reviewer (Response)
+                </button>
+            </nav>
+        </div>
+
+        <main>
+            <!-- Reviewer Content -->
+            <div id="reviewer" class="tab-content active">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Part 1: Generating the Initial Review</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Your task is to use an LLM to generate a high-quality, constructive review for the Author's paper. Your goal is to be a helpful, critical, and fair reviewer.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h3 class="font-semibold text-lg mb-4">Task 1: Draft a High-Quality Review</h3>
+                        <p class="mb-4">A good review is structured, provides evidence for its claims, and offers actionable suggestions. You will need to guide the LLM to produce a review that meets these criteria. Attach the Author's paper to your prompt.</p>
+                        <div class="bg-gray-800 text-white p-4 rounded-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-400 text-sm">Example Prompt</span>
+                                <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                            </div>
+                            <code class="block whitespace-pre-wrap">Act as an expert peer reviewer for a top-tier academic conference in [Author's Field]. I have attached a research paper. Your task is to generate a high-quality, constructive review.
+
+The review must include the following sections:
+1.  **Summary:** A brief summary of the paper's contributions.
+2.  **Strengths:** At least three major strengths of the paper.
+3.  **Weaknesses:** At least three major weaknesses, with specific examples from the text. For each weakness, provide a concrete, actionable suggestion for improvement.
+4.  **Overall Recommendation:** A final recommendation (e.g., Accept, Leaning Accept, Leaning Reject, Reject) with a clear justification.
+
+Your tone should be critical but constructive and professional. Avoid overly positive or negative language without justification.</code>
+                        </div>
+                         <div class="mt-6">
+                            <h4 class="font-semibold mb-2 text-gray-700">Official Reviewer Guidelines (for inspiration):</h4>
+                            <ul class="list-disc list-inside space-y-2 text-blue-600">
+                                <li><a href="https://neurips.cc/Conferences/2024/ReviewerGuidelines" target="_blank" class="hover:underline">NeurIPS Reviewer Guidelines</a></li>
+                                <li><a href="https://cvpr.thecvf.com/Conferences/2024/ReviewerGuidelines" target="_blank" class="hover:underline">CVPR Reviewer Guidelines</a></li>
+                                <li><a href="https://aclrollingreview.org/reviewertutorial" target="_blank" class="hover:underline">ACL Rolling Review (ARR) Reviewer Tutorial</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 p-4 bg-amber-50 rounded-lg">
+                            <h4 class="font-semibold text-amber-800">Critical Analysis:</h4>
+                            <p class="mt-2 text-amber-700">Once you have the review, read it carefully. Does it seem fair? Are the suggestions helpful? Pay close attention to the generated weaknesses. Are they valid critiques of the paper, or superficial? Does the AI hallucinate any claims, misinterpret contributions, or cite incorrect examples from the text? Refine your prompt if necessary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Area Chair Content -->
+            <div id="ac" class="tab-content">
+                 <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Part 2: Reviewing the Review</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Your task is to act as a meta-reviewer or Area Chair. You will assess the quality of the review generated in Part 1 to ensure it is fair, helpful, and adheres to good reviewing standards.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h3 class="font-semibold text-lg mb-2 flex justify-between items-center">
+                            <span>Task 2: Assess the Generated Review</span>
+                            <button class="copy-btn bg-stone-200 hover:bg-stone-300 text-xs font-semibold py-1 px-2 rounded text-stone-700">Copy Guidelines</button>
+                        </h3>
+                        <p class="mb-4">Provide the LLM with the generated review from Part 1. Your goal is to have the LLM critique the review itself based on a set of quality guidelines. This will help determine if the AI-generated review is actually any good.</p>
+                        <div class="guidelines mb-4">
+                            <h4 class="font-semibold mb-2">Reviewer Quality Guidelines:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li><strong>Constructive:</strong> Does the review offer actionable suggestions for improvement?</li>
+                                <li><strong>Specific:</strong> Does the review cite specific examples from the paper to support its claims?</li>
+                                <li><strong>Balanced:</strong> Does it fairly assess both strengths and weaknesses?</li>
+                                <li><strong>Respectful Tone:</strong> Is the language professional and respectful?</li>
+                                <li><strong>Clear Justification:</strong> Is the final recommendation clearly justified by the points made in the review?</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800 text-white p-4 rounded-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-400 text-sm">Example Prompt</span>
+                                <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                            </div>
+                            <code class="block whitespace-pre-wrap">Act as an Area Chair for a major academic conference. I am providing you with a peer review for a paper. Your task is to assess the quality of THIS REVIEW based on the provided guidelines.
+
+[Paste the Reviewer Quality Guidelines here]
+
+Go through the attached review and rate it on each of the five guidelines. For each guideline, explain why the review does or does not meet the standard, providing quotes from the review as evidence. Conclude with an overall assessment of whether this is a high-quality review.</code>
+                        </div>
+                         <div class="mt-6 p-4 bg-amber-50 rounded-lg">
+                            <h4 class="font-semibold text-amber-800">Critical Analysis:</h4>
+                            <p class="mt-2 text-amber-700">Does the AI Area Chair correctly identify the quality of the review? Does its assessment align with your own? Did it miss any key flaws or strengths of the original review, or hallucinate any part of its reasoning?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Content -->
+            <div id="author" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Part 3: Proposing Changes and Writing a Rebuttal</h2>
+                    <p class="max-w-3xl mx-auto mt-2">Now you, the Author, have received the review. Your task is to use the LLM to process the feedback, propose changes to your paper, and draft a professional rebuttal.</p>
+                </div>
+                <div class="space-y-6">
+                     <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h3 class="font-semibold text-lg mb-4">Task 3a: Generate a Plan of Changes</h3>
+                        <p class="mb-4">First, have the LLM analyze the review and your paper to create a structured plan for how you will address the reviewer's concerns.</p>
+                        <div class="bg-gray-800 text-white p-4 rounded-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-400 text-sm">Example Prompt</span>
+                                <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                            </div>
+                            <code class="block whitespace-pre-wrap">Act as a PhD student who has just received a review for your paper. I have attached my paper and the review I received.
+
+Your task is to create a detailed, point-by-point plan of the changes I will make to the paper to address the reviewer's weaknesses. For each weakness identified by the reviewer, create a bullet point that clearly states the proposed change. For example: "To address the concern about methodological clarity, I will add a new paragraph in Section 3 detailing the data filtering process."</code>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h3 class="font-semibold text-lg mb-4">Task 3b: Draft the Rebuttal</h3>
+                        <p class="mb-4">Now, using your plan of changes, have the LLM generate a formal rebuttal to send back to the reviewers.</p>
+                         <div class="bg-gray-800 text-white p-4 rounded-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-400 text-sm">Example Prompt</span>
+                                <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                            </div>
+                            <code class="block whitespace-pre-wrap">Based on the plan of changes we just created, now draft a formal author rebuttal.
+
+The rebuttal should start by thanking the reviewer for their constructive feedback. Then, for each point raised by the reviewer, respond directly. State the change you have made (or will make) and politely explain how it addresses their concern. If you disagree with a point, provide a brief, evidence-based counter-argument. Maintain a polite and professional tone throughout.</code>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-semibold mb-2 text-gray-700">Official Rebuttal Guidelines (for inspiration):</h4>
+                            <ul class="list-disc list-inside space-y-2 text-blue-600">
+                                <li><a href="https://blog.neurips.cc/2023/08/23/a-short-guide-to-neurips-rebuttals/" target="_blank" class="hover:underline">A Short Guide to NeurIPS Rebuttals</a></li>
+                                <li><a href="https://sites.google.com/view/cvpr-2024-ac-page/author-rebuttal-guidelines" target="_blank" class="hover:underline">CVPR Author Rebuttal Guidelines</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="mt-6 p-4 bg-amber-50 rounded-lg">
+                        <h4 class="font-semibold text-amber-800">Critical Analysis:</h4>
+                        <p class="mt-2 text-amber-700">Evaluate the AI's output for both tasks. Is the 'plan of changes' reasonable and strategic? Does the rebuttal effectively address the review's points, or is it too defensive or generic? Did the AI misunderstand the reviewer's intent or your paper's content?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviewer 2 Content -->
+            <div id="reviewer2" class="tab-content">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold">Part 4: Responding to the Rebuttal</h2>
+                    <p class="max-w-3xl mx-auto mt-2">You are the Reviewer again. You have received the author's rebuttal. Your final task is to assess their response and proposed changes, and decide if you will update your recommendation.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h3 class="font-semibold text-lg mb-4">Task 4: Generate a Final Response</h3>
+                        <p class="mb-4">Provide the LLM with the original review and the author's rebuttal. Ask it to generate a final response to the Area Chair.</p>
+                        <div class="bg-gray-800 text-white p-4 rounded-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-400 text-sm">Example Prompt</span>
+                                <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                            </div>
+                            <code class="block whitespace-pre-wrap">Act again as the expert peer reviewer. I have attached my original review and the author's rebuttal.
+
+Please draft a final response to the Area Chair. In your response, state whether the author has adequately addressed your concerns. Decide if you will maintain or change your original recommendation for the paper based on their rebuttal and planned revisions. Justify your final decision.</code>
+                        </div>
+                         <div class="mt-6 p-4 bg-amber-50 rounded-lg">
+                            <h4 class="font-semibold text-amber-800">Critical Analysis:</h4>
+                            <p class="mt-2 text-amber-700">This concludes the lifecycle. Does the AI's final judgment seem fair? Does the updated recommendation logically follow from its analysis of the rebuttal? Critically assess whether the AI is simply agreeing with the author or providing a nuanced, final critique. Where was the AI most helpful in this entire process, and where did it require the most guidance?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    const target = tab.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        content.id === target ? content.classList.add('active') : content.classList.remove('active');
+                    });
+                });
+            });
+            
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    let textToCopy = '';
+                    const parent = e.target.closest('div');
+                    
+                    if (parent.querySelector('code')) {
+                        textToCopy = parent.querySelector('code').innerText;
+                    } else if (e.target.innerText.includes('Guidelines')) {
+                        const guidelinesContainer = e.target.closest('.border').querySelector('.guidelines');
+                        if (guidelinesContainer) {
+                             textToCopy = guidelinesContainer.innerText;
+                        }
+                    }
+
+                    if (textToCopy) {
+                         navigator.clipboard.writeText(textToCopy).then(() => {
+                            const originalText = button.innerText;
+                            button.innerText = 'Copied!';
+                            setTimeout(() => {
+                                button.innerText = originalText;
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            });
+             // Make the first tab content active on load
+            if (document.querySelector('.tab-content')) {
+                document.querySelector('.tab-content').classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
+
+```
