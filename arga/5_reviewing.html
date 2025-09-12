@@ -176,6 +176,9 @@ Your task is to create a detailed, point-by-point plan of the changes I will mak
                     <div class="border border-gray-200 rounded-lg p-5 bg-white">
                         <h3 class="font-semibold text-lg mb-4">Task 3b: Generate Specific Edits to the Paper</h3>
                         <p class="mb-4">Now, turn the plan into action. Have the LLM generate the specific text edits needed for your paper based on the plan you just created.</p>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md mb-4" role="alert">
+                            <p><span class="font-bold">Important Note:</span> If the review requires new experiments or results, explicitly instruct the LLM to use clear placeholders (e.g., `[TBD: Insert result of new experiment here]`) in the generated text. Do not let it hallucinate or invent new data.</p>
+                        </div>
                          <div class="bg-gray-800 text-white p-4 rounded-md">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-gray-400 text-sm">Example Prompt</span>
@@ -295,5 +298,3 @@ Please draft a final response to the Area Chair. In your response, state whether
     </script>
 </body>
 </html>
-
-```
