@@ -44,6 +44,12 @@
                 <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md my-4" role="alert">
                     <p><span class="font-bold">Challenge Yourself:</span> We encourage you to select an environment you haven't used before. The goal is to explore new workflows, not just stick to what's familiar.</p>
                 </div>
+                 <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md my-4" role="alert">
+                    <p><span class="font-bold">Pro Tip: Use Personas.</span> In every prompt you write, assign an expert persona to the agent (e.g., "Act as a senior software engineer specializing in scientific Python..."). This consistently focuses the AI and improves the quality of its responses.</p>
+                </div>
+                 <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md my-4" role="alert">
+                    <p><span class="font-bold">Pro Tip from the Instructor: Create Reusable Gems.</span> In the Gemini web UI, you can create "Gems," which are custom system prompts you can easily reuse. If you find yourself repeating instructions (e.g., for a specific coding style or debugging workflow), save them as a Gem to create your own specialized assistants.</p>
+                </div>
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- IDE Copilot -->
                     <div class="border border-gray-200 rounded-lg p-5 bg-white">
@@ -52,7 +58,12 @@
                         <h5 class="font-semibold mb-1">Setup (Gemini Code Assist):</h5>
                         <p class="text-sm mb-3">In VS Code, go to the Extensions tab, search for "Google Gemini Code Assist", and install it. Follow the setup instructions to log in with your Google account.</p>
                         <h5 class="font-semibold mb-1">Other Options:</h5>
-                        <a href="https://cursor.sh/" target="_blank" class="text-sm text-blue-600 hover:underline">Cursor IDE</a>
+                        <ul class="text-sm list-disc list-inside space-y-1">
+                            <li><a href="https://cursor.sh/" target="_blank" class="text-blue-600 hover:underline">Cursor IDE</a> (Free and Pro tiers)</li>
+                            <li><a href="https://github.com/features/copilot" target="_blank" class="text-blue-600 hover:underline">GitHub Copilot</a> (Paid)</li>
+                            <li><a href="https://aws.amazon.com/codewhisperer/" target="_blank" class="text-blue-600 hover:underline">Amazon CodeWhisperer</a> (Free tier available)</li>
+                             <li><a href="https://www.tabnine.com/" target="_blank" class="text-blue-600 hover:underline">Tabnine</a> (Free and Pro tiers)</li>
+                        </ul>
                     </div>
                     <!-- Notebook -->
                     <div class="border border-gray-200 rounded-lg p-5 bg-white">
@@ -60,6 +71,11 @@
                         <p class="text-sm mb-3">An AI integrated directly into a notebook environment. Excellent for data-heavy tasks, rapid prototyping, and visualization.</p>
                         <h5 class="font-semibold mb-1">Setup (Gemini in Colab):</h5>
                         <p class="text-sm mb-3">Open a new Google Colab notebook. You should see Gemini features integrated, including a "Generate" button in cells to help write code.</p>
+                        <h5 class="font-semibold mb-1">Other Options:</h5>
+                        <ul class="text-sm list-disc list-inside space-y-1">
+                             <li><a href="https://jupyter-ai.readthedocs.io/en/latest/index.html" target="_blank" class="text-blue-600 hover:underline">Jupyter AI</a> (Requires setup)</li>
+                            <li>AI features in platforms like <a href="https://www.databricks.com/product/databricks-ai" target="_blank" class="text-blue-600 hover:underline">Databricks</a> and <a href="https://hex.tech/" target="_blank" class="text-blue-600 hover:underline">Hex</a></li>
+                        </ul>
                     </div>
                     <!-- CLI Agent -->
                     <div class="border border-gray-200 rounded-lg p-5 bg-white">
@@ -71,6 +87,8 @@
                         <ul class="text-sm list-disc list-inside space-y-1">
                             <li><a href="https://www.anthropic.com/product" target="_blank" class="text-blue-600 hover:underline">Claude</a> (Paid)</li>
                             <li>CLine (Paid, or free with local LLMs)</li>
+                            <li><a href="https://github.com/paul-gauthier/aider" target="_blank" class="text-blue-600 hover:underline">Aider</a> (Open-source, requires setup)</li>
+                             <li>Devin by Cognition (Limited access)</li>
                         </ul>
                     </div>
                 </div>
@@ -99,6 +117,9 @@
                     <p class="mb-4">The concept was detailed in this technical report: <a href="https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf" target="_blank" class="text-blue-600 hover:underline">The "Echo State" Approach... by Herbert Jaeger</a>.</p>
                     <h4 class="font-semibold mb-3">First Step: Understand the Paper</h4>
                     <p class="mb-3">Before you write any code, use a standard LLM to understand the paper. Ask it questions to get familiar with the concepts.</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md my-4" role="alert">
+                        <p><span class="font-bold">Pro Tip: Bridge Theory to Practice.</span> After asking for an explanation, ask the LLM to generate *pseudo-code* for the core algorithm described in the paper. This is a great way to solidify your understanding before writing actual Python code.</p>
+                    </div>
                     <div class="bg-gray-800 text-white p-4 rounded-md">
                         <div class="flex justify-between items-center mb-2">
                             <span class="text-gray-400 text-sm">Example Prompts</span>
@@ -108,7 +129,7 @@
 
 "What is the 'reservoir' and why is it kept fixed?"
 
-"What is the 'echo state property' and why is it important?"</code>
+"Based on section 2.1 of the paper, generate a simplified pseudo-code implementation of the ESN's state update equation."</code>
                     </div>
                 </div>
             </div>
@@ -172,12 +193,33 @@
                 <div class="bg-white border border-gray-200 p-5 rounded-lg">
                     <h3 class="font-semibold text-lg mb-3">Task 4: The Bug Hunt - Debugging with AI</h3>
                     <p class="mb-3">It's likely you'll encounter errors. When you do, use your agent to help.</p>
+                     <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md my-4" role="alert">
+                        <p><span class="font-bold">Pro Tip: Effective Debugging.</span> Don't just paste the error message. Provide the error, the code that caused it, and ask the AI to "think step-by-step to explain the cause of the error and then suggest a fix." This encourages a more thorough analysis.</p>
+                    </div>
                      <div class="bg-gray-800 text-white p-4 rounded-md">
                         <div class="flex justify-between items-center mb-2">
                             <span class="text-gray-400 text-sm">Example Prompt</span>
                             <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
                         </div>
                         <code class="block whitespace-pre-wrap">I ran the test script and got this error: [paste full error traceback]. Here is the code for my ESN class and the test script. Explain what this error means and suggest a fix.</code>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 5: Code Improvement (Optional)</h3>
+                    <p class="mb-3">Once you have a working prototype, a great next step is to use the AI to improve it. This can involve making the code faster, cleaner, or better documented. Try one of the following improvements with your agent.</p>
+                     <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md my-4" role="alert">
+                        <p><span class="font-bold">Pro Tip: Guide the Improvement.</span> Be specific about your goals. Instead of asking to "make it better," provide clear constraints. For example: "Refactor this code to improve readability by separating the data logic from the model logic."</p>
+                    </div>
+                     <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Here is the working code for my ESN prototype. Please help me improve it.
+
+1.  **Refactor for Modularity:** Can we refactor this into cleaner, more modular functions? For example, separating the data generation, model training, and plotting logic.
+2.  **Add Documentation:** Please add professional-level docstrings to the ESN class and all major functions, explaining what they do, their parameters, and what they return.
+3.  **Check for Inefficiencies:** Is there any way to make the training or prediction code more efficient or faster using NumPy vectorization?</code>
                     </div>
                 </div>
             </div>
@@ -236,4 +278,5 @@
     </script>
 </body>
 </html>
+
 
