@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: Prototyping with AI Coding Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A stepped, linear navigation guides the user through the four distinct phases of the exercise: Setup, Mission, Coding, and Reflection. This is better than tabs for a process that should be followed sequentially. Within each section, clear headings and styled boxes separate different options (like choosing an environment) and tasks (like planning or debugging), making the workflow easy to follow. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Sequential steps -> Single-page layout with scroll-spy or clear sections. Goal -> Guide a linear process. Justification -> Reinforces the start-to-finish nature of the coding exercise.
+        - Options/Tasks: Different choices -> Styled cards/boxes. Goal -> Organize & Delineate. Interaction -> Read and choose. Justification -> Visually separates distinct options and sub-tasks.
+        - Prompts/Code: Example prompts -> Code-style blocks with copy buttons. Goal -> Action. Interaction -> Click to copy. Justification -> Provides direct utility and reduces friction.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">From Zero to Code: Prototyping with AI Agents</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">An exercise in building a new codebase from scratch using a modern AI coding agent as your partner.</p>
+        </header>
+
+        <!-- Part 1: Setup -->
+        <section id="setup" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 1: Introduction & Setup</h2>
+            <div class="space-y-6">
+                <p>Today, you will act as a developer starting a new project, using an AI agent as your primary coding partner to go from a high-level idea to a working prototype. First, set up your notes document.</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-md" role="alert">
+                    <h3 class="font-bold">Important: Document Your Process</h3>
+                    <p class="mt-2">Before you begin, create your notes document in the class Google Drive folder. Throughout the exercise, track your prompts, the agent's responses, any errors you encounter, and your overall experience.</p>
+                    <a href="https://drive.google.com/drive/folders/1DHWieonhqQiRdwkjNeBuITj6304VI2MX?usp=drive_link" target="_blank" class="mt-3 inline-block font-bold text-amber-900 hover:underline">Open Class Notes Folder →</a>
+                </div>
+
+                <h3 class="text-2xl font-semibold pt-4">Choose Your Environment</h3>
+                <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md my-4" role="alert">
+                    <p><span class="font-bold">Challenge Yourself:</span> We encourage you to select an environment you haven't used before. The goal is to explore new workflows, not just stick to what's familiar.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- IDE Copilot -->
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h4 class="font-bold text-lg mb-2">A) The IDE Copilot</h4>
+                        <p class="text-sm mb-3">An AI assistant deeply integrated into a familiar IDE (like VS Code). Best for complex file management and a traditional development feel.</p>
+                        <h5 class="font-semibold mb-1">Setup (Gemini Code Assist):</h5>
+                        <p class="text-sm mb-3">In VS Code, go to the Extensions tab, search for "Google Gemini Code Assist", and install it. Follow the setup instructions to log in with your Google account.</p>
+                        <h5 class="font-semibold mb-1">Other Options:</h5>
+                        <a href="https://cursor.sh/" target="_blank" class="text-sm text-blue-600 hover:underline">Cursor IDE</a>
+                    </div>
+                    <!-- Notebook -->
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h4 class="font-bold text-lg mb-2">B) The Interactive Notebook</h4>
+                        <p class="text-sm mb-3">An AI integrated directly into a notebook environment. Excellent for data-heavy tasks, rapid prototyping, and visualization.</p>
+                        <h5 class="font-semibold mb-1">Setup (Gemini in Colab):</h5>
+                        <p class="text-sm mb-3">Open a new Google Colab notebook. You should see Gemini features integrated, including a "Generate" button in cells to help write code.</p>
+                    </div>
+                    <!-- CLI Agent -->
+                    <div class="border border-gray-200 rounded-lg p-5 bg-white">
+                        <h4 class="font-bold text-lg mb-2">C) The Command-Line Agent</h4>
+                        <p class="text-sm mb-3">A fully conversational agent that generates and modifies code based on high-level commands. This is the most "agentic" approach.</p>
+                        <h5 class="font-semibold mb-1">Setup (Gemini CLI):</h5>
+                        <p class="text-sm mb-3">Can be set up via the Google Cloud SDK (`gcloud`). You can authenticate with a personal Google account using OAuth for free tier access. This is an advanced option for those comfortable with the command line.</p>
+                         <h5 class="font-semibold mb-1">Other Options:</h5>
+                        <ul class="text-sm list-disc list-inside space-y-1">
+                            <li><a href="https://www.anthropic.com/product" target="_blank" class="text-blue-600 hover:underline">Claude</a> (Paid)</li>
+                            <li>CLine (Paid, or free with local LLMs)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold pt-4">For Advanced Users</h3>
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h4 class="font-bold text-lg mb-2">D) The Advanced Challenge: Agent Orchestration</h4>
+                    <p class="text-sm mb-3">For those already familiar with coding agents, consider a more complex setup: having one agent call another. This is known as orchestration. For example, you could set up CLine to orchestrate a series of calls to the Gemini CLI, or have a custom script where Claude Code generates high-level logic and then calls a local model to flesh out the details.</p>
+                    <p class="text-sm font-semibold">This is a highly advanced, self-directed path that requires significant setup but offers a glimpse into the future of agentic software development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: Mission -->
+        <section id="mission" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 2: Choosing Your Mission</h2>
+             <div class="space-y-6">
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-bold text-xl mb-2">Option 1: Your Own Research Project</h3>
+                    <p>Select a small, self-contained coding task from your own research that you can start from scratch (e.g., a data processing script, a utility function, a simple model).</p>
+                    <p class="mt-3 text-sm font-semibold text-red-600 bg-red-50 p-3 rounded-md">⚠️ Warning: This is an experiment. Do not work on your main codebase. Create a new, separate folder and be sure to back up any important work beforehand.</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-bold text-xl mb-2">Option 2: The Suggested Task - An Echo State Network (ESN)</h3>
+                    <p class="mb-3">An Echo State Network is a type of recurrent neural network with a wonderfully weird twist: most of its connections are fixed and random! You only train the final layer. This makes it incredibly fast to train and surprisingly powerful for time-series tasks.</p>
+                    <p class="mb-4">The concept was detailed in this technical report: <a href="https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf" target="_blank" class="text-blue-600 hover:underline">The "Echo State" Approach... by Herbert Jaeger</a>.</p>
+                    <h4 class="font-semibold mb-3">First Step: Understand the Paper</h4>
+                    <p class="mb-3">Before you write any code, use a standard LLM to understand the paper. Ask it questions to get familiar with the concepts.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompts</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">"Explain the key components of an Echo State Network based on the attached paper."
+
+"What is the 'reservoir' and why is it kept fixed?"
+
+"What is the 'echo state property' and why is it important?"</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 3: Coding Sprint -->
+        <section id="sprint" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 3: The Coding Sprint</h2>
+            <p class="mb-6">It's time to build. If you chose your own task, adapt these steps as needed. The following tasks are based on the ESN implementation.</p>
+            <div class="space-y-6">
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 1: The Blueprint - Generate an Implementation Plan</h3>
+                    <p class="mb-3">Use your chosen AI agent to create a high-level plan for your project.</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md my-4" role="alert">
+                        <p><span class="font-bold">Pro Tip:</span> For the best results, consider using a powerful reasoning LLM (like Gemini 2.5 Pro, GPT-4, or Claude 3) to generate your high-level plan first. You can then feed this detailed plan to your more specialized coding agent for implementation.</p>
+                    </div>
+                     <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">I want to implement a simple Echo State Network in Python using NumPy. Based on the ESN paper, generate a step-by-step plan. The plan should include creating a synthetic dataset, defining the ESN class, writing a training loop, and testing its performance.</code>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 2: The Building Blocks - Code Generation</h3>
+                    <p class="mb-3">Execute your plan step-by-step, using the agent to generate code for each part.</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md my-4" role="alert">
+                        <p><span class="font-bold">Pro Tip (Hierarchical Planning):</span> Instead of writing a simple instruction for each task, try generating a detailed plan for the sub-task first. Then, use that plan as the prompt for your agent. For example, first ask a reasoning LLM to "generate a detailed plan for a Python function that creates a synthetic sine wave dataset." Then, give that detailed plan to your coding agent.</p>
+                    </div>
+                    <h4 class="font-bold mb-2">A) Generate Synthetic Data:</h4>
+                    <div class="bg-gray-800 text-white p-4 rounded-md mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Write a Python function to generate a synthetic time-series dataset for training the ESN. The task should be to predict the next value in a sine wave.</code>
+                    </div>
+                    <h4 class="font-bold mb-2">B) Implement the Model:</h4>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Based on our plan, generate a Python class for the Echo State Network. It should have methods for initialization (__init__), running the reservoir (call it 'forward' or '__call__'), and a method for training the output layer (call it 'fit').</code>
+                    </div>
+                </div>
+                 <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 3: Quality Control - Testing</h3>
+                     <h4 class="font-bold mb-2">A) Write Test Scripts:</h4>
+                     <div class="bg-gray-800 text-white p-4 rounded-md mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Write a Python script that uses the ESN class and the synthetic data. It should initialize the model, train it on the sine wave data, and then generate predictions. Plot the true values and the predicted values on a Matplotlib graph to see how well it learned.</code>
+                    </div>
+                    <h4 class="font-bold mb-2">B) Run the Tests:</h4>
+                     <p>Execute the script and see what happens. It's time to debug!</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 4: The Bug Hunt - Debugging with AI</h3>
+                    <p class="mb-3">It's likely you'll encounter errors. When you do, use your agent to help.</p>
+                     <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">I ran the test script and got this error: [paste full error traceback]. Here is the code for my ESN class and the test script. Explain what this error means and suggest a fix.</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 4: Reflection -->
+        <section id="reflection">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 4: Reflection</h2>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                 <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-semibold text-lg">Final Analysis Questions</h3>
+                    <button class="copy-btn bg-stone-200 hover:bg-stone-300 text-xs font-semibold py-1 px-2 rounded text-stone-700">Copy All Questions</button>
+                </div>
+                <div class="questions text-gray-700 space-y-3">
+                    <p>1. Which coding agent environment did you choose, and why?</p>
+                    <p>2. How did the experience of using an AI agent compare to your usual coding workflow? What was faster? What was slower?</p>
+                    <p>3. Did the AI-generated plan help structure your work? Did you deviate from it?</p>
+                    <p>4. Describe your experience with the debugging process. Was the AI helpful in identifying and fixing errors?</p>
+                    <p>5. What was the biggest strength of your chosen AI agent? What was its biggest weakness?</p>
+                    <p>6. How could you see yourself incorporating a tool like this into your day-to-day research and coding work?</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    let textToCopy = '';
+                    const parent = e.target.closest('div');
+                    
+                    if (parent.querySelector('code')) {
+                        textToCopy = parent.querySelector('code').innerText;
+                    } else if (button.innerText.includes('Questions')) {
+                        const questionsContainer = button.closest('.bg-white').querySelector('.questions');
+                        if (questionsContainer) {
+                             textToCopy = questionsContainer.innerText;
+                        }
+                    }
+
+                    if (textToCopy) {
+                         navigator.clipboard.writeText(textToCopy).then(() => {
+                            const originalText = button.innerText;
+                            button.innerText = 'Copied!';
+                            setTimeout(() => {
+                                button.innerText = originalText;
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
