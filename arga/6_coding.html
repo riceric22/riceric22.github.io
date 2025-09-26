@@ -82,8 +82,11 @@
                         <h4 class="font-bold text-lg mb-2">C) The Command-Line Agent</h4>
                         <p class="text-sm mb-3">A fully conversational agent that generates and modifies code based on high-level commands. This is the most "agentic" approach.</p>
                         <h5 class="font-semibold mb-1">Setup (Gemini CLI):</h5>
-                        <p class="text-sm mb-3">Can be set up via the Google Cloud SDK (`gcloud`). You can authenticate with a personal Google account using OAuth for free tier access. This is an advanced option for those comfortable with the command line.</p>
-                         <h5 class="font-semibold mb-1">Other Options:</h5>
+                        <p class="text-sm mb-3">Can be set up via the Google Cloud SDK (`gcloud`). This is an advanced option for those comfortable with the command line.</p>
+                        <div class="text-sm font-semibold text-red-600 bg-red-50 p-3 rounded-md">
+                            <p>⚠️ Important: To use the free quota, make sure to authenticate with a personal Google account using OAuth. If you use an API key, you will be charged.</p>
+                        </div>
+                         <h5 class="font-semibold mb-1 mt-3">Other Options:</h5>
                         <ul class="text-sm list-disc list-inside space-y-1">
                             <li><a href="https://www.anthropic.com/product" target="_blank" class="text-blue-600 hover:underline">Claude</a> (Paid)</li>
                             <li>CLine (Paid, or free with local LLMs)</li>
@@ -278,6 +281,7 @@
     </script>
 </body>
 </html>
+
 
 
 
