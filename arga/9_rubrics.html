@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: AI-Assisted Grading & Rubric Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A single-page, top-to-bottom linear guide. This is a multi-step process where each part builds on the last (Draft Rubric -> Test -> Refine -> Apply). A sequential layout with clear <section> dividers is the most intuitive structure. This is preferable to tabs as it guides the user through a clear, linear workflow. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Sequential steps -> Single-page layout with clear sections. Goal -> Guide a linear process. Justification -> Reinforces the start-to-finish nature of the rubric-building exercise.
+        - Tasks/Steps: Different phases -> Styled cards/boxes. Goal -> Organize & Delineate. Interaction -> Read and follow. Justification -> Visually separates the distinct phases of the workflow.
+        - Prompts/Code: Example prompts -> Code-style blocks with copy buttons. Goal -> Action. Interaction -> Click to copy. Justification -> Provides direct utility.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">The Grader's Assistant</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Using LLMs for Effective Rubric Design and Grading</p>
+        </header>
+
+        <!-- Introduction -->
+        <section id="intro" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Introduction & Goals</h2>
+            <div class="space-y-6">
+                <p>Today's exercise is to use an LLM as a partner in the grading process. This involves two distinct, high-level skills:</p>
+                <ol class="list-decimal list-inside ml-4 space-y-2">
+                    <li><strong class="font-semibold">Prompt Engineering:</strong> Designing a high-quality rubric (which is a form of "mega prompt").</li>
+                    <li><strong class="font-semibold">Critical Analysis:</strong> Evaluating the AI's application of that rubric.</li>
+                </ol>
+                <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-md" role="alert">
+                    <h3 class="font-bold">Your Tools & Deliverable</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li>An LLM (e.g., Gemini 2.5 Pro, or via the Canvas).</li>
+                        <li>Access to the class folder of project proposals (link below).</li>
+                        <li><strong class="font-semibold">Your Deliverable:</strong> A final, refined <strong class="font-semibold">"Rubric v2.0"</strong> Google Doc, which you will save in the class submission folder.</li>
+                    </ul>
+                    <a href="https://drive.google.com/drive/folders/14mrlkSxBRZ44JkOZfDVGUaeVN4pThZPN?usp=drive_link" target="_blank" class="mt-3 inline-block font-bold text-amber-900 hover:underline">Open Class Proposals Folder →</a>
+                    <a href="https://drive.google.com/drive/folders/120hTGOLUnX_cdEcVrrV9XNV-QIPuoTte?usp=drive_link" target="_blank" class="mt-3 ml-4 inline-block font-bold text-amber-900 hover:underline">Open Rubric Submission Folder →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 1: Generate Rubric -->
+        <section id="part1" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 1: Generating the Rubric (v1.0)</h2>
+            <p class="mb-6">Before you can grade, you need a standard. The first step is to use an LLM as a collaborator to brainstorm and draft a comprehensive rubric for a research proposal.</p>
+            <div class="space-y-6">
+                <!-- Task 1: Brainstorm -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 1: Brainstorm Criteria</h3>
+                    <p class="mb-3">Ask the LLM to help you define what makes a "good" project proposal.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Act as an experienced professor. What are the key criteria you use to evaluate a graduate-level research project proposal? List the criteria and briefly explain what you look for in each one.</code>
+                    </div>
+                </div>
+                <!-- Task 2: Draft Rubric -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 2: Draft "Rubric v1.0"</h3>
+                    <p class="mb-3">Use the brainstormed list to have the LLM generate a structured, point-based rubric. Save this as "Rubric v1.0" in a new Google Doc in your class folder.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Based on the criteria we just discussed (e.g., Novelty, Feasibility, Methodology, Clarity, Impact), generate a formal grading rubric.
+
+The rubric MUST be out of 100 points total. Assign a point value to each criterion, ensuring they all sum up to 100.
+
+For each criterion, create a 5-point scoring system (or similar) with clear descriptors for what a low, medium, and high score means.</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 2: Test Rubric -->
+        <section id="part2" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 2: Testing the Rubric (Applying v1.0)</h2>
+            <p class="mb-6">A rubric is a "prompt" for a grader. Now, you will test how well the AI performs as the grader when given your rubric as its instructions.</p>
+            <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                <h3 class="font-semibold text-lg mb-3">Task: Grade Two Proposals</h3>
+                <p class="mb-3">Go to the class folder and select two project proposals (not your own). For each proposal, start a <strong class="font-semibold">new, fresh LLM session</strong> (to avoid context leaks) and use the prompt below.</p>
+                <div class="bg-gray-800 text-white p-4 rounded-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-400 text-sm">Example Prompt</span>
+                        <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                    </div>
+                    <code class="block whitespace-pre-wrap">Act as a diligent teaching assistant. Your task is to grade the attached project proposal using the *exact* rubric I am providing.
+
+[Attach your "Rubric v1.0" Google Doc here]
+
+---
+Now, grade the attached proposal. For each criterion in the rubric:
+1.  Provide a specific score (e.g., "Feasibility: 20/25").
+2.  Write a 2-3 sentence justification for that score, citing specific evidence or quotes from the proposal.
+3.  Conclude with a summary of the proposal's main strengths and weaknesses.
+4.  Provide a "Total Score" out of 100.
+
+[Attach the project proposal here]</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Refine Rubric -->
+        <section id="part3" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 3: Analysis & Refinement (Iterating to v2.0)</h2>
+            <p class="mb-6">This is the most critical step. You must now act as the "professor" again, evaluating the "TA" (the AI) and the tool you gave it (the rubric).</p>
+            <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-5 rounded-lg space-y-4">
+                <h3 class="font-bold text-lg">Task 1: Analyze the AI-Generated Grades</h3>
+                <p>Read the AI's graded outputs and compare them to the proposals. Ask yourself:</p>
+                <ul class="list-disc list-inside ml-4 font-medium my-2">
+                    <li><strong class="font-semibold">Validity:</strong> Are the scores fair? Does the AI's justification make sense, or is it superficial?</li>
+                    <li><strong class="font-semibold">Hallucination:</strong> Did the AI cite evidence that wasn't actually in the proposal?</li>
+                    <li><strong class="font-semibold">Misinterpretation:</strong> Did the AI misunderstand a criterion? (e.g., "I said 'Impact,' but the AI only focused on 'Novelty'.")</li>
+                    <li><strong class="font-semibold">Gaps:</strong> What did the AI *miss*? What important feedback is missing because the rubric didn't ask for it?</li>
+                </ul>
+                
+                <h3 class="font-bold text-lg mt-4">Task 2: Refine the Rubric (AI-Assisted Iteration)</h3>
+                <p>Based on your analysis, your rubric has flaws. Use the LLM (e.g., in the Canvas) to fix them. Save the result as <strong class="font-semibold">"Rubric v2.0"</strong> in your Google Doc.</p>
+                <div class="bg-gray-800 text-white p-4 rounded-md mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-400 text-sm">Example Iteration Prompt</span>
+                        <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                    </div>
+                    <code class="block whitespace-pre-wrap">[Attach your "Rubric v1.0" Google Doc]
+
+---
+You are a prompt engineer. I have attached a grading rubric I designed, but it has flaws. When I tested it, the AI was too lenient on 'Methodology'. Also, the points don't add up to 100.
+
+Please modify the rubric to create 'Rubric v2.0'. Specifically:
+1.  In the 'Methodology' section, add a sub-point that explicitly checks for "discussion of limitations."
+2.  Adjust the point values for all criteria (e.g., Methodology: 30, Feasibility: 20, etc.) so that they logically add up to exactly 100 points.
+3.  Add a new criterion called "Clarity of Writing" (worth 10 points) and adjust the other points accordingly.</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 4: Final Application -->
+        <section id="part4" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 4: Final Application - Grading the Class</h2>
+            <p class="mb-6">Your rubric is now refined and tested. The final step is to apply it to a larger set of proposals to evaluate its performance at scale and record the grades.</p>
+            <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                <h3 class="font-semibold text-lg mb-3">Task: Grade Five Proposals</h3>
+                <p class="mb-3">Go to the class proposals folder and select <strong class="font-semibold">five different proposals</strong> (not your own and not the ones you used for testing). For each proposal, use your refined <strong class="font-semibold">"Rubric v2.0"</strong> to generate a grade. Use a new, fresh LLM session for each one.  Don't know which ones to grade? Try asking your LLM to pick 5 random ones for you. </p>
+                <div class="bg-gray-800 text-white p-4 rounded-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-400 text-sm">Example Prompt</span>
+                        <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                    </div>
+                    <code class="block whitespace-pre-wrap">Act as a diligent teaching assistant. Your task is to grade the attached project proposal using the *exact* rubric I am providing.
+
+[Attach your final "Rubric v2.0" Google Doc here]
+
+---
+Now, grade the attached proposal. For each criterion in the rubric:
+1.  Provide a specific score.
+2.  Write a 2-3 sentence justification for that score, citing evidence.
+3.  Conclude with a summary of strengths and weaknesses.
+4.  Provide a "Total Score" out of 100.
+
+[Attach the project proposal here]</code>
+                </div>
+                 <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md mt-6" role="alert">
+                    <h3 class="font-bold">Record Your Grades</h3>
+                    <p class="mt-2">As you generate each grade, open the class spreadsheet and record the AI's final score for each proposal you graded. This will help us analyze consistency as a class.</p>
+                    <a href="https://docs.google.com/spreadsheets/d/1gaR4Uqk82FcSK2WQgqSImgeoZBht7YiTeINFbJ8Ggaw/edit?usp=sharing" target="_blank" class="mt-3 inline-block font-bold text-blue-900 hover:underline">Open Grading Spreadsheet →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Reflection</h2>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                 <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-semibold text-lg">For Class Discussion</h3>
+                </div>
+                <p class="mb-4">Think about the following questions. We will use them as a basis for our class discussion.</p>
+                <ul class="questions text-gray-700 space-y-3 list-decimal list-inside">
+                    <li>What was the biggest flaw in your "Rubric v1.0" that you had to fix?</li>
+                    <li>Where did the AI grader perform well? Where did it fail? (e.g., Was it good at spotting typos but bad at judging "novelty"?)</li>
+                    <li>How consistent was the AI in applying your rubric across all five proposals in Part 4? (Check the spreadsheet).</li>
+                    <li>What are the ethical implications of using an AI to grade subjective work like this?</li>
+                    <li>What is the difference between using an AI to *grade* (give a score) versus *give feedback* (provide formative comments)? Which is more appropriate?</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    let textToCopy = '';
+                    const parent = e.target.closest('div');
+                    
+                    if (parent.querySelector('code')) {
+                        textToCopy = parent.querySelector('code').innerText;
+                    }
+
+                    if (textToCopy) {
+                         navigator.clipboard.writeText(textToCopy).then(() => {
+                            const originalText = button.innerText;
+                            button.innerText = 'Copied!';
+                            setTimeout(() => {
+                                button.innerText = originalText;
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

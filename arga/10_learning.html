@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: The AI Tutor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A single-page, top-to-bottom linear guide. This is a multi-step process where each part builds on the last (Pre-Test -> Study -> Self-Assess -> Exam -> Grade -> Reflect). A sequential layout with clear <section> dividers is the most intuitive structure. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Sequential steps -> Single-page layout with clear sections. Goal -> Guide a linear process. Justification -> Reinforces the start-to-finish nature of the learning exercise.
+        - Tasks/Steps: Different phases -> Styled cards/boxes. Goal -> Organize & Delineate. Interaction -> Read and follow. Justification -> Visually separates the distinct phases of the workflow.
+        - Prompts/Code: Example prompts -> Code-style blocks with copy buttons. Goal -> Action. Interaction -> Click to copy. Justification -> Provides direct utility.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">The AI Tutor</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Using an LLM to Learn (and Prove You've Learned) a New Topic</p>
+        </header>
+
+        <!-- Introduction -->
+        <section id="intro" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Introduction & Goals</h2>
+            <div class="space-y-6">
+                <p>Today's exercise is to learn a new, unfamiliar paper or research area using an LLM as your personal tutor.</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-md" role="alert">
+                    <h3 class="font-bold">The Core Challenge: Passive vs. Active Learning</h3>
+                    <p class="mt-2">It's easy to read an AI's explanation and <em class="italic">think</em> you understand it. This is <strong class="font-semibold">passive learning</strong> and is often shallow. We want <strong class="font-semibold">active learning</strong>, where you can prove you've retained and can apply the knowledge.</p>
+                    <p class="mt-2">To fight this, we will use a <strong class="font-semibold">"Test-First" Approach</strong>. You will use an LLM to generate a "final exam" for your chosen topic *before* you start learning it. You will then study the topic, and finally, take the exam to see what you *actually* learned.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 1: The "Pre-Test" -->
+        <section id="part1" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 1: The "Pre-Test" - Define Your Goal</h2>
+            <p class="mb-6">First, you must choose your topic and generate your test. You should not study the topic or read the paper before you do this.</p>
+            <div class="space-y-6">
+                <!-- Task 1: Select Topic -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 1: Select Your Unfamiliar Topic</h3>
+                    <p>Choose a paper or a niche research area that you are <strong class="font-semibold">unfamiliar with</strong> or want to learn about, even if you know the surrounding literature. This should be a topic you haven't had time to dive into yet.</p>
+                    <p class="mt-2">If you're stuck, ask a neighbor to recommend a foundational paper from their field. This is a great way to get a topic you aren't already biased about.</p>
+                </div>
+                <!-- Task 2: Generate Exam -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 2: Generate Your "Final Exam" (Before You Study)</h3>
+                    <p class="mb-3">This is the most important step. Before you ask the AI to explain *anything*, ask it to create the test you'll take at the end. </p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Act as an expert professor in [Field of the Paper]. I have attached a research paper titled "[Paper Title]".
+
+Please generate a comprehensive 10-question test (a mix of 5 high-level conceptual questions and 5 low-level detail-oriented questions) that a student who *fully understands* this paper and its context should be able to answer. 
+
+Do NOT provide the answers. Just list the 10 questions.</code>
+                    </div>
+                </div>
+                <!-- Action: Save Test -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+                    <h3 class="font-bold">Save Your Test!</h3>
+                    <p class="mt-2">Create a new Google Doc. Copy and paste these 10 questions into it and save the document in the class folder below. This is your "exam."</p>
+                    <a href="https://drive.google.com/drive/folders/1A_jaf7uPkJ8T_9-Ds_hssjQAJH9vKLmy?usp=drive_link" target="_blank" class="mt-3 inline-block font-bold text-blue-900 hover:underline">Open Test Submission Folder →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Part 2: The "Study Session" -->
+        <section id="part2" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 2: The "Study Session" - Interactive Learning</h2>
+            <p class="mb-6">Now you will use the LLM as your tutor to learn the material, going from the 30,000-foot view down to the details. This is an open-ended process. Be curious and ask follow-up questions.</p>
+            <div class="space-y-6">
+                <!-- Task 1: High-Level -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 1: High-Level Scaffolding (The "Big Picture")</h3>
+                    <p class="mb-3">Use prompts to understand the context, importance, and main ideas.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompts</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">"Explain this paper to me like I'm a graduate student in a completely different field. What is the core problem it's trying to solve?"
+
+"Why is this work important? What specific work does this paper build on or respond to?"
+
+"What is the main 'contribution' or 'finding' of this paper?"</code>
+                    </div>
+                </div>
+                <!-- Task 2: Low-Level -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 2: Low-Level Deep Dive (The "Nitty-Gritty")</h3>
+                    <p class="mb-3">This is where you tackle the parts you find confusing. Be specific.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompts</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">"Let's walk through Section 3.1. Can you explain Equation (2) in simpler terms? What does each variable represent?"
+
+"I don't understand the logic of the proof for Theorem 1. Can you explain the key steps?"
+
+"In the experiment section, what is the 'baseline model' they are comparing against, and why did they choose it?"
+
+"Generate pseudo-code for the algorithm described in Figure 4."</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Self-Assessment -->
+        <section id="part3" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 3: The "Self-Assessment" - Check Your Confidence</h2>
+            <p class="mb-6">You have finished your study session. Before you look at the test questions again, you must perform a self-assessment.</p>
+            <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                <h3 class="font-semibold text-lg mb-3">Task: Rate Your Understanding</h3>
+                <p>On a scale of 1-10, how well do you <em class="italic">feel</em> you understand the material right now? 1 means "not at all," 10 means "I could explain this to a professor."</p>
+                <p class="mt-2">Write this number down in your Google Doc, *before* you take the test.</p>
+            </div>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 text-red-800 p-4 rounded-md mt-6" role="alert">
+                <h3 class="font-bold">Warning: The Illusion of Understanding</h3>
+                <p class="mt-2">A growing body of evidence suggests that the fluency of LLM explanations can be deceptive. Because the answer is so clear and confident, it can make you *feel* like you've learned the material, even if you haven't truly internalized it.</p>
+                <p class="mt-2">This "illusion of understanding" is exactly what we are testing for. Be honest with your self-assessment. We will compare this number to your actual test score.</p>
+            </div>
+        </section>
+
+        <!-- Part 4: Final Exam & Grading -->
+        <section id="part4" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 4: The "Final Exam" - Verifying Your Knowledge</h2>
+            <p class="mb-6">This is the moment of truth. You will now test what you *actually* learned.</p>
+            <div class="space-y-6">
+                <!-- Task 1: Take Test -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 1: Take the Test (No AI Help)</h3>
+                    <p>Open your Google Doc with the 10 questions from Part 1. Close any browser tabs with the AI tutor.</p>
+                    <p class="mt-2"><strong class="font-semibold">Without asking the LLM for help</strong>, write out your answers to all 10 questions from memory. Do your best to be thorough.</p>
+                </div>
+                <!-- Task 2: Get Graded -->
+                <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3">Task 2: Get Graded by the AI</h3>
+                    <p class="mb-3">Start a <strong class="font-semibold">new, fresh LLM session</strong> (to be safe). Provide the AI with the original paper, your questions, and your answers.</p>
+                    <div class="bg-gray-800 text-white p-4 rounded-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Example Prompt</span>
+                            <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                        </div>
+                        <code class="block whitespace-pre-wrap">Act as a strict but fair grader. I have attached the original research paper. I also have a list of 10 questions about this paper, along with my answers.
+
+Your task is to grade my answers. For each question, tell me if my answer is:
+- Correct
+- Partially Correct
+- Incorrect
+
+After each grade, you MUST provide a 1-2 sentence justification for your grade, explaining *why* my answer was right or wrong.
+
+[Attach the original paper]
+
+---
+Here are the questions and my answers:
+
+[Paste the 10 Questions + Your 10 Answers here]</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Reflection</h2>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg">
+                 <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-semibold text-lg">For Class Discussion</h3>
+                </div>
+                <p class="mb-4">Read the AI's grades and justifications. Think about the following questions:</p>
+                <ul class="questions text-gray-700 space-y-3 list-decimal list-inside">
+                    <li>What was your self-assessment score (1-10)? What was your actual score on the test (e.g., 7/10)? How big was the gap between your perceived and actual understanding?</li>
+                    <li>What kinds of questions did you get right (e.g., high-level) vs. wrong (e.g., low-level/math)?</li>
+                    <li>Was the AI's grading fair? Did it correctly identify your misunderstandings?</li>
+                    <li>What was the most effective prompt you used during your "Study Session" (Part 2) that led to a "correct" answer on the test?</li>
+                    <li>What are the biggest risks or blind spots of learning a new topic *only* from an LLM? (e.g., Did it have a specific bias? Did it fail to explain something?)</li>
+                    <li>How will this exercise change the way you use LLMs for learning in the future?</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    let textToCopy = '';
+                    const parent = e.target.closest('div');
+                    
+                    if (parent.querySelector('code')) {
+                        textToCopy = parent.querySelector('code').innerText;
+                    }
+
+                    if (textToCopy) {
+                         navigator.clipboard.writeText(textToCopy).then(() => {
+                            const originalText = button.innerText;
+                            button.innerText = 'Copied!';
+                            setTimeout(() => {
+                                button.innerText = originalText;
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
