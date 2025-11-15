@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide: The Mega Prompt Workshop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A single-page, top-to-bottom linear guide. This is a multi-step process where each part builds on the last, so a sequential layout with clear <section> dividers is the most intuitive structure. It guides the user through a cycle of: Seed -> Build v1 -> Unit Test -> Iterate. -->
+    <!-- Visualization & Content Choices: 
+        - Main Navigation: Sequential steps -> Single-page layout with clear sections. Goal -> Guide a linear process. Justification -> Reinforces the start-to-finish nature of the prompt-building exercise.
+        - Tasks/Steps: Different phases -> Styled cards/boxes. Goal -> Organize & Delineate. Interaction -> Read and follow. Justification -> Visually separates the distinct phases of the workflow (e.g., "Seed", "Draft", "Test").
+        - Prompts/Code: Example prompts -> Code-style blocks with copy buttons. Goal -> Action. Interaction -> Click to copy. Justification -> Provides direct utility.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">The Mega Prompt Workshop</h1>
+            <p class="mt-3 text-sm text-gray-500">
+                Created by <a href="https://www.cis.upenn.edu/~exwong/" target="_blank" class="text-amber-700 hover:underline">Eric Wong</a>
+            </p>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">From Iterative Learnings to a Reusable AI Tool</p>
+        </header>
+
+        <!-- Part 1: Intro -->
+        <section id="intro" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Introduction & Goals</h2>
+            <div class="space-y-6">
+                <p>A "mega prompt" is a comprehensive set of instructions, rules, and strategies that you provide to an LLM <em class="italic">before</em> your specific task. It's a "superprompt" designed to front-load all your hard-won knowledge, transforming a general-purpose AI into a specialized tool for a specific task.</p>
+                <p>Your goal in this ~1-hour exercise is to build, test, and refine one mega prompt for a research task you frequently perform. You will keep all your files locally.</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-md" role="alert">
+                    <h3 class="font-bold">Your Tools & Resources</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li>An idea for a task you want to automate (e.g., "summarizing research papers," "drafting emails," "generating code for plots").</li>
+                        <li>Any previous examples you have of good or bad prompts for this task.</li>
+                        <li>An LLM to help you draft and test (e.g., Gemini, Claude, ChatGPT).</li>
+                        <li>A <strong class="font-semibold">Google Doc</strong> (recommended for easy attachment to LLMs) or a local text file to build and save your prompt.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: Seed -->
+        <section id="seed" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 1: The "Seed" - Gather Your Knowledge</h2>
+            <p class="mb-6">A good mega prompt is built from experience. Instead of starting from a blank page, you'll gather "raw material"—your own knowledge, past examples, and online guides—to seed your prompt.</p>
+            <div class="bg-white border border-gray-200 p-5 rounded-lg space-y-4">
+                <h3 class="font-semibold text-lg">Task: Gather Your Raw Material</h3>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li><strong class="font-semibold">Choose Your Task:</strong> Clearly define the <strong class="font-semibold">one</strong> task you want to build a mega prompt for. Be specific!
+                        <ul class="list-disc list-inside ml-8 text-sm text-gray-600 my-2 space-y-1">
+                            <li><em class="italic">Example (Research):</em> "Summarize 1-3 attached abstracts into a 'Related Work' paragraph."</li>
+                            <li><em class="italic">Example (Coding):</em> "Generate Python code for a specific type of data visualization (e.g., a 3-panel matplotlib figure)."</li>
+                            <li><em class="italic">Example (Writing):</em> "Draft a polite follow-up email based on a previous email thread and a core request."</li>
+                            <li><em class="italic">Example (Analysis):</em> "Extract key themes, sentiments, and actionable suggestions from a page of customer reviews."</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-semibold">Gather Data:</strong> Collect any materials you have related to this task. This is your "seed" data.
+                        <ul class="list-disc list-inside ml-8 text-sm text-gray-600 my-2 space-y-1">
+                            <li><strong class="font-semibold">Past Prompts:</strong> Copy/paste any prompts you've used before (both successful and failed).</li>
+                            <li><strong class="font-semibold">Ideal Outputs:</strong> Find 1-2 examples of a <em class="italic">perfect</em> result for your task.</li>
+                            <li><strong class="font-semibold">Common Failures:</strong> Think about how AI <em class="italic">usually</em> gets this task wrong. (e.g., "it's always too verbose," "it forgets to format the output as JSON," "it sounds too robotic").</li>
+                            <li><strong class="font-semibold">Online Guides:</strong> Find a good blog post or guide on your task (e.g., "how to write a good related work section").</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-semibold">Use an LLM to Summarize:</strong> Go to a powerful LLM. Paste all your "raw material" (or attach files) and use a prompt <em class="italic">like</em> the one below to distill it into actionable rules.</li>
+                </ol>
+                <div class="bg-gray-800 text-white p-4 rounded-md mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-400 text-sm">Example Prompt</span>
+                        <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                    </div>
+                    <code class="block whitespace-pre-wrap">Act as a prompt engineering analyst. I am trying to build a 'mega prompt' for [Your Specific Task].
+
+I've attached [or will paste below] a collection of my notes, past prompts, ideal outputs, and common failures related to this task.
+
+Your task is to analyze all of this information and extract two lists:
+1.  A "Success List" of clear strategies, rules, and instructions that lead to a good output.
+2.  A "Failure List" of common problems, pitfalls, and things to avoid.
+
+[Paste your notes, examples, etc. here if you cannot attach files]</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Draft v1.0 -->
+        <section id="draft" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 2: The First Draft - Building Mega Prompt v1.0</h2>
+            <p class="mb-6">Now you will synthesize your "Success List" into your first mega prompt. The best way to do this is to have an LLM help you.</p>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg space-y-4">
+                <h3 class="font-semibold text-lg">Task: Generate Mega Prompt v1.0</h3>
+                <p>Use the "Success List" from the previous step to generate a structured set of instructions, paying special attention to the <strong class="font-semibold">Execution Strategy</strong>.</p>
+                <p class="mb-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md">Below is a <strong class="font-semibold">suggested prompt</strong> to help you generate your first mega prompt (v1.0). This prompt *itself* is just a starting point, not a 'gold standard.' Feel free to modify it to get a better v1.0. For example, you can change the sections it's asked to generate (e.g., remove 'Style & Tone' or add a new 'Error Handling' section) before you run it.</p>
+                 <div class="bg-gray-800 text-white p-4 rounded-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-400 text-sm">Example Prompt</span>
+                        <button class="copy-btn bg-gray-700 hover:bg-gray-600 text-xs font-semibold py-1 px-2 rounded">Copy</button>
+                    </div>
+                    <code class="block whitespace-pre-wrap">Using the "Success List" you just generated, synthesize these points into a single, coherent "mega prompt" template.
+
+Structure the mega prompt with the following sections:
+-   **Persona:** "Act as an expert..."
+-   **Core Task:** A general description of the main goal.
+-   **Context:** Instructions on what source material will be provided.
+-   **Execution Strategy:** HOW the AI must think and apply the rules. (e.g., "For writing, you must first create an outline, then generate paragraph by paragraph." or "For coding, you must first create a file-by-file plan, then generate code for each file sequentially.")
+-   **Rules & Constraints:** A strict, bulleted list of "You must..." and "You must not..."
+-   **Style & Tone:** Instructions on the desired writing style.
+-   **Output Format:** Instructions on how the output should be structured.</code>
+                </div>
+                <p class="font-semibold">Result: You now have your "Mega Prompt v1.0".</p>
+                <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-3 rounded-md mt-4" role="alert">
+                    <p><strong class="font-bold">Workflow Tip:</strong> Save this generated prompt in your <strong class="font-semibold">Google Doc</strong> (or local file). This is your "Mega Prompt v1.0".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 4: Unit Test v1.0 -->
+        <section id="unittest" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 3: The "Unit Test" - Applying v1.0</h2>
+            <p class="mb-6">A prompt is only as good as its output. You should first test it on a simple, repeatable task.</p>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg space-y-4">
+                <h3 class="font-semibold text-lg">Task: Run Your Unit Test</h3>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li><strong class="font-semibold">Define Your "Unit Test" Task:</strong> Create one simple, "clean" task.
+                        <ul class="list-disc list-inside ml-8 text-sm text-gray-600 my-2 space-y-1">
+                            <li><em class="italic">Example (Figures):</em> "Generate Python code for a 2-panel figure showing a line graph and a bar graph using placeholder data."</li>
+                            <li><em class="italic">Example (Related Work):</em> "Write a 3-paragraph related work section based on the attached 2 abstracts."</li>
+                            <li><em class="italic">Example (Email):</em> "Draft a follow-up email based on this short thread [paste 1-2 emails]."</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-semibold">Run the Test:</strong>
+                        <ul class="list-disc list-inside ml-8 text-sm text-gray-600 my-2 space-y-1">
+                            <li>Start a <span class="font-bold">new, fresh LLM session</span> (critical to avoid context leaks).</li>
+                            <li><strong class="font-semibold">Attach your "Mega Prompt v1.0" Google Doc</strong> (or paste the text).</li>
+                            <li>In the <span class="font-bold">same message</span> (or immediately after), paste your <span class="font-bold">"Unit Test" Task</span>.</li>
+                            <li>Run the prompt and save the output (you can copy this into your document for reference).</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Part 5: Post-Mortem -->
+        <section id="postmortem" class="mb-12">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Part 4: The Iteration Loop - Analyze & Refine</h2>
+            <p class="mb-6">A prompt is rarely perfect on the first try. Your goal now is to critically evaluate the output and refine your prompt. This is a <em class="italic">loop</em>: you will analyze, edit, and re-test until you're satisfied.</p>
+            <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-5 rounded-lg space-y-4">
+                <h3 class="font-bold text-lg">Task: Analyze, Edit, and Re-Test</h3>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong class="font-semibold">Analyze the Output:</strong> Look at the output from your last test. Ask yourself:
+                        <ul class="list-disc list-inside ml-8 font-medium my-2 space-y-1">
+                            <li>What instructions did the AI follow perfectly?</li>
+                            <li>What instructions did it ignore, misunderstand, or get wrong?</li>
+                            <li><span class="font-bold">Strategy Check:</span> Did the AI <em class="italic">actually</em> follow your <span class="font-bold">Execution Strategy</span>?</li>
+                            <li>What was bad, missing, or incorrect?</li>
+                            <li>What new instructions do I need to add to fix these flaws?</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-semibold">Edit Your Prompt:</strong> Based on your analysis, go back to your <strong class="font-semibold">Google Doc or local file</strong> and edit your mega prompt. (See the Pro-Tip below). This new version is your "Mega Prompt v2.0".</li>
+                    <li><strong class="font-semibold">Re-Run the Test:</strong>
+                        <ul class="list-disc list-inside ml-8 text-sm my-2 space-y-1">
+                            <li>Start a <span class="font-bold">new, fresh LLM session</span> (this is critical!).</li>
+                            <li><strong class="font-semibold">Attach your new "Mega Prompt v2.0"</strong> file.</li>
+                            <li>In the same message, paste the <span class="font-bold">exact same "Unit Test" Task</span> from Part 3.</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-semibold">Compare:</strong> Place the new output side-by-side with the old output. Did your changes fix the problems? Did they create <em class="italic">new</em> problems?</li>
+                    <li><strong class="font-semibold">Repeat!</strong> Keep looping through steps 1-4. Continue editing your prompt (v3.0, v4.0...) and re-running the <em class="italic">same unit test</em> until it produces a high-quality result consistently.</li>
+                </ol>
+                <div class="bg-blue-900 bg-opacity-10 border-l-4 border-blue-400 text-blue-800 p-4 rounded-md mt-6" role="alert">
+                    <h4 class="font-bold">Pro-Tip: Manual vs. AI-Assisted Editing</h4>
+                    <p class="mt-2"><strong class="font-semibold">Method 1: Manual Editing (Best for Learning)</strong><br>
+                    Go into your Google Doc and manually type your changes. This forces you to think critically about <em class="italic">why</em> you're adding each rule and gives you full control.</p>
+                    <p class="mt-3"><strong class="font-semibold">Method 2: AI-Assisted Editing (Best for Speed &amp; Large Prompts)</strong><br>
+                    As your prompt gets large, manual editing can be slow. Instead, you can attach your current prompt (e.g., v1.0) and instruct the AI to modify it for you.</p>
+                    <p class="mt-2 pl-4 italic text-sm">"Please find my attached v1.0 mega prompt. It failed to [describe failure]. Please update the prompt by adding a new rule to the 'Rules & Constraints' section that [describe new rule]. Send me back the complete, updated v2.0 prompt."</p>
+                    <p class="mt-2"><strong class="font-semibold">Warning:</strong> This is fast, but you risk "losing track" of your prompt. If you use this method, <strong class="font-semibold">you must copy/paste the AI's new v2.0 prompt back into your Google Doc</strong> to maintain a single "source of truth".</p>
+                    
+                    <hr class="my-3 border-blue-300">
+                    <p class="mt-2"><strong class="font-semibold">Keep a History!</strong> We strongly recommend saving your versions as you go (e.g., "Mega Prompt v1.0", "Mega Prompt v2.0"). You can do this by making copies in your Google Doc (using version history or just copy-pasting) or by saving separate files. This lets you revert to a previous working version if a new change makes things worse.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 6: Conclusion -->
+        <section id="conclusion">
+            <h2 class="text-3xl font-bold border-b-2 border-amber-600 pb-2 mb-6">Conclusion & Next Steps</h2>
+             <div class="bg-white border border-gray-200 p-5 rounded-lg space-y-4">
+                 <p>Congratulations! You've successfully built and refined a reusable "mega prompt". You now have a specialized AI tool, built from your own expertise, that can save you significant time and effort on a recurring task.</p>
+                <h3 class="font-semibold text-lg">What's Next?</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="font-semibold">Stress Test It:</strong> The next step (outside of this 1-hour exercise) is to "stress test" your prompt. Try it on harder, more complex, or unusual versions of your task. When it fails, analyze the failure and refine your prompt again.</li>
+                    <li><strong class="font-semibold">Generalize It:</strong> How could you make your prompt useful for <em class="italic">other</em> tasks? A good "Related Work" prompt might be adaptable into a "Literature Review" prompt.</li>
+                    <li><strong class="font-semibold">Save It:</strong> Keep your final prompt in your Google Doc or another safe, easy-to-access place. You've earned it!</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add robust copy-to-clipboard functionality
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    let textToCopy = '';
+                    // Find the closest parent container with the code
+                    const parent = e.target.closest('.bg-gray-800'); 
+                    
+                    if (parent && parent.querySelector('code')) {
+                        textToCopy = parent.querySelector('code').innerText;
+                    }
+
+                    if (textToCopy) {
+                         // Use the 'document.execCommand('copy')' method
+                         // This is the most reliable way to copy in sandboxed iframes
+                         const textArea = document.createElement('textarea');
+                         textArea.value = textToCopy;
+                         
+                         // Make the textarea invisible and prevent scrolling
+                         textArea.style.position = 'fixed';
+                         textArea.style.top = '0';
+                         textArea.style.left = '0';
+                         textArea.style.width = '2em'; // Keep it small
+                         textArea.style.height = '2em';
+                         textArea.style.padding = '0';
+                         textArea.style.border = 'none';
+                         textArea.style.outline = 'none';
+                         textArea.style.boxShadow = 'none';
+                         textArea.style.background = 'transparent';
+                         textArea.style.opacity = '0';
+
+                         document.body.appendChild(textArea);
+                         textArea.focus();
+                         textArea.select();
+
+                         try {
+                            const successful = document.execCommand('copy');
+                            if (successful) {
+                                // Provide visual feedback
+                                const originalText = button.innerText;
+                                button.innerText = 'Copied!';
+                                setTimeout(() => {
+                                    button.innerText = originalText;
+                                }, 2000);
+                            } else {
+                                console.error('Failed to copy text using execCommand.');
+                            }
+                         } catch (err) {
+                             console.error('Failed to copy text: ', err);
+                         }
+                         
+                         // Clean up the temporary textarea
+                         document.body.removeChild(textArea);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
