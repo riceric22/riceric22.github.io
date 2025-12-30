@@ -120,18 +120,19 @@ Tentative schedule. Topics are subject to change.
 
 | Date   | Topic | Notes |
 | :----- | :---- | :---- |
-| Aug 29 | Writing | Related work & reports |
-| Sep 05 | Writing | Abstract, introductions & figures |
-| Sep 12 | Writing | Reviewing & editing technical writing |
-| Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) |  |
-| Sep 26 | Coding | AI coding 1 |
-| Oct 03 | Coding | AI Coding 2 |
-| Oct 10 | Fall Term Break (No class) |       |
-| Oct 17 | Studies | LLMs for Data collection #1 |
-| Oct 24 | Superprompting | Creating generalizable and reusable prompts |
-| Oct 31 | Proofs | Guest instructor: Surbhi  |
-| Nov 07 | Tooling and/or ethics |  |
-| Nov 14 | Studies | LLMs Data Collection #2 |
-| Nov 21 | Class Projects |  Presentations  |
-| Nov 26 | Thanksgiving (No class) |       |
-| Dec 05 | NeurIPS conference (No class) |       |
+| Aug 29 | Writing | Related work: [Worksheet 1](/arga/1_related_work.html) & Report generation: [Worksheet 2](/arga/2_report_generation.html) |
+| Sep 05 | Writing | Abstracts & Intros: [Worksheet 3](/arga/3_abstracts_intros.html) & Figures: [Worksheet 4](/arga/4_figures.html) |
+| Sep 12 | Writing | Reviewing & editing: [Worksheet 5](/arga/5_reviewing.html) |
+| Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) | |
+| Sep 26 | Coding | AI coding: [Worksheet 6](/arga/6_coding.html) |
+| Oct 03 | Coding | |
+| Oct 10 | Fall Term Break (No class) | |
+| Oct 17 | Studies | |
+| Oct 24 | Superprompting | Megaprompting: [Worksheet 7](/arga/7_megaprompt.html) |
+| Oct 31 | Proofs | Guest instructor: Surbhi ([Worksheet](https://www.surbhigoel.com/others/llm_proofs)) |
+| Nov 07 | Rubrics and Learning | Rubrics: [Worksheet 9](/arga/9_rubrics.html) & Learning: [Worksheet 10](/arga/10_learning.html) |
+| Nov 14 | Studies | |
+| Nov 21 | Class Projects | Presentations |
+| Nov 26 | Thanksgiving (No class) | |
+| Dec 05 | NeurIPS conference (No class) | |
+
