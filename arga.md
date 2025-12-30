@@ -120,17 +120,17 @@ Tentative schedule. Topics are subject to change.
 
 | Date   | Topic | Notes |
 | :----- | :---- | :---- |
-| Aug 29 | Writing | Related work: [Worksheet 1](/arga/1_related_work.html) & Report generation: [Worksheet 2](/arga/2_report_generation.html) |
-| Sep 05 | Writing | Abstracts & Intros: [Worksheet 3](/arga/3_abstracts_intros.html) & Figures: [Worksheet 4](/arga/4_figures.html) |
-| Sep 12 | Writing | Reviewing & editing: [Worksheet 5](/arga/5_reviewing.html) |
+| Aug 29 | Writing | Related work: [Worksheet 1](1_related_work.html) & Report generation: [Worksheet 2](2_report_generation.html) |
+| Sep 05 | Writing | Abstracts & Intros: [Worksheet 3](3_abstracts_intros.html) & Figures: [Worksheet 4](4_figures.html) |
+| Sep 12 | Writing | Reviewing & editing: [Worksheet 5](5_reviewing.html) |
 | Sep 19 | [AI Research Mixer](https://ai.seas.upenn.edu/ai-research-mixer-2025/) (No class) | |
-| Sep 26 | Coding | AI coding: [Worksheet 6](/arga/6_coding.html) |
+| Sep 26 | Coding | AI coding: [Worksheet 6](6_coding.html) |
 | Oct 03 | Coding | |
 | Oct 10 | Fall Term Break (No class) | |
 | Oct 17 | Studies | |
-| Oct 24 | Superprompting | Megaprompting: [Worksheet 7](/arga/7_megaprompt.html) |
+| Oct 24 | Superprompting | Megaprompting: [Worksheet 7](7_megaprompt.html) |
 | Oct 31 | Proofs | Guest instructor: Surbhi ([Worksheet](https://www.surbhigoel.com/others/llm_proofs)) |
-| Nov 07 | Rubrics and Learning | Rubrics: [Worksheet 9](/arga/9_rubrics.html) & Learning: [Worksheet 10](/arga/10_learning.html) |
+| Nov 07 | Rubrics and Learning | Rubrics: [Worksheet 9](9_rubrics.html) & Learning: [Worksheet 10](10_learning.html) |
 | Nov 14 | Studies | |
 | Nov 21 | Class Projects | Presentations |
 | Nov 26 | Thanksgiving (No class) | |
