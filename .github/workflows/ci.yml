@@ -5,11 +5,17 @@ jobs:
     name: Build Jekyll
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Build the site in the jekyll/builder container
+      - uses: actions/checkout@v4
+      - name: Build the site in a ruby container
         run: |
-          export JEKYLL_VERSION=3.8
           docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          -v ${{ github.workspace }}:/srv/jekyll \
           -e PAGES_REPO_NWO=${{ github.repository }} \
-          jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+          ruby:3.1-slim /bin/bash -c "
+            apt-get update -qq &&
+            apt-get install -y -qq build-essential git > /dev/null 2>&1 &&
+            cd /srv/jekyll &&
+            rm -f Gemfile.lock &&
+            bundle install --quiet &&
+            bundle exec jekyll build --future
+          "
