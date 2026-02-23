@@ -1,41 +1,187 @@
 ---
 layout: page
 title: Research
+css: ["/assets/css/research-cards.css"]
 ---
 
-How can we make sure that deep learning models are actually doing what we want them to do? I study  the foundations of robust and reliable machine learning: how to understand, debug, and guarantee the behavior of machine learning models. My research interests span machine learning, optimization, and robustness, in order to develop principled methods with an eye towards scalability and practicality in real-world settings such as cosmology and surgery. 
+How can we make sure that deep learning models are actually doing what we want them to do? I study the foundations of robust and reliable machine learning: how to understand, debug, and guarantee the behavior of machine learning models. My research interests span machine learning, optimization, and robustness, in order to develop principled methods with an eye towards scalability and practicality in real-world settings such as cosmology, surgery, cardiology, and sepsis. My work is organized around three themes: **Adversarial Safety**, **Interpretability with Guarantees**, and **Formal Assurances for Foundation Models**.
 
-To achieve this goal, my work touches upon a variety of topics. Some examples include generative modeling, sparsity, influence functions, transformers, linear programs, overfitting, biases, and transfer learning. Below we summarize some of the main questions we've been looking at. 
+{% comment %}
+  Flatten all papers into a single array for filtering.
+{% endcomment %}
+{% assign all_papers = "" | split: "" %}
+{% for collection in site.data.papers %}
+  {% for paper in collection.papers %}
+    {% assign all_papers = all_papers | push: paper %}
+  {% endfor %}
+{% endfor %}
 
-# Explanations with Guarantees
-What does a model explanation mean? Even though explanations in machine learning purport to explain the prediction process, we still don't know what we can conclude from many common explanations for large machine learning models. We're looking into constructing principled explanations that have guaranteed, provable meaning for the end user. Some examples include: 
-+ **Certified interpretability.** Explanations of model predictions in machine learning are often criticized for being misleading and brittle. We are interested in learning models with provably stable post-hoc explanations.
-+ **Faithful explanations.** A core property of a good explanation is faithfulness: an explanation should reflect what the model actually does, otherwise the explanation is misleading. We are developing methods of building models with explanations that are guaranteed to be faithful. 
-+ **Explaining with structure.** Explanations need to be in terms of features and structures that the end-users can understand. How do we enforce explanations to adhere to such structures? We are developing techniques that explain in terms of higher-level concepts and structures as opposed to low-level features. 
+<!-- ═══ ADVERSARIAL SAFETY ═══ -->
+<div class="research-card">
+<h3><span class="card-icon"><i class="fas fa-shield-alt"></i></span> Adversarial Safety</h3>
+<p class="card-desc">How do we defend models against adversarial threats, from perturbation attacks to jailbreaks to misuse? Topics include <strong>mechanistic theory of safety</strong>, <strong>alignment & control</strong>, <strong>jailbreaking & LLM defenses</strong>, and <strong>adversarial robustness</strong>.</p>
+<div class="papers-preview" id="safety-papers">
 
-# Explaining for Scientific Discovery
-ML models can learn complex patterns from data that we as humans may not even be aware of. How can we learn from the model? We're applying our explanation techniques to various domains to help experts understand and learn more about the world. 
-+ **Safety in surgery.** In medical surgical settings, it is insufficient to simply predict outcomes---medical professionals need to also understand why an outcome is predicted for a patient. We're exploring how to explain surgical AI systems to surgeons to improve patient care and provide transparency for surgeons.
-+ **Exploring the cosmos.** In cosmology, there are many interactions between galatic properties, objects, and structures that we do not yet understand. However, we can simulate outcomes and train accurate ML models. We're extracting knowledge from cosmological AI models to learn more about cosmology, such as the properties of dark matter and how galaxies are formed. 
+<div class="subtheme-heading">Mechanistic Theory of Safety</div>
+<p class="subtheme-desc">We develop theoretical frameworks that mechanistically explain how models follow and break rules, connecting attention mechanisms and logical inference to safety behaviors.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "adversarial-safety" and p.subtheme == "mechanistic-theory-of-safety" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
 
-# Debugging Machine Learning
-When your machine learning model behaves strangely, how do you find and fix the issue? We're developing systems that enable scalable and interactive analysis of machine learning pipelines to describe and correct these so-called "bugs". For example: 
-+ **Generating rules at scale.** Machine learning models behave in surprising ways that sometimes defy basic common sense, or basic rules about the world. We are creating systems that can automatically extract common rules for machine learning systems at scale.
-+ **Interactive ML debugger.** In research, we often assume a specific formulation of a problem to solve, but in practice, we often don't know what this is a priori. We are building interactive debugging tools for inspecting machine learning pipelines and identifying issues in the pipeline.
+<div class="subtheme-heading">Alignment & Control</div>
+<p class="subtheme-desc">How do we control model behavior to prevent misuse and remove unwanted knowledge? We develop methods for machine unlearning, misuse mitigation, and cross-cultural alignment.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "adversarial-safety" and p.subtheme == "alignment-control" or p.themes contains "adversarial-safety" and p.subtheme == "concepts-structure" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
 
-# Prompting Science
-A recent learning paradigm known as "prompting" allows users to adapt models with natural language instructions. We are working on developing tools and methods to automatically guide and support prompt design. 
-+ **Adversarial Prompting.** The internet has found numerous examples of prompts elucidating strange outputs from large language models. We're developing tools that automatically search for prompts that can remain under the radar but achieve certain goals. 
-+ **Certified LLM defenses.** We are developing defense mechanisms that protect large language models from being hijacked by malicious users. 
-+ **Chain of thought.** Asking the large language model to explain its output can improve its performance (i.e. "chain of thought"), but the explanation may have little or nothing to do with the actual output. We've studied how to make this paradigm directly faithful, or causal, to the ultimate prediction. 
+<div class="subtheme-heading">Jailbreaking & LLM Defenses</div>
+<p class="subtheme-desc">We study how adversarial prompts bypass LLM safety guardrails and develop principled defenses, spanning automated attack algorithms, smoothing-based defenses, and standardized benchmarks.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "adversarial-safety" and p.subtheme == "jailbreaking" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
 
-# Past research
-In the past, I've also worked on a variety of other topics. 
+<div class="subtheme-heading">Adversarial Robustness</div>
+<p class="subtheme-desc">We develop both empirical and provably certified defenses against adversarial perturbations, spanning threat models from Lp norms to patches to learned perturbation sets.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "adversarial-safety" and p.subtheme == "adversarial-robustness" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
 
-**Understanding transfer learning.** More data and bigger models in the form of pretraining typically leads to better performance when transferred to a downstream task. However, pretraining and transferring can have unexpected effects that are not always beneficial. We have studied how transfer learning can insert unintended spurious correlations to the downstrea model, and found that certain subpopulations used in pretraining can actually harm transfer performance. 
+</div>
+<a class="expand-link" href="#" data-target="safety-papers" data-label="Adversarial Safety">Show all Adversarial Safety papers <i class="fas fa-chevron-down"></i></a>
+</div>
 
-**Beyond L-p: characterizing robustness in the real world.** Research in adversarial robustness typically focuses on robustness to L-p norm-bounded perturbations. However, the types of changes and perturbations that occur in real-world settings often cannot be described via an L-p ball. To bridge the gap from L-p perturbations to real-world changes, we proposed and studied new perturbation sets that capture real-world phenomena. 
+<!-- ═══ INTERPRETABILITY WITH GUARANTEES ═══ -->
+<div class="research-card">
+<h3><span class="card-icon"><i class="fas fa-search"></i></span> Interpretability with Guarantees</h3>
+<p class="card-desc">What do model explanations actually mean? We build principled methods for understanding, debugging, and explaining ML models. Topics include <strong>concepts & structure</strong>, <strong>scientific & healthcare applications</strong>, <strong>certified explanations</strong>, and <strong>debugging</strong>.</p>
+<div class="papers-preview" id="interpretability-papers">
 
-**Understanding and improving robust optimization.** Adversarial training is a popular robust optimization method for empirically defending against adversarial examples. However, adversarial training does not always behave the way we expect it to. We demonstrate how, unlike standard training, adversarial training is more prone to various forms of overfitting during the training process, such as robust overfitting and catastrophic overfitting. Understanding these issues allowed us to greatly accelerate and improve the performance of adversarial training approaches. 
+<div class="subtheme-heading">Concepts & Structure</div>
+<p class="subtheme-desc">What concepts do models learn, and how do they compose? We develop methods for extracting expert-aligned features, compositional concept representations, and topic-based explanations across domains and languages.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "interpretability" and p.subtheme == "concepts-structure" or p.themes contains "interpretability" and p.subtheme == "neurosymbolic" or p.themes contains "interpretability" and p.subtheme == "alignment-control" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
 
-**Provable guarantees for deep networks.** Adversarial examples have established that deep networks are exceedingly brittle, and are not robust to small targeted perturbations. Empirical defenses and attacks are prone to blind spots, leading to unreliable robustness estimates. Instead, we derived scalable, provable defenses which provides a differentiable, guaranteed bound on the output of a network that can be used to train convolutional networks with robustness guarantees. 
+<div class="subtheme-heading">Scientific & Healthcare Applications</div>
+<p class="subtheme-desc">We apply interpretable ML methods to high-stakes scientific and medical settings, including treatment effect estimation, anomaly repair with formal guarantees, and clinical prediction.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "interpretability" and p.subtheme == "scientific-healthcare" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+<div class="subtheme-heading">Certified Explanations</div>
+<p class="subtheme-desc">Can we trust model explanations? We develop explanation methods with provable guarantees, including certified stability for feature attributions and faithful group-based models.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "interpretability" and p.subtheme == "certified-explanations" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+<div class="subtheme-heading">Debugging</div>
+<p class="subtheme-desc">We build tools for diagnosing model failures, from sparse linear layers for debuggable networks to methods for detecting spurious correlations, data biases, and transfer learning pathologies.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "interpretability" and p.subtheme == "debugging" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+</div>
+<a class="expand-link" href="#" data-target="interpretability-papers" data-label="Interpretability">Show all Interpretability papers <i class="fas fa-chevron-down"></i></a>
+</div>
+
+<!-- ═══ FORMAL ASSURANCES FOR FOUNDATION MODELS ═══ -->
+<div class="research-card">
+<h3><span class="card-icon"><i class="fas fa-brain"></i></span> Formal Assurances for Foundation Models</h3>
+<p class="card-desc">How can we bring formal structure and provable guarantees to foundation models through programs, logic, and verification? Topics include <strong>verifying & faithful reasoning</strong> and <strong>neurosymbolic learning</strong>.</p>
+<div class="papers-preview" id="formal-papers">
+
+<div class="subtheme-heading">Verifying & Faithful Reasoning</div>
+<p class="subtheme-desc">Can we verify that a model's reasoning is sound? We develop methods for certifying reasoning chain correctness, ensuring chain-of-thought faithfulness, and checking whether models follow statistical rules inferred from data.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "formal-assurances" and p.subtheme == "verifying-reasoning" or p.themes contains "formal-assurances" and p.subtheme == "mechanistic-theory-of-safety" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+<div class="subtheme-heading">Neurosymbolic Learning</div>
+<p class="subtheme-desc">We combine neural networks with symbolic programs to enable scalable, data-efficient learning with formal structure, from programmable frameworks to compositional tensor methods.</p>
+<ul class="paper-list">
+{% for p in all_papers %}{% if p.themes contains "formal-assurances" and p.subtheme == "neurosymbolic" %}
+<li>
+  <div class="paper-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.short %}<span class="venue-badge">{{ p.short }}</span>{% endif %}</div>
+  <div class="paper-authors">{{ p.authors | replace: "*", "" }}</div>
+  {% if p.blog or p.github or p.website %}<div class="paper-links">{% if p.website %}<a href="{{ p.website }}">Site</a>{% endif %}{% if p.blog %}<a href="{{ p.blog }}">Blog</a>{% endif %}{% if p.github %}<a href="{{ p.github }}">Code</a>{% endif %}</div>{% endif %}
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+</div>
+<a class="expand-link" href="#" data-target="formal-papers" data-label="Formal Assurances">Show all Formal Assurances papers <i class="fas fa-chevron-down"></i></a>
+</div>
+
+<div class="research-footer">
+Before this, I have dabbled in a <a href="https://arxiv.org/abs/1705.00772">semismooth Newton method</a> (ICML 2017), an <a href="http://zicokolter.com/publications/wong2015svdkernel.pdf">SVD kernel approach</a> (AAAI 2015), as well as a <a href="https://github.com/locuslab/dreaml">reactive programming language</a> that became obsolete when PyTorch was released. My PhD thesis can be found <a href="https://www.ml.cmu.edu/research/phd-dissertation-pdfs/thesis-wong-eric.pdf">here</a>.
+</div>
+
+<script>
+document.querySelectorAll('.expand-link').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.getElementById(this.getAttribute('data-target'));
+    var isExpanded = target.classList.toggle('expanded');
+    var label = this.getAttribute('data-label');
+    if (isExpanded) {
+      this.innerHTML = 'Show fewer ' + label + ' papers <i class="fas fa-chevron-up"></i>';
+    } else {
+      this.innerHTML = 'Show all ' + label + ' papers <i class="fas fa-chevron-down"></i>';
+    }
+  });
+});
+</script>
