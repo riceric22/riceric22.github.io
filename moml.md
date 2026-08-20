@@ -3,7 +3,9 @@ layout: skeleton
 ---
 [site]: https://www.cis.upenn.edu/~exwong/moml/
 
-# [CIS 3333: Mathematics of Machine Learning (Fall 2024)][site]
+# [CIS 3333: Mathematics of Machine Learning (Fall 2026)][site]
+
+> **Note**: This class starts the week of August 31st. There is no class on August 26.
 
 Machine learning is the study of algorithms (i.e. gradient descent) that learn functions (i.e. deep networks) from experience (i.e. data). 
 Behind this simple statement, is a lot of mathematical scaffolding: statistics for handling data, optimization for understanding learning algorithms, and linear algebra to create expressive models. 
@@ -18,7 +20,7 @@ To better prepare undergraduates for machine learning coursework and research, t
 
 **Instructor**: [Eric Wong](https://www.cis.upenn.edu/~exwong) ([exwong@cis](mailto:exwong@cis.upenn.edu))
 
-**Class**: Monday and Wednesday, 12:00PM-1:29PM
+**Class**: Monday and Wednesday, 3:30PM-4:59PM, CHEM 109
 
 **Website**: [https://www.cis.upenn.edu/~exwong/moml/][site]
 
@@ -39,9 +41,9 @@ If you have 2 out of the 3 pre-requisites, you can review the missing background
 
 These topics will be accompanied with several examples demonstrating how these core techniques are used to prove fundamental results about machine learning algorithms. In particular, we will prove several hallmark theoretical results from machine learning: genearlization bounds that explain why learning from data works, representer theorems that identify what functions models can learn, and convergence rates that control how long it takes to learn models.  
 
-**Grading**: There will be approximately 10 homeworks (estimated weekly) totaling 50% of your grade. There will also be 3 midterms at 15% each, one per focus area. 5% for in-class participation. 
+**Grading**: There will be 3 midterms at 15% each, one per focus area, and 5% for in-class participation. The remaining 50% comes from approximately 10 homeworks (estimated weekly).
 
-A template for your homework solutions can be found [here](https://www.overleaf.com/read/jpxqtspbpqdk). Homeworks are due a week after they are assigned. 
+There will be homeworks, but how they are assessed and submitted is TBD and will be announced before the term begins.
 
 ### Schedule
 
@@ -49,39 +51,41 @@ Tentative schedule.
 
 | Date | Topic | Notes |
 |---|---|---|
-| August 28 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
-| September 2 | Labor day (no class) ||
+| August 26 | No class ||
+| August 31 | Overview | (1.1, [extra notes](https://www.cis.upenn.edu/~exwong/assets/moml/overview.pdf)) |
 | *Probability & statistics* || [(probability lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/probability.pdf) |
-| September 4 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 |
+| September 2 | Review | Discrete + Continuous Probability <br>Reading: Chapters 6.1, 6.2 |
+| September 7 | Labor day (no class) ||
 | September 9 | Review |  Discrete + Continuous Probability <br>Reading: Chapters 6.3, 6.4 |
-| September 11 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5|
+| September 14 | Fundamentals | Mean and Variance, Gaussian distribution <br>Reading: Chapters 6.4, 6.5|
 | September 16 | Fundamentals | Exponential Distributions and Conjugacy <br>Reading: 6.6 |
-| September 18 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>[(concentration lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/concentration.pdf)|
+| September 21 | Fundamentals | Concentration inequalities (Markov, Chebyshev, WLLN) <br>[(concentration lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/concentration.pdf)|
 | September 23 | Example | Generalization bounds |
-| September 24 | Example | Generalization bounds |
+| September 28 | Example | Generalization bounds |
 | September 30 | Midterm 1 || 
+| October 1-4 | Fall term break (no class) ||
 | *Linear & functional analysis* |||
-| October 2 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)||
+| October 5 | Review | Linear algebra  (2.2,2.4) <br>[(linear algebra lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/linear_algebra.pdf)||
 | October 7 | Review | Linear algebra (2.5,2.6)|
-| October 9 | Fundamentals | Change of Basis (2.7)|
+| October 12 | Fundamentals | Change of Basis (2.7)|
 | October 14 | Fundamentals | Inner product spaces and Orthogonality (3.1-3.8) |
-| October 16 | Fundamentals | Decompositions (4.1, 4.2, 4.4)|
+| October 19 | Fundamentals | Decompositions (4.1, 4.2, 4.4)|
 | October 21 | Example | Functional analysis, Hilbert spaces, Kernels (12.4)  <br>[(representer lecture notes)](https://www.cis.upenn.edu/~exwong/assets/moml/representer.pdf)|
-| October 23 | Example | Representer theorems |
+| October 26 | Example | Representer theorems |
 | October 28 | Midterm 2 ||
-| October 30 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
 | *Calculus & optimization* |||
+| November 2 | Review | Multivariate calculus (5.1-5.4) <br>[(calculus notes)](https://www.cis.upenn.edu/~exwong/assets/moml/calculus.pdf)|
 | November 4 | Review | Multivariate calculus (5.5-5.7)|
-| November 6 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
-| November 11 | Fundamentals | Gradient Descent (7.1))<br>[(continuous optimization notes)](https://www.cis.upenn.edu/~exwong/assets/moml/continuous_optimization.pdf)|
-| November 13 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
+| November 9 | Fundamentals | Multivariate Taylor Series (5.8-5.9) |
+| November 11 | Fundamentals | Gradient Descent (7.1)<br>[(continuous optimization notes)](https://www.cis.upenn.edu/~exwong/assets/moml/continuous_optimization.pdf)|
+| November 16 | Fundamentals | Constrained and Convex Optimization (7.2-7.3) |
 | November 18 | Fundamentals | Conjugates & Taylor's Theorem <br>[(SGD convergence notes)](https://www.cis.upenn.edu/~exwong/assets/moml/sgd_convergence.pdf)|
-| November 20 | Example | Convergence analysis |
-| November 25 | No class ||
-| November 27 | Friday class schedule (no class) ||
-| December 2 | Example | Convergence analysis |
-| December 4 | Midterm 3 ||
-| December 9 | No class ||
-| December 19 | Term ends ||
+| November 23 | Example | Convergence analysis |
+| November 25 | Friday class schedule (no class) ||
+| November 26-29 | Thanksgiving break (no class) ||
+| November 30 | Example | Convergence analysis |
+| December 2 | Midterm 3 ||
+| December 7 | No class (NeurIPS) ||
+| December 17 | Term ends ||
 
 
