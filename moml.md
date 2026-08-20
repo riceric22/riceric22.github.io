@@ -43,7 +43,7 @@ These topics will be accompanied with several examples demonstrating how these c
 
 **Grading**: There will be 3 midterms at 15% each, one per focus area, and 5% for in-class participation. The remaining 50% comes from approximately 10 homeworks (estimated weekly).
 
-There will be homeworks, but how they are assessed and submitted is TBD and will be announced before the term begins.
+There will be homeworks, but how they are assessed and submitted is TBD and will be announced in class.
 
 ### Schedule
 
